@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BerBISIk</title>
 </head>
+
+@extends('layout/layout')
+
+
 <body>
     <!-- css  -->
     <link rel="stylesheet" href="{{ asset('css/homePage.css') }}">
@@ -19,6 +23,7 @@
     <title>BerBISIk</title>
 </head>
 <body>
+    @section('content')
     <!-- header start -->
     <header>
         <nav class="navbar">
@@ -52,7 +57,6 @@
             </ul>
         </nav>
     </header>
-
     <!-- header end -->
 
      <!-- Main Start -->
@@ -294,5 +298,6 @@
         
     <!-- footer end  -->   
     
+    @endsection
 </body>
 </html>
