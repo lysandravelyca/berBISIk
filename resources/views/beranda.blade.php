@@ -24,40 +24,6 @@
 </head>
 <body>
     @section('content')
-    <!-- header start -->
-    <header>
-        <nav class="navbar">
-            
-            
-            <div class="logo">
-                <img src="{{ asset('assets/logo.png') }}" alt="">
-            </div>
-
-            <ul class="nav-menu">
-
-                <li class="nav-item">
-                    <a href="/Code/Home/Home.html" class="nav-link">Beranda</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="/Code/Product/product.html" class="nav-link">Kamus</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="/Code/Promotion/promotion.html" class="nav-link">Acara</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="/Code/About Us/About Us.html" class="nav-link">Tentang Kami</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="/Code/Contact Us/Contact Us.html" class="nav-link">Profile</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- header end -->
 
      <!-- Main Start -->
 
@@ -66,12 +32,12 @@
             <div>
                 <h1>Ingin Belajar Bahasa Isyarat? </h1>
                 <div class="paragrap">
-                    <p>Dengan<span> Ber</span><span>BISI</span><span>k </span>kalian bisabelajar mandiri dengan 
-                        kamus BISI dan berbagai fitur pencarian kata hingga alfabet  </p>
+                    <p>Dengan<span> Ber</span><span>BISI</span><span>k </span>kalian bisa belajar mandiri dengan 
+                        kamus BISINDO dan berbagai fitur pencarian kata hingga alfabet  </p>
                 </div>
                 <div class="hashtag">
                     <p>#BerbahasaIsyaratIndonesiaAsik</p>
-                    <button class="btn">Kamus BISI</button>
+                    <button class="btn">Kamus BISINDO</button>
                 </div>
             </div>
            
@@ -119,7 +85,7 @@
         <div class="tes">
             <div class="gar1"></div>  
             <div class="judul">
-                <h1>Manfaat ber<span>BISI</span>DO</h1>
+                <h1>Manfaat ber<span>BISI</span>NDO</h1>
             </div>
             <div class="gar2"></div>
         </div>
@@ -184,7 +150,7 @@
                 <div class="box">
                     <img src="{{ asset('assets/1.png') }}" alt="">
                     <h2>Workshop</h2>
-                    <p>Sesi perkenalan Bisindo dimulai dari pengenalan budaya
+                    <p>Sesi perkenalan BISINDO dimulai dari pengenalan budaya
                          Tuli serta pengajaran Bisindo dasar
                     </p>
                     <br><br>
@@ -266,37 +232,7 @@
             </div>
           </div>
 
-          <!-- tentang kami end  -->
-
-          <!-- footer start  -->
-    <footer>
-        <div class="text">
-            <h1>#BerbahasaIsyaratIndonesiaAsik</h1>
-            <p>
-                Kami berupaya memberikan aksesibilitas dan inklusi dalam mempelajari bahasa isyarat melalui 
-                platform pembelajaran yang mudah diakses dan berorientasi pasa pengguna dengan inovasi dan 
-                pengetahuan mendalam tentang bahasa insyarat
-            </p>
-        </div>
-
-        <hr>
-
-        <div class="contact">
-            <pre>+62 89732706488  |  berbisik@gmail.com</pre>
-        </div>
-
-        <div class="social">
-            <a href=""><img src="{{ asset('assets/instagram.png') }}" alt="logo insta"></a>
-            <a href=""><img src="{{ asset('assets/twit.png') }}" alt="logo twitter"></a>
-            <a href=""><img src="{{ asset('assets/fb.png') }}" alt="logo facebook"></a>
-        </div>
-
-        <div class="copyRight">
-            <img src="{{ asset('assets/cr.png') }}" alt="credit"><p>2024 Ber<span>BISI</span>k</p>
-        </div>
-    </footer>
-        
-    <!-- footer end  -->   
+          <!-- tentang kami end  --> 
     
     @endsection
 </body>

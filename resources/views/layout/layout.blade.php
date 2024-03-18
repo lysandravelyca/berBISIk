@@ -18,19 +18,19 @@
             <ul class="nav-menu">
 
                 <li class="nav-item">
-                    <a href="/Code/Home/Home.html" class="nav-link">Beranda</a>
+                    <a href="{{asset('')}}" class="nav-link">Beranda</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Code/Product/product.html" class="nav-link">Kamus</a>
+                    <a href="{{asset('kamus')}}" class="nav-link">Kamus</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Code/Promotion/promotion.html" class="nav-link">Acara</a>
+                    <a href="{{asset('acara')}}" class="nav-link">Acara</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Code/About Us/About Us.html" class="nav-link">Tentang Kami</a>
+                    <a href="{{asset('tentangKami')}}" class="nav-link">Tentang Kami</a>
                 </li>
 
                 <li class="nav-item">
