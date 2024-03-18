@@ -66,7 +66,7 @@
             <div>
                 <h1>Ingin Belajar Bahasa Isyarat? </h1>
                 <div class="paragrap">
-                    <p>Dengan<span> Ber</span><span>BISI</span><span>k </span>kalian bisabelajar mandiri dengan 
+                    <p>Dengan<span> Ber</span><span>BISI</span><span>k </span>kalian bisa belajar mandiri dengan 
                         kamus BISI dan berbagai fitur pencarian kata hingga alfabet  </p>
                 </div>
                 <div class="hashtag">
