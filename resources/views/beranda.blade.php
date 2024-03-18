@@ -180,7 +180,7 @@
                 <div class="box">
                     <img src="{{ asset('assets/4.png') }}" alt="">
                     <h2>Kelas Daring</h2>
-                    <p>Sesi pembelajaran Bisindo secara daring bersama team <span>Ber</span><span>BISI</span><span>k</span></p>
+                    <p>Sesi pembelajaran BISINDO secara daring bersama tim <span>Ber</span><span>BISI</span><span>k</span></p>
                     <br><br><br>
                     <a href="#">Lebih Detail ></a>
                 </div>
