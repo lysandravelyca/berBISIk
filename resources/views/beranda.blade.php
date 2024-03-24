@@ -173,7 +173,7 @@
                     <p>Bertemu secara daring dengan narasumber untuk 
                         mengetahui lebih lanjut tentang bahasa isyarat
                     </p>
-                    <br><br>
+                    <br>
                     <a href="#">Lebih Detail ></a>
                 </div>
 
@@ -181,7 +181,7 @@
                     <img src="{{ asset('assets/4.png') }}" alt="">
                     <h2>Kelas Daring</h2>
                     <p>Sesi pembelajaran BISINDO secara daring bersama tim <span>Ber</span><span>BISI</span><span>k</span></p>
-                    <br><br><br>
+                    <br><br>
                     <a href="#">Lebih Detail ></a>
                 </div>
             </div>
