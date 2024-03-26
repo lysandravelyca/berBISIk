@@ -37,6 +37,8 @@
                 </div>
                 <div class="hashtag">
                     <p>#BerbahasaIsyaratIndonesiaAsik</p>
+                </div>
+                <div>
                     <button class="btn">Kamus BISINDO</button>
                 </div>
             </div>
