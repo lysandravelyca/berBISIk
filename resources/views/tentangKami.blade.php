@@ -6,7 +6,11 @@
     <!-- tes -->
     <title>Tentang Kami</title>
 </head>
+
+@extends('layout/layout')
+
 <body>
-    
+    @section('content')
+    @endsection
 </body>
 </html>

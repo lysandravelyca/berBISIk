@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamus BISINDO</title>
 </head>
+
+@extends('layout/layout')
+
 <body>
+    @section('content')
     <div>
         <button>HURUF</button>
         <button>KATA DAN KALIMAT</button>
@@ -37,5 +41,7 @@
             
         </div>
     </div>
+
+    @endsection
 </body>
 </html>
