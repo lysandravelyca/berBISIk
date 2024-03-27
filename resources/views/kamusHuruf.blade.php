@@ -38,8 +38,8 @@
     </div>
 
     <div>
-        <h2 class="katadsr">KATA DASAR BAHASA ISYARAT</h2>
-        <div class = "kata-dasar">
+        <h2 class="hurufdsr">HURUF DASAR BAHASA ISYARAT</h2>
+        <div class = "huruf">
             <div class="container2">
                 <div class="kotak">
                     <img src="{{ asset('assets/a.png') }}" alt="a">

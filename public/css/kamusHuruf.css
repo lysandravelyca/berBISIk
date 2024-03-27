@@ -69,7 +69,7 @@
     color: #5F2A5D;
 }
 
-.katadsr{
+.hurufdsr{
     color: #5F2A5D;
     text-align: center;
     font-size: 48px;
@@ -89,14 +89,16 @@
     margin-bottom: 2.3%;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .kotak img{
+    position: relative;
     display: block;
     max-width: 100%; 
     max-height: 100%; 
     object-fit: cover;
-    z-index: -1;
+    z-index: 3;
 }
 
 .teks {
@@ -104,7 +106,7 @@
     top: 50%; /* Mengatur posisi teks di tengah vertikal kotak */
     left: 65%; /* Mengatur posisi teks di tengah horizontal kotak */
     transform: translate(-50%, -50%); /* Menggeser teks ke tengah kotak */
-    z-index: 1; /* Menempatkan teks di atas gambar */
+    z-index: 2; /* Menempatkan teks di atas gambar */
     font-size: 250px; /* Sesuaikan ukuran font sesuai kebutuhan */
     color: rgb(255, 255, 255);
     font-weight: 550;
