@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamus BISINDO</title>
+    <title>Kamus Kata BISINDO</title>
 </head>
 
 @extends('layout/layout')
@@ -45,12 +45,24 @@
         <h2 class="katadsr">KATA DASAR BAHASA ISYARAT</h2>
         <div class = "kata-dasar">
             <div class="container1">
-                <div class="kotak"></div>
-                <div class="kotak"></div>
-                <div class="kotak"></div>
-                <div class="kotak"></div>
-                <div class="kotak"></div>
-                <div class="kotak"></div>
+                <div class="kotak">
+                    <img src="{{ asset('assets/halo.png') }}" alt="halo">
+                </div>
+                <div class="kotak">
+                    <img src="{{ asset('assets/hari.png') }}" alt="hari">
+                </div>
+                <div class="kotak">
+                <img src="{{ asset('assets/aku.png') }}" alt="aku">
+                </div>
+                <div class="kotak">
+                <img src="{{ asset('assets/teman-teman.png') }}" alt="teman-teman">
+                </div>
+                <div class="kotak">
+                <img src="{{ asset('assets/tuli.png') }}" alt="tuli">
+                </div>
+                <div class="kotak">
+                <img src="{{ asset('assets/selamat.png') }}" alt="selamat">
+                </div>
                 <div class="kotak"></div>
                 <div class="kotak"></div>
                 <div class="kotak"></div>
