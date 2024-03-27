@@ -9,7 +9,7 @@
     border-radius: 25px;
     font-weight: bold;
 	margin-top: 2%;  
-    margin-left: 5%;
+    margin-left: 1%;
 }
 
 .btnksg{
@@ -23,7 +23,7 @@
     border-radius: 25px;
     font-weight: bold;
 	margin-top: 2%;  
-    margin-left: 1%;
+    margin-left: 5%;
 }
 
 .judul{
@@ -87,9 +87,26 @@
     margin: 5px;
     margin-left: 2.3%;
     margin-bottom: 2.3%;
+    position: relative;
+    overflow: hidden;
 }
 
 .kotak img{
+    display: block;
     max-width: 100%; 
     max-height: 100%; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+.teks {
+    position: absolute;
+    top: 50%; /* Mengatur posisi teks di tengah vertikal kotak */
+    left: 65%; /* Mengatur posisi teks di tengah horizontal kotak */
+    transform: translate(-50%, -50%); /* Menggeser teks ke tengah kotak */
+    z-index: 1; /* Menempatkan teks di atas gambar */
+    font-size: 250px; /* Sesuaikan ukuran font sesuai kebutuhan */
+    color: rgb(255, 255, 255);
+    font-weight: 550;
+    pointer-events: none
 }

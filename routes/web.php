@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KamusController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +30,10 @@ Route::get('/acara', function(){
 Route::get('/tentangKami', function(){
     return view('tentangKami');
 });
+
+Route::get('/kamusHuruf', [KamusController::class, 'kamusHuruf'])->name('kamus.huruf');
+
+Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus');
+
+
+
