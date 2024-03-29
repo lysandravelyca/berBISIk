@@ -30,7 +30,7 @@
         <div class="search-box">
             <input class="search" type="text"
                 placeholder="Masukkan Huruf"
-                id="input-word"/>
+                id="input-word" name="search" value="{{ isset($search) ? $search : ''}}"/>
             <button id="search-btn" class="btnsearch">Cari</button>
         </div>
 
