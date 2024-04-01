@@ -1,31 +1,17 @@
+@extends('layout/layout')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BerBISIk</title>
-</head>
-
-@extends('layout/layout')
-
-
-<body>
-    <!-- css  -->
     <link rel="stylesheet" href="{{ asset('css/homePage.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <!-- css end  -->
-   
-    <!-- js  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <!-- js end  -->
-    <title>BerBISIk</title>
 </head>
-<body>
-    @section('content')
+</html>
 
-     <!-- Main Start -->
+@section('title', 'Beranda')
+
+@section('content')
 
     <div class="Home">
         <div class="mainSlide">
@@ -265,4 +251,4 @@ $(".step04").click( function() {
 	$(".production").addClass("active").siblings().removeClass("active");
 });
     </script>
-</html>
+

@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamus Kata BISINDO</title>
-</head>
-
 @extends('layout/layout')
+
+@section('title', 'Kamus')
 
 <body>
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('css/kamusHuruf.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-
+</body>
 
     @section('content')
     <div>
@@ -30,7 +22,7 @@
         <div class="search-box">
             <input class="search" type="text"
                 placeholder="Masukkan Huruf"
-                id="input-word"/>
+                id="input-word" name="search" value="{{ isset($search) ? $search : ''}}"/>
             <button id="search-btn" class="btnsearch">Cari</button>
         </div>
 
@@ -150,6 +142,5 @@
         </div>
     </div>
 
-    @endsection
-</body>
-</html>
+@endsection
+
