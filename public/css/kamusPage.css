@@ -77,7 +77,13 @@
     margin-bottom: 3%;
 }
 
+.container1{
+    display: inline-block;
+}
 
+.kata-dasar{
+    text-align: center;
+}
   
 .kotak {
     width: 170px; 
