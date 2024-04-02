@@ -11,8 +11,11 @@
     <div>
         <form action="{{ route('kamus.huruf') }}">
             <button type="submit" class="btnfull">HURUF</button>
-            <button class="btnksg">KATA DAN KALIMAT</button>
+            <label for="" class="btnksg">KATA DAN KALIMAT</label>
         </form>
+
+        
+        {{-- <button class="btnksg">KATA DAN KALIMAT</button> --}}
         
     </div>
     

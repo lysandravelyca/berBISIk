@@ -10,7 +10,8 @@
     @section('content')
     <div>
         <form action="{{ route('kamus') }}">
-            <button class="btnksg">HURUF</button>
+            <label for="" class="btnksg">HURUF</label>
+            {{-- <button class="btnksg">HURUF</button> --}}
             <button type="submit" class="btnfull">KATA DAN KALIMAT</button>
         </form>
         
