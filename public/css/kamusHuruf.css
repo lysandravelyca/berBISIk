@@ -44,7 +44,13 @@
 }
 
 
+.container2{
+    display: inline-block;
+}
 
+.huruf{
+    text-align: center;
+}
 
 
 .btnsearch{
