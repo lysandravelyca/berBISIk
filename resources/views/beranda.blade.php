@@ -52,7 +52,7 @@
                 <div class="judulBisi">
                     <h1>BISI<span>NDO</span></h1>
                     <div class="txtBisi">
-                        <p>merupakan <span>bahasa ibu</span> yang tumbuh secara alami pada kalangan komunitas Tuli di Indonesia.  </p>
+                        <p>merupakan <span>bahasa ibu</span> yang tumbuh secara alami pada kalangan komunitas Tuli di Indonesia.</p>
                     </div>
                     <div class="txtBisi2">
                         <p>Tidak ada batasan dalam berkomunikasi! Di Indonesia, 
