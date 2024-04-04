@@ -10,8 +10,8 @@
     @section('content')
     <div>
         <form action="{{ route('kamus.huruf') }}">
-            <button type="submit" class="btnfull">HURUF</button>
-            <label for="" class="btnksg">KATA DAN KALIMAT</label>
+            <button type="submit" class="btnksg">HURUF</button>
+            <label for="" class="btnfull">KATA DAN KALIMAT</label>
         </form>
 
         

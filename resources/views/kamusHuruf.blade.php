@@ -10,14 +10,14 @@
     @section('content')
     <div>
         <form action="{{ route('kamus') }}">
-            <label for="" class="btnksg">HURUF</label>
+            <label for="" class="btnfull">HURUF</label>
             {{-- <button class="btnksg">HURUF</button> --}}
-            <button type="submit" class="btnfull">KATA DAN KALIMAT</button>
+            <button type="submit" class="btnksg">KATA DAN KALIMAT</button>
         </form>
         
     </div>
     
-    <h2 class="judul">PENCARIAN HURUF</h2>
+    {{-- <h2 class="judul">PENCARIAN HURUF</h2>
 
     <div class="searchcontainer">
         <div class="search-box">
@@ -28,7 +28,7 @@
         </div>
 
         
-    </div>
+    </div> --}}
 
     <div>
         <h2 class="hurufdsr">HURUF DASAR BAHASA ISYARAT</h2>
