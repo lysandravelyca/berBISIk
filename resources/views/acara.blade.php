@@ -2,12 +2,15 @@
 
 @section('title', 'Acara')
 
+<body>
+    <!-- css -->
+    <link rel="stylesheet" href="{{ asset('css/acara.css') }}">
+</body>
+
 @section('content')
 {{-- insert code here --}}
 
 <div class="search">
-    <img src="{{asset('assets/acara/download (2) 1.png')}}" alt="">
-
     <div class="text-search">
         <h2>Yuk, intip acara menarik</h2>
         <h1>Ber<span>BISI</span>k!</h1>
@@ -15,7 +18,7 @@
 
     <div class="searchcontainer">
         <div class="search-box">
-            <input class="search" type="text"
+            <input class="search-box2" type="text"
                 placeholder="Cari program"
                 id="input-word"/>
             <button id="search-btn" class="btnsearch">Cari</button>
