@@ -37,13 +37,13 @@
             
            
             <div class="desc_kelas">
-                <p>Tipe: Kelas</p>
-                <p>Judul Kelas</p>
-                <p>7/10 sesi</p>
+                <p class="tipe_kelas">Tipe: Kelas</p>
+                <p class="judul_kelas">Judul Kelas</p>
+                <p class="sesi_kelas">7/10 sesi</p>
             </div>
 
             <div class="persen">
-
+                {{-- ini progress barnya --}}
             </div>
         </div>
     </div>
