@@ -48,6 +48,38 @@
     color: #FF885E;
 }
 
-/* .progress{
-    background-color: ;
-} */
+.progress{
+    background: linear-gradient(to bottom, #F5DDC3, #FBF3EA);
+    padding: 2% 5% 20%;
+    border-radius: 0 0 300px 300px;
+}
+
+.progress h2{
+    color: #5F2A5D;
+    font-size: 32px;
+}
+
+.progres_kelas{
+    background-color: white;
+    width: 415px;
+    height: 112px;
+    padding: 1%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tipe_kelas{
+    font-size: 14px;
+    font-weight: 500;
+    color: #5F2A5D;
+}
+
+.judul_kelas{
+    font-weight: bold;
+}
+
+.sesi_kelas{
+    font-size: 14px;
+}
