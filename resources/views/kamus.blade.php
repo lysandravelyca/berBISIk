@@ -22,24 +22,48 @@
     <h2 class="judul">PENCARIAN KATA ATAU KALIMAT</h2>
 
     <div class="searchcontainer">
-        <div class="search-box">
-            <input class="search" type="text"
-                placeholder="Masukkan Kata atau Kalimat"
-                id="input-word"/>
-            <button id="search-btn" class="btnsearch">Cari</button>
-        </div>
-
-        <div class="result" id="result">
-            <p class="res">Bahasa Isyarat dari "input user"</p>
-
-            {{-- ini kayaknya pake ini --}}
-            {{-- @@foreach ($collection as $item)
+        <form action="" method="GET">
+            <div class="search-box">
+                <input class="search" name="keyword" type="text"
+                    placeholder="Masukkan Kata atau Kalimat"
+                    id="input-word"/>
+                <button id="search-btn" class="btnsearch">Cari</button>
+            </div>
+        </form>
+    
+            <div class="result" id="result">
+                <p class="res">Bahasa Isyarat dari</p>
+                <div class="container1">
+                    @foreach ($kamusCari as $kata)
+                        <div class="kotak">
+                        <img src="{{ asset($kata->picture) }}" alt="{{ $kata->word }}">
+                        <p>{{ $kata->word }}</p>
+                    @endforeach
+                </div>
+                    
+                </div>
+                {{-- {{ $kamusCari }} --}}
+                {{-- ini kayaknya pake ini --}}
                 
-            @endforeach --}}
-        </div>
+            </div>
+       
     </div>
 
     <div>
+        <h2 class="katadsr">KATA DASAR BAHASA ISYARAT</h2>
+        <div class="kata-dasar">
+            <div class="container1">
+                @foreach ($daftarKamus as $kata)
+                <div class="kotak">
+                    <img src="{{ asset($kata->picture) }}" alt="{{ $kata->word }}">
+                    <p>{{ $kata->word }}</p>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    {{-- <div>
         <h2 class="katadsr">KATA DASAR BAHASA ISYARAT</h2>
         <div class = "kata-dasar">
             <div class="container1">
@@ -100,6 +124,6 @@
             </div>
             
         </div>
-    </div>
+    </div> --}}
 
 @endsection

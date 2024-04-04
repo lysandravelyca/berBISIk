@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KamusController;
+use App\Http\Controllers\DictionaryController;
 
 
 /*
@@ -37,7 +38,9 @@ Route::get('/profil', function(){
 
 Route::get('/kamusHuruf', [KamusController::class, 'kamusHuruf'])->name('kamus.huruf');
 
-Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus');
+// Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus');
+
+Route::get('/kamus', [DictionaryController::class, 'index']);
 
 
 
