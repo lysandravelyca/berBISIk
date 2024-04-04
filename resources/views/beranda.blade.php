@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BerBISIk</title>
+      <!-- js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+     <!-- js end  -->
+
+
+    @extends('layout/layout')
+
 </head>
-
-@extends('layout/layout')
-
-
 <body>
     <!-- css  -->
     <link rel="stylesheet" href="{{ asset('css/homePage.css') }}">
@@ -16,18 +20,15 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <!-- css end  -->
    
-    <!-- js  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <!-- js end  -->
+  
     <title>BerBISIk</title>
-</head>
-<body>
-    @section('content')
+
+  
+        @section('content')
 
      <!-- Main Start -->
 
-    <div class="Home">
+        <div class="Home">
         <div class="mainSlide">
             <div>
                 <h1>Ingin Belajar Bahasa Isyarat? </h1>
@@ -50,7 +51,7 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
           <!-- Main end -->
 
           <!-- bisindo start  -->
@@ -238,31 +239,39 @@
     
     @endsection
 </body>
-     <script>
-    
-    $(".step").click( function() {
-	$(this).addClass("active").prevAll().addClass("active");
-	$(this).nextAll().removeClass("active");
-});
 
-$(".step01").click( function() {
-	$("#line-progress").css("width", "3%");
-	$(".discovery").addClass("active").siblings().removeClass("active");
-});
+<script>
+		
+		$(".step").click( function() {
+		$(this).addClass("active").prevAll().addClass("active");
+		$(this).nextAll().removeClass("active");
+	});
 
-$(".step02").click( function() {
-	$("#line-progress").css("width", "33%");
-	$(".strategy").addClass("active").siblings().removeClass("active");
-});
+	$(".step01").click( function() {
+		$("#line-progress").css("width", "3%");
+		$(".discovery").addClass("active").siblings().removeClass("active");
+	});
 
-$(".step03").click( function() {
-	$("#line-progress").css("width", "66%");
-	$(".creative").addClass("active").siblings().removeClass("active");
-});
+	$(".step02").click( function() {
+		$("#line-progress").css("width", "25%");
+		$(".strategy").addClass("active").siblings().removeClass("active");
+	});
 
-$(".step04").click( function() {
-	$("#line-progress").css("width", "100%");
-	$(".production").addClass("active").siblings().removeClass("active");
-});
+	$(".step03").click( function() {
+		$("#line-progress").css("width", "50%");
+		$(".creative").addClass("active").siblings().removeClass("active");
+	});
+
+	$(".step04").click( function() {
+		$("#line-progress").css("width", "75%");
+		$(".production").addClass("active").siblings().removeClass("active");
+	});
+
+	$(".step05").click( function() {
+		$("#line-progress").css("width", "100%");
+		$(".analysis").addClass("active").siblings().removeClass("active");
+	});
+
+ 
     </script>
 </html>

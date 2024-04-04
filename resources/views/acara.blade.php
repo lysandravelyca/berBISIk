@@ -10,6 +10,10 @@
 
 <body>
     @section('content')
+
+
+    
+    <div>h1</div>
     @endsection
 </body>
 </html>
