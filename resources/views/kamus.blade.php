@@ -32,21 +32,22 @@
         </form>
     
             <div class="result" id="result">
-                <p class="res">Bahasa Isyarat dari</p>
-                <div class="container1">
-                    @foreach ($kamusCari as $kata)
-                        <div class="kotak">
-                        <img src="{{ asset($kata->picture) }}" alt="{{ $kata->word }}">
-                        <p>{{ $kata->word }}</p>
-                    @endforeach
-                </div>
-                    
-                </div>
+                @if(isset($kamusCari) && count($kamusCari) > 0)
+                    <p class="res">Bahasa Isyarat dari</p>
+                    <div class="container1">
+                        @foreach ($kamusCari as $kata)
+                            <div class="kotak">
+                            <img src="{{ asset($kata->picture) }}" alt="{{ $kata->word }}">
+                                <div class="boxkata">
+                                    <p>{{ $kata->word }}</p>
+                                </div>            
+                            </div>
+                        @endforeach                      
+                    </div>
                 {{-- {{ $kamusCari }} --}}
                 {{-- ini kayaknya pake ini --}}
-                
-            </div>
-       
+                @endif
+            </div>     
     </div>
 
     <div>
@@ -56,7 +57,9 @@
                 @foreach ($daftarKamus as $kata)
                 <div class="kotak">
                     <img src="{{ asset($kata->picture) }}" alt="{{ $kata->word }}">
-                    <p>{{ $kata->word }}</p>
+                    <div class="boxkata">
+                        <p>{{ $kata->word }}</p>
+                    </div>     
                 </div>
                 @endforeach
             </div>
