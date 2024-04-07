@@ -22,7 +22,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            KamusHurufSeeder::class
+            DictionarySeeder::class,
+            InstructorSeeder::class,
+            EventTypeSeeder::class,
+            EventSeeder::class
         ]);
     }
 }
