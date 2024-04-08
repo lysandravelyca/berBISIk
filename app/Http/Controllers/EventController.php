@@ -9,7 +9,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        $event = Event::with('instructors', 'event_types')->get();
+        $event = Event::with('instructors', 'event_types', 'event_schedules')->get();
         return view('acara', ['daftarAcara' => $event]);
     }
 }

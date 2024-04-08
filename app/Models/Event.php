@@ -18,4 +18,14 @@ class Event extends Model
     {
         return $this->belongsTo(EventType::class, 'event_type_id', 'id');
     }
+
+    public function event_schedules()
+    {
+        return $this->hasMany(EventSchedule::class, 'event_id', 'id');
+    }
+
+    public function event_details()
+    {
+        return $this->hasOne(EventDetail::class);
+    }
 }
