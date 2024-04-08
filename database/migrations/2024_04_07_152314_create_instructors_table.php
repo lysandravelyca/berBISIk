@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('instructors', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255)->required();
+            $table->string('job', 255)->required();
             $table->string('description', 500)->required();
+            $table->string('photo', 255)->nullable();
             $table->timestamps();
         });
     }

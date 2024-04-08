@@ -35,7 +35,9 @@ class EventFactory extends Factory
         return [
             'event_type_id' => $faker->randomElement($types),
             'instructor_id' => $faker->randomElement($instructor),
-            'title' => $faker->randomElement($titles)
+            'title' => $faker->randomElement($titles),
+            'price' => $faker->numberBetween(50000, 150000),
+            'location' => $faker->address()
         ];
     }
 }

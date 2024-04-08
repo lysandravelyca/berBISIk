@@ -20,6 +20,9 @@ return new class extends Migration
             $table->unsignedBigInteger('instructor_id')->required();
             $table->foreign('instructor_id')->references('id')->on('instructors')->onDelete('restrict');
             $table->string('title', 255)->required();
+            $table->integer('price')->unsigned()->required();
+            $table->string('location', 255)->required();
+            $table->string('photo', 255)->nullable();
             $table->timestamps();
         });
     }

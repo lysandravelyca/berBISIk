@@ -17,7 +17,8 @@ class InstructorFactory extends Factory
 
         return [
             'name' => $faker->name(),
-            'description' => $faker->text(300)
+            'description' => $faker->text(300),
+            'job' => $faker->jobTitle()
         ];
     }
 }
