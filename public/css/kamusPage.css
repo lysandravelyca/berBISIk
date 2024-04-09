@@ -80,12 +80,6 @@
     flex-wrap: wrap;
 }
 
-/* .kata-dasar{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-} */
-
 .result .container1 {
     justify-content: start;
     flex-direction: row;
