@@ -14,12 +14,13 @@ class DictionaryController extends Controller
         $keyword = explode(' ', $keywords);
         $dictionarySearch = new Collection();
 
-        foreach($keyword as $word){
-            $dictionarySearch = $dictionarySearch->concat(Dictionary::where('word', 'LIKE', '%'.$word.'%')->get());
+        if($keywords != null){
+            foreach($keyword as $word){
+                $dictionarySearch = $dictionarySearch->concat(Dictionary::where('word', 'LIKE', '%'.$word.'%')->get());
+            }
         }
         
-        // dd($dictionarySearch);
-        // dd($keyword);
+        
         $dictionary = Dictionary::all();
         return view('kamus', ['daftarKamus' => $dictionary, 'kamusCari' => $dictionarySearch]);
     }

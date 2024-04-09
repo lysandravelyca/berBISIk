@@ -56,11 +56,54 @@
     </div>
 
     <div class="container">
+        @foreach ($daftarAcara as $acara)
         <div class="tipe">
-            <p>Tipe: Kelas/Seminar/Webinar</p>
+            <p>{{ $acara->event_types->name }}</p>
         </div>
 
         <div class="kelas_card">
+            <img src="" alt="">
+            <h3>{{ $acara->title }}</h3>
+            {{-- <h3>Lorem ipsum dolor sit amet</h3> --}}
+
+            <div class="profil_pengajar">
+                <img src="" alt="">
+            </div>
+
+            <div class="deskripsi_pengajar">
+                <p>{{ $acara->instructors->name }}</p>
+                <p>{{ $acara->instructors->job }}</p>
+            </div>
+
+            <div class="tanggal">
+                <img src="" alt="">
+                <h3>5 Maret 2024 - 7 May 2024</h3>
+            </div>
+
+            <div class="jam">
+                <img src="" alt="">
+                <h3>16.00 - 18.00 WIB</h3>
+            </div>
+
+            <div class="rating">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <h3>4.0</h3>
+            </div>
+
+            <p>Rp{{ $acara->price/1000 }}</p>
+        </div>
+    </div>
+        @endforeach
+        
+        {{-- <div class="tipe">
+            <p>Tipe: Kelas/Seminar/Webinar</p>
+        </div> --}}
+
+        {{-- <div class="kelas_card">
             <img src="" alt="">
             <h3>Judul Kelas/Seminar/Webinar</h3>
             <h3>Lorem ipsum dolor sit amet</h3>
@@ -94,8 +137,8 @@
             </div>
 
             <p>FREE/Total Pembayaran</p>
-        </div>
-    </div>
+        </div> --}}
+    {{-- </div> --}}
 </div>
 
 <div class="relawan">

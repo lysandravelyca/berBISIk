@@ -107,24 +107,23 @@
 
 .boxkata{
     position: absolute;
-    bottom: -22;
-    height: 42px;
+    bottom: -15;
+    /* height: 42px; */
     width: 170px;
     left: -10;
     font-size: 14px;
     font-weight: bold;
     padding: 10px;
-    padding-top: 20px;
-    padding-left: 20%;
+    padding-top: 15px;
     padding-right: 100%;
     background-image: url("../assets/dictionary/word/boxkata.png");
-    background-size: 60%;
+    background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
 }
 
 .boxkata p{
-    color: #F9EEE1;
+    color: white;
 }
 
 

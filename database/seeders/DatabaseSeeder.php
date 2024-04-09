@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\EventDetail;
+use App\Models\EventSchedule;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +25,12 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            KamusHurufSeeder::class
+            DictionarySeeder::class,
+            InstructorSeeder::class,
+            EventTypeSeeder::class,
+            EventSeeder::class,
+            EventDetailSeeder::class,
+            EventScheduleSeeder::class
         ]);
     }
 }
