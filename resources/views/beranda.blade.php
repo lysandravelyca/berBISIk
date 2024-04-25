@@ -1,32 +1,17 @@
+@extends('layout/layout')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BerBISIk</title>
-      <!-- js  -->
+    <link rel="stylesheet" href="{{ asset('css/homePage.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-     <!-- js end  -->
-
-
-    @extends('layout/layout')
-
 </head>
-<body>
-    <!-- css  -->
-    <link rel="stylesheet" href="{{ asset('css/homePage.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <!-- css end  -->
-   
-  
-    <title>BerBISIk</title>
+</html>
 
-  
-        @section('content')
+@section('title', 'Beranda')
 
-     <!-- Main Start -->
+@section('content')
 
         <div class="Home">
         <div class="mainSlide">
@@ -67,7 +52,7 @@
                 <div class="judulBisi">
                     <h1>BISI<span>NDO</span></h1>
                     <div class="txtBisi">
-                        <p>merupakan <span>bahasa ibu</span> yang tumbuh secara alami pada kalangan komunitas Tuli di Indonesia.  </p>
+                        <p>merupakan <span>bahasa ibu</span> yang tumbuh secara alami pada kalangan komunitas Tuli di Indonesia.</p>
                     </div>
                     <div class="txtBisi2">
                         <p>Tidak ada batasan dalam berkomunikasi! Di Indonesia, 
@@ -274,4 +259,4 @@
 
  
     </script>
-</html>
+

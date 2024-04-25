@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamus Kata BISINDO</title>
-</head>
-
 @extends('layout/layout')
+
+@section('title', 'Kamus')
 
 <body>
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('css/kamusPage.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-
+</body>
 
     @section('content')
     <div>
         <form action="{{ route('kamus.huruf') }}">
-            <button type="submit" class="btnfull">HURUF</button>
-            <button class="btnksg">KATA DAN KALIMAT</button>
+            <button type="submit" class="btnksg">HURUF</button>
+            <label for="" class="btnfull">KATA DAN KALIMAT</label>
         </form>
+
+        
+        {{-- <button class="btnksg">KATA DAN KALIMAT</button> --}}
         
     </div>
     
@@ -107,6 +102,4 @@
         </div>
     </div>
 
-    @endsection
-</body>
-</html>
+@endsection

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>BerBISIk | @yield('title') </title>
 
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
@@ -26,23 +26,23 @@
             <ul class="nav-menu">
 
                 <li class="nav-item">
-                    <a href="{{asset('')}}" class="nav-link">Beranda</a>
+                    <a href="/" class="nav-link">Beranda</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{asset('kamus')}}" class="nav-link">Kamus</a>
+                    <a href="/kamus" class="nav-link">Kamus</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{asset('acara')}}" class="nav-link">Acara</a>
+                    <a href="/acara" class="nav-link">Acara</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{asset('tentangKami')}}" class="nav-link">Tentang Kami</a>
+                    <a href="/tentangKami" class="nav-link">Tentang Kami</a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Code/Contact Us/Contact Us.html" class="nav-link">Profile</a>
+                    <a href="/profil" class="nav-link">Profile</a>
                 </li>
             </ul>
         </nav>

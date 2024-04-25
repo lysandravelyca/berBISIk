@@ -31,6 +31,10 @@ Route::get('/tentangKami', function(){
     return view('tentangKami');
 });
 
+Route::get('/profil', function(){
+    return view('profil');
+});
+
 Route::get('/kamusHuruf', [KamusController::class, 'kamusHuruf'])->name('kamus.huruf');
 
 Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus');

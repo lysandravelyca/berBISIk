@@ -1,30 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamus Kata BISINDO</title>
-</head>
-
 @extends('layout/layout')
+
+@section('title', 'Kamus')
 
 <body>
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('css/kamusHuruf.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-
+</body>
 
     @section('content')
     <div>
         <form action="{{ route('kamus') }}">
-            <button class="btnksg">HURUF</button>
-            <button type="submit" class="btnfull">KATA DAN KALIMAT</button>
+            <label for="" class="btnfull">HURUF</label>
+            {{-- <button class="btnksg">HURUF</button> --}}
+            <button type="submit" class="btnksg">KATA DAN KALIMAT</button>
         </form>
         
     </div>
     
-    <h2 class="judul">PENCARIAN HURUF</h2>
+    {{-- <h2 class="judul">PENCARIAN HURUF</h2>
 
     <div class="searchcontainer">
         <div class="search-box">
@@ -35,7 +28,7 @@
         </div>
 
         
-    </div>
+    </div> --}}
 
     <div>
         <h2 class="hurufdsr">HURUF DASAR BAHASA ISYARAT</h2>
@@ -150,6 +143,5 @@
         </div>
     </div>
 
-    @endsection
-</body>
-</html>
+@endsection
+
