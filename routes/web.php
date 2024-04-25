@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\KamusController;
+use App\Http\Controllers\DictionaryController;
 
 
 /*
@@ -23,9 +25,9 @@ Route::get('/kamus', function(){
     return view('kamus');
 });
 
-Route::get('/acara', function(){
-    return view('acara');
-});
+// Route::get('/acara', function(){
+//     return view('acara');
+// });
 
 Route::get('/tentangKami', function(){
     return view('tentangKami');
@@ -37,7 +39,9 @@ Route::get('/profil', function(){
 
 Route::get('/kamusHuruf', [KamusController::class, 'kamusHuruf'])->name('kamus.huruf');
 
-Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus');
+// Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus');
 
+Route::get('/kamus', [DictionaryController::class, 'index']);
 
+Route::get('/acara', [EventController::class, 'index']);
 
