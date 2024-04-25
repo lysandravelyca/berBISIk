@@ -90,6 +90,7 @@
     background-image: url(../assets/acara/Group\ 42.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     margin: 78px;
     margin-top: -120px;
     /* width: 1286px; */
@@ -194,6 +195,7 @@
     background-image: url(../assets/acara/Group\ 427320762.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     margin: 78px;
     display: flex;
     align-items: flex-start;
@@ -215,7 +217,7 @@
     justify-content: left;
     /* margin: auto; */
     padding: 32px;
-    padding-bottom: 58px;
+    padding-bottom: 48px;
 }
 
 .judul_relawan h2{
