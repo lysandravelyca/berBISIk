@@ -44,4 +44,6 @@ Route::get('/kamusHuruf', [KamusController::class, 'kamusHuruf'])->name('kamus.h
 Route::get('/kamus', [DictionaryController::class, 'index'])->name('kamus');
 
 Route::get('/acara', [EventController::class, 'index']);
+Route::get('/acara/{id}', [EventController::class, 'show']);
+Route::get('/acara-add', [EventController::class, 'create']);
 

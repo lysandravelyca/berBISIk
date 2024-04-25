@@ -1,5 +1,5 @@
 .search{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../assets/acara/medium-shot-woman-working-with-computer.jpg");
+    background-image: url("../assets/acara/meeting.png");
     background-size: cover;
     /* background: rgba(255, 255, 255, 0.5); */
     height: 640px;

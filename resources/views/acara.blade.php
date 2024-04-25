@@ -58,9 +58,17 @@
         <h2>Kelas yang Tersedia</h2>
     </div>
 
+    <div>
+        <a href=""></a>
+    </div>
+
+    {{-- container tuh isinya card cardnya --}}
     <div class="container">
         @foreach ($daftarAcara as $acara)
 
+        <a href="acara/{{ $acara->id }}">
+
+        {{-- c2 isinya satu card --}}
         <div class="c2">
             <div class="tipe">
                 <p>{{ $acara->event_types->name }}</p>
