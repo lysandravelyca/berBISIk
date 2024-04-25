@@ -23,22 +23,22 @@ class EventScheduleFactory extends Factory
         $latestEventScheduleDate = EventSchedule::max('date');
 
         if ($latestEventScheduleDate == null) {
-            $date = $currentDate->format('Y-m-d');
+            $date = $currentDate;
         } else {
-            // $latestEventScheduleDate = new DateTime($latestEventScheduleDate); // Convert to DateTime object
-            // $latestEventScheduleDateString = $latestEventScheduleDate->format('Y-m-d');
             $latestDatePlusOne = (new DateTime($latestEventScheduleDate))->modify('+1 day');
             $endDateInterval = $latestDatePlusOne->modify('+7 days');
-            $date = $faker->dateTimeBetween($latestDatePlusOne, $endDateInterval)->format('Y-m-d');
+            $date = $faker->dateTimeBetween($latestDatePlusOne, $endDateInterval);
         }
 
-        $timeStart = date('H:00:00', strtotime('07:00:00') + ($faker->numberBetween(0, 11)*3600));
-        $timeEnd = date('H:00:00', strtotime($timeStart) + ($faker->numberBetween(1, 3)*3600));
+        $startHour = $faker->numberBetween(7, 17); 
+        $timeStartString = sprintf('%02d:00:00', $startHour); 
+        $endHour = $startHour + $faker->numberBetween(1, 4);
+        $timeEndString = sprintf('%02d:00:00', $endHour); 
 
         return [
             'date' => $date,
-            'time_start' => $timeStart,
-            'time_end' => $timeEnd
+            'time_start' => $timeStartString,
+            'time_end' => $timeEndString
         ];
     }
 }

@@ -77,12 +77,20 @@
 
             <div class="tanggal">
                 <img src="" alt="">
-                <h3>5 Maret 2024 - 7 May 2024</h3>
+                <h3>
+                    {{ $acara->event_schedules->first()->date->format('j M Y')}}
+                    @if ( count($acara->event_schedules) > 1)
+                        - {{ $acara->event_schedules->last()->date->format('j M Y') }}
+                    @endif
+                </h3>
+
+                
             </div>
 
             <div class="jam">
                 <img src="" alt="">
-                <h3>16.00 - 18.00 WIB</h3>
+                <h3>{{ substr($acara->event_schedules->first()->time_start, 0, -3) }} - 
+                    {{ substr($acara->event_schedules->first()->time_end, 0, -3)}} WIB</h3>
             </div>
 
             <div class="rating">
@@ -94,7 +102,7 @@
                 <h3>4.0</h3>
             </div>
 
-            <p>Rp{{ $acara->price/1000 }}</p>
+            <p>Rp{{ number_format($acara->price, 0,',', '.')  }}</p>
         </div>
     </div>
         @endforeach

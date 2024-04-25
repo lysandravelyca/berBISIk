@@ -2,20 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class EventSchedule extends Model
 {
     use HasFactory;
+    
+    protected $casts = [
+        'date' => 'date'
+    ];
 
-    /**
-     * Get the user that owns the EventSchedule
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    // public function events(): BelongsTo
-    // {
-    //     return $this->belongsTo(User::class, 'foreign_key', 'other_key');
-    // }
 }

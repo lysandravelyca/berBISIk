@@ -15,10 +15,24 @@ class InstructorFactory extends Factory
     {
         $faker = faker::create();
 
+        $job_titles = [
+            'Terjemah Bahasa Isyarat',
+            'Guru Bahasa Isyarat',
+            'Penerjemah Tuna Rungu',
+            'Asisten Komunikasi Bahasa Isyarat',
+            'Pelatih Komunikasi Tuna Rungu',
+            'Konselor Bahasa Isyarat',
+            'Interpreter Bahasa Isyarat',
+            'Koordinator Komunikasi Tuna Rungu',
+            'Pengajar Bahasa Isyarat',
+            'Komunikator Tuna Rungu'
+        ];
+        
+
         return [
             'name' => $faker->name(),
             'description' => $faker->text(300),
-            'job' => $faker->jobTitle()
+            'job' => $faker->randomElement($job_titles)
         ];
     }
 }
