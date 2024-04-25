@@ -56,7 +56,7 @@
     </div>
 
     <div>
-        <a href=""></a>
+        <a href="tambahAcara">Tambah Acara Baru</a>
     </div>
 
     @foreach ($daftarAcara as $acara)
