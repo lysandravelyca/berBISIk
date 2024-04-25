@@ -55,57 +55,63 @@
         <h2>Kelas yang Tersedia</h2>
     </div>
 
-    <div class="container">
-        @foreach ($daftarAcara as $acara)
-        <div class="tipe">
-            <p>{{ $acara->event_types->name }}</p>
-        </div>
-
-        <div class="kelas_card">
-            <img src="" alt="">
-            <h3>{{ $acara->title }}</h3>
-            {{-- <h3>Lorem ipsum dolor sit amet</h3> --}}
-
-            <div class="profil_pengajar">
-                <img src="" alt="">
-            </div>
-
-            <div class="deskripsi_pengajar">
-                <p>{{ $acara->instructors->name }}</p>
-                <p>{{ $acara->instructors->job }}</p>
-            </div>
-
-            <div class="tanggal">
-                <img src="" alt="">
-                <h3>
-                    {{ $acara->event_schedules->first()->date->format('j M Y')}}
-                    @if ( count($acara->event_schedules) > 1)
-                        - {{ $acara->event_schedules->last()->date->format('j M Y') }}
-                    @endif
-                </h3>
-
-                
-            </div>
-
-            <div class="jam">
-                <img src="" alt="">
-                <h3>{{ substr($acara->event_schedules->first()->time_start, 0, -3) }} - 
-                    {{ substr($acara->event_schedules->first()->time_end, 0, -3)}} WIB</h3>
-            </div>
-
-            <div class="rating">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <h3>4.0</h3>
-            </div>
-
-            <p>Rp{{ number_format($acara->price, 0,',', '.')  }}</p>
-        </div>
+    <div>
+        <a href=""></a>
     </div>
-        @endforeach
+
+    @foreach ($daftarAcara as $acara)
+        <a href="acara/{{ $acara->id }}">
+        <div class="container">
+            <div class="tipe">
+                <p>{{ $acara->event_types->name }}</p>
+            </div>
+
+            <div class="kelas_card">
+                <img src="" alt="">
+                <h3>{{ $acara->title }}</h3>
+                {{-- <h3>Lorem ipsum dolor sit amet</h3> --}}
+
+                <div class="profil_pengajar">
+                    <img src="" alt="">
+                </div>
+
+                <div class="deskripsi_pengajar">
+                    <p>{{ $acara->instructors->name }}</p>
+                    <p>{{ $acara->instructors->job }}</p>
+                </div>
+
+                <div class="tanggal">
+                    <img src="" alt="">
+                    <h3>
+                        {{ $acara->event_schedules->first()->date->format('j M Y')}}
+                        @if ( count($acara->event_schedules) > 1)
+                            - {{ $acara->event_schedules->last()->date->format('j M Y') }}
+                        @endif
+                    </h3>
+
+                    
+                </div>
+
+                <div class="jam">
+                    <img src="" alt="">
+                    <h3>{{ substr($acara->event_schedules->first()->time_start, 0, -3) }} - 
+                        {{ substr($acara->event_schedules->first()->time_end, 0, -3)}} WIB</h3>
+                </div>
+
+                <div class="rating">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <h3>4.0</h3>
+                </div>
+
+                <p>Rp{{ number_format($acara->price, 0,',', '.')  }}</p>
+            </div>
+        </div>
+        </a>
+    @endforeach
         
         {{-- <div class="tipe">
             <p>Tipe: Kelas/Seminar/Webinar</p>
