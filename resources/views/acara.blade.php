@@ -32,7 +32,7 @@
 
         {{-- @foreach($daftarAcara as $acara) --}}
         <div class="progres_kelas">
-            <div class="img_kelas">
+            <div class="img_progress">
                 <img src="" alt="">
             </div>
             
@@ -43,8 +43,9 @@
                 <p class="sesi_kelas">7/10 sesi</p>
             </div>
 
+            {{-- progress barnya --}}
             <div class="persen">
-                {{-- ini progress barnya --}}
+                <span class="value-percentage">0%</span>
             </div>
         </div>
         {{-- @endforeach --}}
@@ -214,5 +215,7 @@
     </div>
 </div>
 
+{{-- js --}}
+<script src="{{asset('js/acara.js') }}"></script>
 
 @endsection
