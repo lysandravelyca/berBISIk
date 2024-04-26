@@ -51,6 +51,12 @@
     flex-direction: column;
 }
 
+.judul{
+    
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
 
 
 .judul span{
@@ -72,7 +78,7 @@
 
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: center;
     font-size: 16px;
 }
@@ -113,8 +119,8 @@
 
 .visiKami{
 
-    margin-bottom: -12px;
-    margin-top: -12px;
+    margin-bottom: -35px;
+    margin-top: -40px;
     margin-left: 3%;
 }
 
@@ -135,7 +141,6 @@
     color: white;
     font-size: 265px;
     font-weight: bolder;
-    /* width:1000px; */
     line-height: 78%;
     
 }
@@ -152,7 +157,70 @@
 .misiKami{
 
     width: 65%;
-    margin-bottom: -12px;
-    margin-top: -12px;
+    margin-bottom: -35px;
+    margin-top: -50px;
 }
+
+.timKami{
+
+    display: flex;
+    position:relative;
+    align-items: center;
+    margin: 40px;
+    width:fit-content; 
+
+}
+
+.juduls h1{
+
+    margin-right: 22px;
+    font-size: 60px;
+    color: rgb(95, 42, 93);
+    font-weight: 600;
+
+}
+
+.bulet{
+
+    border-radius: 100%;
+    background-color:  #FF885E;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    z-index: -999;
+    right: 0;
+}
+
+.case{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+
+}
+
+.semua{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.semua img{
+
+    width: 60%;
+
+}
+
+.semua h1{
+
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(95, 42, 93);
+
+}
+
+
+
 

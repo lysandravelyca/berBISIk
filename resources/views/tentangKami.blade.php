@@ -76,6 +76,40 @@
                 pengetahuan dan pengalaman antar pengguna. </p>
         </div>
     </div>
+
+    <div class="case">
+        <div class="timKami">
+            <div class="juduls">
+                <h1>TIM KAMI</h1>
+            </div>
+
+            <div class="bulet">
+            </div>
+        </div>
+    </div>
+
+    <div class="track">
+
+        <div class="semua">
+            <div class="peserta">
+                <img src="assets/peserta.png">
+                <h1>378</h1>
+                <p>Peserta Program Kami</p>
+            </div>
+
+            <div class="provinsi">
+                <img src="assets/provinsi.png">
+                <h1>25</h1>
+                <p>Provinsi di Indonesia</p>
+            </div>
+            <div class="paket">
+                <img src="assets/paket.png">
+                <h1>32</h1>
+                <p>Paket Belajar</p>
+            </div>
+        </div>
+        
+    </div>
     
 </div>
 
