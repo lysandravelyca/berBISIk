@@ -17,32 +17,27 @@ class DictionarySeeder extends Seeder
     public function run()
     {
         Dictionary::truncate();
-        
-        $words = [
-            ['word' => 'halo', 'picture' => 'assets\dictionary\word\halo.png'],
-            ['word' => 'selamat', 'picture' => 'assets\dictionary\word\selamat.png'],
-            ['word' => 'hari', 'picture' => 'assets\dictionary\word\hari.png'],
-            ['word' => 'semua', 'picture' => 'assets\dictionary\word\semua.png'],
-            ['word' => 'aku', 'picture' => 'assets\dictionary\word\aku.png'],
-            ['word' => 'temanteman', 'picture' => 'assets\dictionary\word\temanteman.png'],
-            ['word' => 'bahasaisyarat', 'picture' => 'assets\dictionary\word\bahasaisyarat.png'],
-            ['word' => 'orang', 'picture' => 'assets\dictionary\word\orang.png'],
-            ['word' => 'indonesia', 'picture' => 'assets\dictionary\word\indonesia.png'],
-            ['word' => 'untuk', 'picture' => 'assets\dictionary\word\untuk.png'],
-            ['word' => 'disabilitas', 'picture' => 'assets\dictionary\word\disabilitas.png'],
-            ['word' => 'tema', 'picture' => 'assets\dictionary\word\tema.png'],
-            ['word' => 'internasional', 'picture' => 'assets\dictionary\word\internasional.png'],
-            ['word' => 'tahun', 'picture' => 'assets\dictionary\word\tahun.png'],
-            ['word' => 'tuli', 'picture' => 'assets\dictionary\word\tuli.png'],
-            ['word' => 'mengucapkan', 'picture' => 'assets\dictionary\word\mengucapkan.png'],
-            ['word' => 'tepuktangan', 'picture' => 'assets\dictionary\word\tepuktangan.png'],
-            ['word' => 'perempuan', 'picture' => 'assets\dictionary\word\perempuan.png']
-        ];
 
-        foreach ($words as $word){
+        $alphabets = [];
+        for ($i = 97; $i <= 122; $i++) {
+            $letter = chr($i); // Mengonversi kode ASCII menjadi huruf
+            $alphabets[] = ['word' => $letter, 'picture' => $letter . '.png'];
+        }
+
+        $wordsSample = ['halo', 'selamat', 'hari', 'semua', 'aku', 'temanteman', 'bahasaisyarat', 'orang', 'indonesia', 'untuk', 
+        'disabilitas', 'tema', 'internasional', 'tahun', 'tuli', 'mengucapkan', 'tepuktangan', 'perempuan'];
+
+        $words = [];
+        foreach($wordsSample as $word){
+            $words[] = ['word' => $word, 'picture' => $word . '.png'];
+        }
+
+        $merges = array_merge($alphabets, $words);
+
+        foreach ($merges as $merge){
             Dictionary::insert([
-                'word' => $word['word'],
-                'picture' => $word['picture'],
+                'word' => $merge['word'],
+                'picture' => $merge['picture'],
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ]);

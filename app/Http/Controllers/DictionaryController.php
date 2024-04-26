@@ -16,12 +16,21 @@ class DictionaryController extends Controller
 
         if($keywords != null){
             foreach($keyword as $word){
-                $dictionarySearch = $dictionarySearch->concat(Dictionary::where('word', 'LIKE', '%'.$word.'%')->get());
+                $found = Dictionary::where('word', 'LIKE', '%'.$word.'%')->get();
+                if($found->isEmpty()){
+                    $letters = str_split($word);
+                    foreach($letters as $letter){
+                        $found = $found->concat(Dictionary::where('word', $letter)->get());
+                    }
+                }
+                $dictionarySearch = $dictionarySearch->concat($found);
             }
         }
         
-        
-        $dictionary = Dictionary::all();
+        $dictionary = Dictionary::all()->reject(function ($item) {
+            return strlen($item->word) === 1;
+        });
+
         return view('kamus', ['daftarKamus' => $dictionary, 'kamusCari' => $dictionarySearch]);
     }
 }

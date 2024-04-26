@@ -33,7 +33,13 @@
                     <div class="container1">
                         @foreach ($kamusCari as $kata)
                             <div class="kotak">
-                            <img src="{{ asset($kata->picture) }}" alt="{{ $kata->word }}">
+                            @if (file_exists(public_path('assets/kamus/kata/' . $kata->picture)))
+                                <img src="{{ asset('assets/kamus/kata/'. $kata->picture) }}" alt="{{ $kata->word }}">
+                            @else
+                                <img src="{{ asset('assets/kamus/huruf/'. $kata->picture) }}" alt="{{ $kata->word }}">
+                                
+                            @endif
+                            
                                 <div class="boxkata">
                                     <p>{{ $kata->word }}</p>
                                 </div>            
@@ -50,7 +56,7 @@
             <div class="container1">
                 @foreach ($daftarKamus as $kata)
                 <div class="kotak">
-                    <img src="{{ asset($kata->picture) }}" alt="{{ $kata->word }}">
+                    <img src="{{ asset('assets/kamus/kata/'. $kata->picture) }}" alt="{{ $kata->word }}">
                     <div class="boxkata">
                         <p>{{ $kata->word }}</p>
                     </div>     
