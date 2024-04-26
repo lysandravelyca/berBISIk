@@ -5,6 +5,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\KamusController;
 use App\Http\Controllers\DictionaryController;
 use App\Http\Controllers\EventScheduleController;
+use App\Http\Controllers\DictionaryLetterController;
 
 
 /*
@@ -38,9 +39,9 @@ Route::get('/profil', function(){
     return view('profil');
 });
 
-Route::get('/kamusHuruf', [KamusController::class, 'kamusHuruf'])->name('kamus.huruf');
+Route::get('/kamusHuruf', [DictionaryLetterController::class, 'index'])->name('kamus.huruf');
 
-// Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus');
+// Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus')   ;
 
 Route::get('/kamus', [DictionaryController::class, 'index'])->name('kamus');
 

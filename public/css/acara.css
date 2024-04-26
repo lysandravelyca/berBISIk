@@ -190,6 +190,12 @@
 }
 
 .kelas_card{
+<<<<<<< HEAD
+    background-color: gray;
+    /* ini cuman buat ngebedain per event aja, nanti diedit saja */
+}
+
+=======
     background-color: white;    
     border-radius: 10px;
     margin: -15px 15px 0px;
@@ -302,3 +308,4 @@
     margin-left: 5px;
     color: gray;
 }
+>>>>>>> 71c1768d5e580ef90d336dda62d43dae7b9d5490
