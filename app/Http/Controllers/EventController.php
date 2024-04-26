@@ -32,26 +32,13 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-        $event = new Event;
-        $event->event_type_id = $request->event_type_id;
-        $event->instructor_id = $request->instructor_id;
-        $event->title = $request->title;
-        $event->price = $request->price;
-        $event->location = $request->location;
-        $event->photo = $request->photo;
-        $event->save();
+        $photoFileName = time() . '-' . $request->title . '.' . $request->photo->extension();
+        $request->photo->move(public_path('assets\fotoAcara'), $photoFileName);
 
-        $eventDetail = new EventDetail;
-        $eventDetail->event_id = $event->id;
-        $eventDetail->session = $request->session;
-        $eventDetail->seat = $request->seat;
-        $eventDetail->short_description = $request->short_description;
-        $eventDetail->benefit = $request->benefit;
-        $eventDetail->whatsapp_link = $request->whatsapp_link;
-        $eventDetail->zoom_link = $request->zoom_link;
-        $eventDetail->save();
-
-        return redirect('/tambahJadwalAcara?id=' . $event->id . '&jumlahSesi=' . $eventDetail->session);
+        session()->put('photo_file_name', $photoFileName);
+        session()->put('event_data', $request->except('photo'));
+        
+        return redirect('/tambahJadwalAcara?jumlahSesi=' . $request->session);
     }
 
     

@@ -75,11 +75,9 @@
             </div>
     
             <div class="kelas_card">
-                <img src="" alt="" class="img_kelas">
+                <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="img_kelas">
                 <div class="card">
                     <h3>{{ $acara->title }}</h3>
-                    {{-- <h3>Lorem ipsum dolor sit amet</h3>  --}}
-        
                     <div class="pengajar">
                         <div class="profil_pengajar">
                             <img src="{{$acara->instructors->photo}}" alt="">

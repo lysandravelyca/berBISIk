@@ -8,7 +8,7 @@
 </body>
 
 @section('content')
-    <form method="POST" action="acara">
+    <form method="POST" action="acara" enctype="multipart/form-data">
         @csrf
 
         <div>
