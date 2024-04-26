@@ -35,6 +35,47 @@
             pembelajaran yang menarik dan efektif.</p>
         </div>
     </div>
+
+
+    <div class="visi">
+
+        <div class="paragrap">
+
+            <p>Menciptakan dunia di mana bahasa isyarat diakui, dihargai, dan 
+                diintegrasikan secara luas dalam masyarakat. Kami percaya bahwa 
+                aksesibilitas terhadap pembelajaran bahasa isyarat adalah hak bagi setiap 
+                individu, tanpa memandang latar belakang atau kondisi. Dengan memperluas 
+                pemahaman dan penggunaan bahasa isyarat, kami berharap dapat membangun 
+                jembatan komunikasi yang kuat antara komunitas tunarungu dan pendengar, 
+                serta meningkatkan inklusi sosial dan kesetaraan peluang bagi semua.</p>
+        </div>
+
+        <div class="visiKami">
+
+            <span>VISI KAMI</span>
+            <!-- <span>KAMI</span> -->
+            
+        </div>
+    </div>
+
+    <div class="misi">
+
+        <div class="misiKami">
+
+            <span>MISI KAMI</span>
+            <!-- <span>KAMI</span> -->
+            
+        </div>
+
+        <div class="paragrapMisi">
+
+            <p>Menyediakan platform pembelajaran yang inovatif dan terjangkau untuk 
+                memungkinkan individu dari berbagai latar belakang belajar dan menguasai 
+                bahasa isyarat dengan mudah. Kami berkomitmen untuk menyediakan konten-konten 
+                berkualitas tinggi yang interaktif dan mudah dipahami, serta memfasilitasi pertukaran 
+                pengetahuan dan pengalaman antar pengguna. </p>
+        </div>
+    </div>
     
 </div>
 
