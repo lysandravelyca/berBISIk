@@ -122,15 +122,9 @@
             </div>
         </div>
 
-<<<<<<< HEAD
-        <div class="kelas_card">    
-            <img src="" alt="">
-            <h3>{{ $acara->title }}</h3>
-            {{-- <h3>Lorem ipsum dolor sit amet</h3> --}}
-=======
+        </a>
         @endforeach
     </div>
->>>>>>> 71c1768d5e580ef90d336dda62d43dae7b9d5490
 
     {{-- <div class="container"> 
         <div class="c2">
