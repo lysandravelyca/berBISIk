@@ -54,15 +54,17 @@
 </div>
 
 <div class="kelas">
-    <div class="judul">
-        <img src="assets/acara/Group 43.png" alt="">
-        <h2>Kelas yang Tersedia</h2>
-    </div>
-
-    <div>
+    <div class="judul2">
+        <div class="judul">
+            <img src="assets/acara/Group 43.png" alt="">
+            <h2>Kelas yang Tersedia</h2>
+        </div>
+    
+        
         <a href="tambahAcara">Tambah Acara Baru</a>
+        
     </div>
-
+    
     {{-- container tuh isinya card cardnya --}}
     <div class="container">
         @foreach ($daftarAcara as $acara)
