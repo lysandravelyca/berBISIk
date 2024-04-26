@@ -60,8 +60,7 @@
             <h2>Kelas yang Tersedia</h2>
         </div>
     
-        
-        <a href="tambahAcara">Tambah Acara Baru</a>
+        <a href="tambahAcara">Tambah Acara Relawan Baru</a>
         
     </div>
     
@@ -177,10 +176,16 @@
 </div>
 
 <div class="relawan">
-    <div class="judul_relawan">
-        <img src="assets/acara/Group 63.png" alt="">
-        <h2>Bantu Menjadi Relawan</h2>
+    <div class="judul2_relawan">
+        <div class="judul_relawan">
+            <img src="assets/acara/Group 63.png" alt="">
+            <h2>Bantu Menjadi Relawan</h2>    
+        </div>
+
+        {{-- belummss --}}
+        <a href="">Tambah Acara Baru</a>
     </div>
+    
 
     <div class="container">
         <div class="c2_relawan">
