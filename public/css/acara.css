@@ -1,6 +1,7 @@
 .search{
-    background-image: url("../assets/acara/download\ \(2\)\ 1.png");
+    background-image: url("../assets/acara/meeting.png");
     background-size: cover;
+    /* background: rgba(255, 255, 255, 0.5); */
     height: 640px;
     text-align: center;
     justify-content: center;
@@ -66,8 +67,35 @@
     padding: 1%;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.persen{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: conic-gradient(#FF885E 3.6deg, #D9D9D9 0deg);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.persen:before{
+    content: "";
+    position: absolute;
+    height: 75%;
+    width: 75%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.value-percentage{
+    position: relative;
+    color: black;
 }
 
 .tipe_kelas{
@@ -84,8 +112,183 @@
     font-size: 14px;
 }
 
+.kelas{
+    background-image: url(../assets/acara/Group\ 42.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 78px;
+    margin-top: -120px;
+    /* kalo responsive dia bakal ttp hiks */
+    width: 1286px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 596px;
+}
+
+.judul2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.judul2 a{
+    color: #F9EEE1;
+    padding: 10px 15px;
+    border: 2px solid #F9EEE1;
+    border-radius: 25px;
+    margin-right: 40px;
+}
+
+.judul{
+    display: flex;
+    justify-content: left;
+    /* margin: auto; */
+    padding: 32px;
+}
+
+.judul h2{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #F9EEE1;
+}
+
+.container{
+    padding: 20px 55px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 1190px;
+}
+
+.c2{
+    width: 292px;
+    height: 399px;
+}
+
+.c2 h3{
+    font-size: 14px;
+}
+
+.c2 p{
+    font-size: 10px;
+}
+
+.tipe{
+    background-color: #FFDA93;
+    padding: 15px;
+    font-size: 10px;
+    width: max-content;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+}
+
 .kelas_card{
+<<<<<<< HEAD
     background-color: gray;
     /* ini cuman buat ngebedain per event aja, nanti diedit saja */
 }
 
+=======
+    background-color: white;    
+    border-radius: 10px;
+    margin: -15px 15px 0px;
+}
+
+.card{
+    padding: 0 20px 10px;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    /* color: gray; */
+}
+
+.icon img{
+    height: 16px;
+}
+
+.icon h3{
+    margin-left: 5px;
+    color: gray;
+}
+
+.img_kelas{
+    height: 160px;
+    padding: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.pengajar{
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+}
+
+.abu{
+    color: gray;
+}
+
+.relawan{
+    background-image: url(../assets/acara/Group\ 427320762.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 78px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 555px;
+}
+
+.c2_relawan{
+    width: 292px;
+    height: 346px;
+}
+
+.c2_relawan h3{
+    font-size: 14px;
+}
+
+.judul_relawan{
+    display: flex;
+    justify-content: left;
+    /* margin: auto; */
+    padding: 32px;
+    padding-bottom: 48px;
+}
+
+.judul_relawan h2{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.icon_relawan{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.icon_relawan img{
+    height: 16px;
+}
+
+.icon_relawan h3{
+    margin-left: 5px;
+    color: gray;
+}
+>>>>>>> 71c1768d5e580ef90d336dda62d43dae7b9d5490

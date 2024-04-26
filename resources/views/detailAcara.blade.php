@@ -1,4 +1,4 @@
-extends('layout/layout')
+@extends('layout/layout')
 
 @section('title', 'Acara')
 
@@ -26,3 +26,4 @@ extends('layout/layout')
         </div>
     </div>
 </div>
+@endsection

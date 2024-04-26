@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\KamusController;
 use App\Http\Controllers\DictionaryController;
+use App\Http\Controllers\EventScheduleController;
 
 
 /*
@@ -41,7 +42,14 @@ Route::get('/kamusHuruf', [KamusController::class, 'kamusHuruf'])->name('kamus.h
 
 // Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus');
 
-Route::get('/kamus', [DictionaryController::class, 'index']);
+Route::get('/kamus', [DictionaryController::class, 'index'])->name('kamus');
 
 Route::get('/acara', [EventController::class, 'index']);
+Route::get('/acara/{id}', [EventController::class, 'show']);
+Route::get('/tambahAcara', [EventController::class, 'create']);
+Route::post('/acara', [EventController::class, 'store']);
+
+// return redirect('/tambahJadwalAcara?id' . $event->id . '&jumlahSesi' . $eventDetail->session);
+Route::get('/tambahJadwalAcara', [EventScheduleController::class, 'create']);
+Route::post('/jadwalAcara', [EventScheduleController::class, 'store']);
 
