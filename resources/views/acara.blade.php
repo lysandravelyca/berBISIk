@@ -61,7 +61,7 @@
             <p>{{ $acara->event_types->name }}</p>
         </div>
 
-        <div class="kelas_card">
+        <div class="kelas_card">    
             <img src="" alt="">
             <h3>{{ $acara->title }}</h3>
             {{-- <h3>Lorem ipsum dolor sit amet</h3> --}}

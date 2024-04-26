@@ -1,0 +1,31 @@
+.header{
+    
+    height: 50vh;
+    background-size:cover;
+    background-image: url("../assets/tentangKami.png");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.header img{
+
+    width: 10%;
+    margin-bottom: -50px;
+
+}
+
+.header span{
+    
+    font-size: 100px;
+    color:rgb(95, 42, 93) ;
+}
+
+.tinggi{
+    background-color:#F9EEE1  ;
+    width: 100vw;
+}
