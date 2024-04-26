@@ -8,19 +8,22 @@
 </body>
 
 @section('content')
-    <label for="">ID Acara</label>
-    <input name="event_id" type="number" value="{{ request()->query('id') }}" readonly>
-
-    <label for="">Jumlah Sesi</label>
-    <input name="session" type="number" value="{{ request()->query('jumlahSesi') }}" readonly>
+    
 
     <form method="POST" action="jadwalAcara" >
         @csrf
+
+        <label for="">ID Acara</label>
+        <input name="event_id" type="number" value="{{ request()->query('id') }}" readonly>
+
+        <label for="">Jumlah Sesi</label>
+        <input name="session" type="number" value="{{ request()->query('jumlahSesi') }}" readonly>
+
         @for ($i = 0; $i < request()->query('jumlahSesi') ;$i++)
 
         <div>
             <label for="">Nama Acara</label>
-            <input name="name{{ $i }}" type="text" id="name">
+            <input name="name{{ $i }}" type="text" id="name{{ $i }}">
         </div>
 
         <div>
