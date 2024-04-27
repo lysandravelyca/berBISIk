@@ -200,26 +200,248 @@
 
 }
 
+.bisik{
+
+    height: 200%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../assets/bisiBg.png");
+
+}
+
+.bisi h1{
+
+    text-align: center;
+    font-size: 50px;
+    color: rgb(95, 42, 93);
+    font-weight: 600;
+    padding-top: 25px;
+
+}
+
+.bisi span{
+
+    
+    color: #FF885E;
+
+}
+
+.member{
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.member img{
+
+    width: 200px;
+    /* mix-blend-mode: multiply; */
+}
+
+.img1, .img2, .img3, .img4, .img5{
+
+    display: flex;
+    position: relative;
+    align-items: center;
+    
+
+}
+
+.img1 .bulet-img1{
+
+    margin-top: 10%;
+    width: 100%;
+    height: 80%;
+    border-radius: 100%;
+    background-color: #A98FA8;
+    position: absolute;
+    z-index: -1;
+}
+
+.img1 .kotak-img1{
+
+    width: 100%;
+    height: 3%;
+    opacity: 70%;
+    background-color: pink;
+    position: absolute;
+    transform: rotate(75deg);
+    right: 30%;
+
+}
+
+.img2 .kotak-img2{
+
+    width: 43%;
+    height: 100%;
+    background-color: #A98FA8;
+    position: absolute;
+    z-index: -1;
+}
+
+.img3 .bulet-img3{
+
+    width: 15%;
+    height: 15%;
+    border-radius: 100%;
+    background-color: #FF885E;
+    position: absolute;
+    top: 7%;
+}
+
+.img3 .kotak-img3{
+
+    width: 20%;
+    height: 100%;
+    background-color: #A98FA8;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(40deg);
+    left: 20%;
+}
+
+.img4 .bulet-img4{
+
+    width: 15%;
+    height: 15%;
+    border-radius: 100%;
+    background-color: #FF885E;
+    position: absolute;
+    bottom: -2%;
+}
+
+.img4 .kotak-img4{
+
+    width: 35%;
+    height: 100%;
+    background-color: #755365;
+    position: absolute;
+    z-index: -1;
+    right: 10%;
+}
+
+.img5 .bulet-img5{
+
+    width: 100%;
+    height: 80%;
+    border-radius: 100%;
+    background-color: #A98FA8;
+    position: absolute;
+    z-index: -2;
+    top: 2%;
+    left: 10%;
+}
+
+.img5 .kotak-img5{
+
+    width: 120%;
+    height: 3%;
+    opacity: 70%;
+    background-color: pink;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0%;
+    z-index:-1;
+  
+}
+
+
 .semua{
     
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10%;
+    margin: 5%;
+}
+
+.peserta{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .semua img{
 
-    width: 60%;
+    width: 105%;
+  
+}
+
+.provinsi {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
+.paket {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
 .semua h1{
 
-    font-size: 50px;
-    font-weight: 500;
+    font-size: 60px;
+    font-weight: 600;
     color: rgb(95, 42, 93);
 
 }
+
+.semua p{
+
+    font-size: 20px;
+}
+
+.faq h2{
+
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(95, 42, 93);
+    font-weight: 600;
+
+}
+
+.a {
+
+    background-color: #F9EEE1;
+    padding: 16px 16px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    margin-right: 16px;
+    transition: transform 0.2s;
+}
+
+.icon.active {
+    transform: rotate(-180deg);
+}
+
+.answer {
+    color: #666;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+}
+
 
 
 
