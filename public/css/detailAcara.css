@@ -1,0 +1,80 @@
+* {
+    font-family: 'Poppins';
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(95, 42, 93);
+    font-weight: 600;
+    padding-top: 25px;
+}
+
+.info {  
+    background-color: #F9EEE1;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 50px;
+    padding: 3%;
+    border-radius: 0 0 80px 80px;
+}
+
+.detail {
+    padding: 3%;
+}
+
+.jadwal_acara {
+    background-color: #FF885E;
+    display: flex;
+    padding: 3%;
+    border-radius: 25px;
+}
+
+.jadwal_acara span,
+.jadwal_acara h3 {
+    color: #ffffff;
+}
+
+.bisi h1 {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(95, 42, 93);
+    font-weight: 600;
+    padding-top: 25px;
+}
+
+.bisi span {
+    color: #FF885E;
+}
+
+.a {
+    background-color: #F9EEE1;
+    padding: 16px 16px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.minggu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    margin-right: 16px;
+    transition: transform 0.2s;
+}
+
+.icon.active {
+    transform: rotate(-180deg);
+}
+
+.isiminggu {
+    color: #666;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+}

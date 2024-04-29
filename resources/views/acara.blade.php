@@ -102,7 +102,7 @@
                     </div>
         
                     <div class="icon">
-                        <img src="assets/icon/clock time.png" alt="">
+                        <img src="assets/icon/clocktime.png" alt="">
                         <h3>{{ substr($acara->event_schedules->first()->time_start, 0, -3) }} - 
                             {{ substr($acara->event_schedules->first()->time_end, 0, -3)}} WIB</h3>
                     </div>
