@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('event_id')->required();
             $table->foreign('event_id')->references('id')->on('events')->onDelete('restrict');
             $table->string('name', 255)->required();
+            $table->string('description', 1000)->required();
             $table->date('date')->required();
             $table->time('time_start')->required();
             $table->time('time_end')->required();

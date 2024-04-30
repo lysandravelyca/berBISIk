@@ -170,7 +170,7 @@
 }
 
 /* Kalau mau ada scroll  bar, tapi bagusan gaada sih*/
-/* .container::-webkit-scrollbar-track {
+.container::-webkit-scrollbar-track {
     background: #5F2A5D;
     border-radius: 100vw;
     width: 2em;
@@ -187,8 +187,8 @@
 .container::-webkit-scrollbar-thumb:hover {
     background: #FF885E;
     width: 2em;
-    border-radius: 100vw; */
-/* } */
+    border-radius: 100vw; 
+} 
 
 .c2{
     width: 292px;
