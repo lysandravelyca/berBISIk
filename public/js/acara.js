@@ -4,7 +4,7 @@ let valueContainer = document.querySelector(".value-percentage");
 let progressValue = 0;
 //end valuenya berarti berdasarkan tanggal kah?
 let progressEndValue = 60;
-let speed = 10;
+let speed = 20;
 
 let progress = setInterval(() => {
     progressValue++;

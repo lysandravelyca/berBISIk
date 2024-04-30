@@ -102,7 +102,7 @@
                     </div>
         
                     <div class="icon">
-                        <img src="assets/icon/clock time.png" alt="">
+                        <img src="assets/icon/clocktime.png" alt="">
                         <h3>{{ substr($acara->event_schedules->first()->time_start, 0, -3) }} - 
                             {{ substr($acara->event_schedules->first()->time_end, 0, -3)}} WIB</h3>
                     </div>
@@ -189,19 +189,26 @@
     
 
     <div class="container">
+        {{-- @foreach($daftarRelawan as $relawan) --}}
+
+        {{-- <a href="acara/{{ $relawan->id }}"> --}}
+
         <div class="c2_relawan">
             <div class="tipe">
+                {{-- apakah ini harus dijadikan satu tabel sendiri? --}}
                 <p>Tipe: Panitia/Penerjemah</p>
             </div>
     
             <div class="kelas_card">
-                <img src="" alt="" class="img_kelas">
+                {{-- <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="img_kelas"> --}}
                 <div class="card">
-                    <h3>Judul Acara</h3>
+                    {{-- <h3>{{ $relawan->Title }}</h3> --}}
+                    <h3>Judul Acara Relawan</h3>
                     <h3>Lorem ipsum dolor sit amet</h3>
         
                     <div class="icon_relawan">
                         <img src="assets/icon/Group 50.png" alt="">
+                        {{-- <h3>{{ $relawan->Location }}</h3> --}}
                         <h3>Jl.Melati 10 Alam Sutera, Tangerang</h3>
                     </div>
         
@@ -218,6 +225,9 @@
             </div>
         </div>
         
+        {{-- </a>
+
+        @endforeach --}}
     </div>
 </div>
 
