@@ -19,9 +19,9 @@ class EventController extends Controller
 
     public function show($id)
     {
-        $event = Event::with('instructors', 'event_types', 'event_schedules')->get();
-        return view('detailAcara', ['daftarAcara' => $event]);
-    }
+        $event = Event::with('instructors', 'event_types', 'event_schedules')->findOrFail($id);
+        return view('detailAcara', ['acara' => $event]);
+    }    
 
     public function create()
     {
