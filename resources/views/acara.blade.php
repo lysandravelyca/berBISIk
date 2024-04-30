@@ -60,7 +60,7 @@
             <h2>Kelas yang Tersedia</h2>
         </div>
     
-        <a href="tambahAcara">Tambah Acara Relawan Baru</a>
+        <a href="tambahAcara">Tambah Acara Baru</a>
         
     </div>
     
@@ -184,7 +184,7 @@
         </div>
 
         {{-- belummss --}}
-        <a href="">Tambah Acara Baru</a>
+        <a href="">Tambah Acara Relawan Baru</a>
     </div>
     
 

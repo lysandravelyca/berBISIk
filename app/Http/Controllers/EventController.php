@@ -26,7 +26,7 @@ class EventController extends Controller
     public function create()
     {
         $eventType = EventType::select('id', 'name')->get();
-        $instructor = Instructor::select('id', 'name')->get();
+        $instructor = Instructor::select('id', 'name')->orderBy('name', 'asc')->get();
         return view('tambahAcara', ['daftarTipeAcara' => $eventType, 'daftarPengajar' => $instructor]);
     }
 

@@ -25,7 +25,7 @@
 
             <div class="input">
                 <label for="">Judul Acara</label>
-                <input name="title" type="text" id="title">
+                <input name="title" type="text" id="title" value={{ old('title') }}>
             </div>
 
             <div class="input">
