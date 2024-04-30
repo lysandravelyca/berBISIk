@@ -10,7 +10,7 @@
     <div class="info">
         <div class="img_kelas">
             <img src="{{ asset('assets/fotoAcara/kotak.png') }}" alt="">
-            <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="">
+            <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="foto_acara">
         </div>
 
         <div class="detail"> 
@@ -26,7 +26,7 @@
                                 @if ($loop->last && $key === count($points) - 1)
                                     <li>{{ $point }}</li>
                                 @else
-                                    <li><img src="{{ asset('assets/icon/checkfilled.png') }}" alt="Check Icon"> {{ $point }}</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> {{ $point }}</li>
                                 @endif
                             @endforeach
                         @else
@@ -39,19 +39,19 @@
             <div class="jadwal_acara">
                 <div class="infojadwal">
                     <div>
-                        <img src="{{ asset('assets/icon/calendar.png') }}" alt=""> 
+                        <i class="fa-regular fa-calendar"></i>
                         <span>{{ $acara->event_schedules->first()->date->format('j M Y')}}</span>
                     </div>
                     <div>
-                        <img src="{{ asset('assets/icon/clocktime.png') }}" alt=""> 
+                        <i class="fa-regular fa-clock"></i>
                         <span>{{ substr($acara->event_schedules->first()->time_start, 0, -3) }} - {{ substr($acara->event_schedules->first()->time_end, 0, -3)}} WIB</span>
                     </div>
                     <div>
-                        <img src="{{ asset('assets/icon/location.png') }}" alt=""> 
+                        <i class="fa-regular fa-compass"></i>
                         <span>{{ $acara->location }}</span>
                     </div>
                     <div>
-                        <img src="{{ asset('assets/icon/flag.png') }}" alt=""> 
+                        <i class="fa-regular fa-flag"></i>
                         <span>{{ $acara->event_details->seat }} seats only</span>
                     </div>
                 </div>
@@ -66,43 +66,47 @@
         </div>   
     </div>
 
-    <div class="instructor">
-        <div class="instructor_desc">
-            <img src="{{ asset($acara->instructors->photo) }}" alt="">
-            <h3>{{ $acara->instructors->name }}</h3>
-            <hr>
-            <p>{{ $acara->instructors->description }}</p>
+    <div class="bg">
+        <div class="instructor">
+            <div class="instructor_photo">
+                <img src="{{ asset('assets/fotoAcara/profil1.png') }}" alt="">
+            </div>
+            <div class="instructor_detail">
+                <h3>{{ $acara->instructors->name }}</h3>
+                <hr>
+                <p>{{ $acara->instructors->description }}</p>
+            </div>
         </div>
-    </div>
 
-    <div class="ikhitisar">
-        <h1>Ikhitisar Kelas</h1>
-        {{-- masi manual isi dropdown belom ada dbnya--}}
-        <div class="a">
-            <div class="minggu">
-                <h3>Minggu 1</h3>
-                <i class="icon fa-solid fa-caret-down"></i>
+        <div class="ikhitisar">
+            <h1>Ikhitisar Kelas</h1>
+            {{-- masi manual isi dropdown belom ada dbnya--}}
+            <div class="a">
+                <div class="minggu">
+                    <h3>Minggu 1</h3>
+                    <i class="icon fa-solid fa-caret-down"></i>
+                </div>
+                <div class="isiminggu">
+                    <p>Konten minggu ini adalah</p>
+                </div>
             </div>
-            <div class="isiminggu">
-                <p>Konten minggu ini adalah</p>
+            <div class="a">
+                <div class="minggu">
+                    <h3>Minggu 2</h3>
+                    <i class="icon fa-solid fa-caret-down"></i>
+                </div>
+                <div class="isiminggu">
+                    <p>Konten minggu ini adalah</p>
+                </div>
             </div>
         </div>
-        <div class="a">
-            <div class="minggu">
-                <h3>Minggu 2</h3>
-                <i class="icon fa-solid fa-caret-down"></i>
-            </div>
-            <div class="isiminggu">
-                <p>Konten minggu ini adalah</p>
-            </div>
-        </div>
-    </div>
-    
+        
 
-    <div class="bisik">
-        <div class="bisi">
-            <h1><span>BISI</span>Kan Mereka </h1>
-            {{-- reviewewww --}}
+        <div class="bisik">
+            <div class="bisi">
+                <h1><span>BISI</span>Kan Mereka </h1>
+                {{-- reviewewww --}}
+            </div>
         </div>
     </div>
 </div>
