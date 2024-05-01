@@ -84,11 +84,16 @@
     </div>
 
     <div class="member">
+       
             <div class="img1">
                 <div class="bulet-img1"></div>
                 <div class="kotak-img1"></div>
                 <img src="{{ asset('assets/el.png') }}" alt="">
             </div>
+                
+        
+            
+          
             <div class="img2">
                 <div class="kotak-img2"></div>
                 <img src="{{ asset('assets/jeje.png') }}" alt="">
@@ -109,6 +114,36 @@
                 <img src="{{ asset('assets/val.png') }}" alt="">
             </div>
     </div>
+
+    <div class="nama">
+        <div class="el">
+            <h1>DIREKTUR UTAMA</h1>
+            <P>Anastashia Ellena Widjaja</P>
+        </div>
+
+        <div class="jeje">
+            <h1>KEPALA KURIKULUM</h1>
+            <P>Jesselyn Widjaja</P>
+        </div>
+
+        <div class="jessy">
+            <h1>KEPALA PEMASARAN</h1>
+            <P>Jessy Clarissa Wijaya</P>
+        </div>
+
+        <div class="ly">
+            <h1>PENGEMBANG WEB/h1>
+            <P>Lysandra Velyca</P>
+        </div>
+
+        <div class="val">
+            <h1>PERANCANG GRAFIS</h1>
+            <p>Vallen Charissa Gunawan</p>
+        </div>
+
+
+    </div>
+
 
         <div class="semua">
             <div class="peserta">
