@@ -29,6 +29,11 @@
             </div>
 
             <div>
+                <label for="">Deskripsi</label>
+                <input name="description{{ $i }}" type="text" id="description{{ $i }}">
+            </div>
+
+            <div>
                 <label for="">Tanggal</label>
                 <input name="date{{ $i }}" type="date" id="date{{ $i }}">
             </div>

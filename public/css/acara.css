@@ -213,6 +213,26 @@
     z-index: 10;
 }
 
+.img_kelas img{
+    position: relative;
+    height: 160px;
+    width: 280px;
+    padding: 0;
+}
+
+.modify_button_container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.modify_button img{
+    z-index: 10;
+    position: relative;
+    width: 33px;
+    height: 33px;
+}
+
 .kelas_card{
     background-color: white;    
     border-radius: 10px;
@@ -238,11 +258,7 @@
     color: gray;
 }
 
-.img_kelas{
-    height: 160px;
-    padding: 0;
-    border-radius: 10px 10px 0 0;
-}
+
 
 .pengajar{
     display: flex;

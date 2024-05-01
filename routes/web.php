@@ -50,6 +50,10 @@ Route::get('/acara', [EventController::class, 'index']);
 Route::get('/acara/{id}', [EventController::class, 'show']);
 Route::get('/tambahAcara', [EventController::class, 'create']);
 Route::post('/acara', [EventController::class, 'store']);
+Route::get('/ubahAcara/{id}', [EventController::class, 'edit']);
+Route::put('/ubahAcara/{id}', [EventController::class, 'update']);
+Route::get('/ubahJadwalAcara/{id}', [EventScheduleController::class, 'edit']);
+Route::put('/ubahJadwalAcara/{id}', [EventScheduleController::class, 'update']);
 
 // Route::get('/acara', [VolunteerEventController::class, 'index']);
 

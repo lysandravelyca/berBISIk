@@ -1,0 +1,9 @@
+.input img {
+    width: 30%;
+    height: 30%;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
