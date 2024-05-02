@@ -193,6 +193,7 @@
 .c2{
     width: 292px;
     height: 399px;
+    margin: 10px;
 }
 
 .c2 h3{
@@ -224,6 +225,8 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
+    margin-top: -150px;
+    margin-right: 10px;
 }
 
 .modify_button img{
@@ -237,10 +240,12 @@
     background-color: white;    
     border-radius: 10px;
     margin: -15px 15px 0px;
+    width: 280px;
 }
 
 .card{
     padding: 0 20px 10px;
+    width: 280px;
 }
 
 .icon{
@@ -340,4 +345,8 @@
 .icon_relawan h3{
     margin-left: 5px;
     color: gray;
+}
+
+.img_container{
+    height: 160px;
 }
