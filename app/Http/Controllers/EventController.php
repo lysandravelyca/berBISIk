@@ -30,7 +30,7 @@ class EventController extends Controller
     public function create()
     {
         $eventType = EventType::select('id', 'name')->get();
-        $instructor = Instructor::select('id', 'name')->get();
+        $instructor = Instructor::select('id', 'name')->orderBy('name', 'asc')->get();
         return view('tambahAcara', ['daftarTipeAcara' => $eventType, 'daftarPengajar' => $instructor]);
     }
 
@@ -43,6 +43,33 @@ class EventController extends Controller
         session()->put('event_data', $request->except('photo'));
         
         return redirect('/tambahJadwalAcara?jumlahSesi=' . $request->session);
+    }
+
+    public function edit(Request $request, $id)
+    {
+        
+        $event = Event::with('event_types', 'event_details', 'event_schedules', 'instructors')->findOrFail($id);
+        $eventType = EventType::where('id', '!=', $event->event_type_id)->get(['id', 'name']);
+        $instructor = Instructor::where('id', '!=', $event->instructor_id)->get(['id', 'name']);
+        return view('ubahAcara', ['acara' => $event, 'daftarTipeAcara' => $eventType, 'daftarPengajar' => $instructor]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        // dd($id);
+        if($request->photo != null){
+            $photoFileName = time() . '-' . $request->title . '.' . $request->photo->extension();
+            $request->photo->move(public_path('assets\fotoAcara'), $photoFileName);
+        }
+        else {
+            $photoFileName = "null";
+        }
+
+        // session()->put('event_id', $id );
+        session()->put('photo_file_name', $photoFileName);
+        session()->put('event_data', $request->except('photo'));
+        
+        return redirect('/ubahJadwalAcara'.'/'. $id . '?jumlahSesi=' . $request->session);
     }
 
     

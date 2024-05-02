@@ -40,7 +40,7 @@
                 <div class="infojadwal">
                     <div>
                         <i class="fa-regular fa-calendar"></i>
-                        <span>{{ $acara->event_schedules->first()->date->format('j M Y')}}</span>
+                        <span>{{ $acara->event_schedules->first()->date->format('j F Y')}}</span>
                     </div>
                     <div>
                         <i class="fa-regular fa-clock"></i>
@@ -83,7 +83,7 @@
             {{-- masi manual isi dropdown belom ada dbnya--}}
             <div class="a">
                 <div class="minggu">
-                    <h3>Minggu 1</h3>
+                    <h3>Minggu ke-1</h3>
                     <i class="icon fa-solid fa-caret-down"></i>
                 </div>
                 <div class="isiminggu">
@@ -92,7 +92,7 @@
             </div>
             <div class="a">
                 <div class="minggu">
-                    <h3>Minggu 2</h3>
+                    <h3>Minggu ke-2</h3>
                     <i class="icon fa-solid fa-caret-down"></i>
                 </div>
                 <div class="isiminggu">

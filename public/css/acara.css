@@ -162,9 +162,33 @@
     display: flex;
     flex-direction: row;
     width: 1190px;
-    overflow: hidden;
     overflow-x: scroll;
 }
+
+.container::-webkit-scrollbar {
+    width: 2em;
+}
+
+/* Kalau mau ada scroll  bar, tapi bagusan gaada sih*/
+.container::-webkit-scrollbar-track {
+    background: #5F2A5D;
+    border-radius: 100vw;
+    width: 2em;
+}
+
+.container::-webkit-scrollbar-thumb {
+    width: 2em;
+    background: #FABEA9;
+    border:.25em solid #5F2A5D;
+    width: 2em;
+    border-radius: 100vw;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #FF885E;
+    width: 2em;
+    border-radius: 100vw; 
+} 
 
 .c2{
     width: 292px;
@@ -187,6 +211,26 @@
     border-radius: 10px;
     position: relative;
     z-index: 10;
+}
+
+.img_kelas img{
+    position: relative;
+    height: 160px;
+    width: 280px;
+    padding: 0;
+}
+
+.modify_button_container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.modify_button img{
+    z-index: 10;
+    position: relative;
+    width: 33px;
+    height: 33px;
 }
 
 .kelas_card{
@@ -214,11 +258,7 @@
     color: gray;
 }
 
-.img_kelas{
-    height: 160px;
-    padding: 0;
-    border-radius: 10px 10px 0 0;
-}
+
 
 .pengajar{
     display: flex;

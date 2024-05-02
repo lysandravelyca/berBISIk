@@ -36,6 +36,7 @@ class EventScheduleFactory extends Factory
         $timeEndString = sprintf('%02d:00:00', $endHour); 
 
         return [
+            'description' => $faker->text($faker->numberBetween(255, 500)),
             'date' => $date,
             'time_start' => $timeStartString,
             'time_end' => $timeEndString

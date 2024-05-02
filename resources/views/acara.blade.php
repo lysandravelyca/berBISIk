@@ -64,7 +64,7 @@
             <h2>Kelas yang Tersedia</h2>
         </div>
     
-        <a href="tambahAcara">Tambah Acara Relawan Baru</a>
+        <a href="tambahAcara">Tambah Acara Baru</a>
         
     </div>
     
@@ -81,7 +81,33 @@
             </div>
     
             <div class="kelas_card">
-                <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="img_kelas">
+                
+                <div class="img_container">
+                    {{-- <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="">
+                    <div class="modify_button">
+                        <a href="ubahAcara/{{ $acara->id }}"><img src="assets/icon/edit.png" alt=""></a>
+                    </div> --}}
+
+                    {{-- ada yang salah keknya gabisa a href di dalam a href jadinya href buat nge
+                        redirect ke detail acara error :) --}}
+                        
+                    <div class="img_kelas">
+                        <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="">
+                    </div>
+                    
+                    <div class="modify_button_container">
+                        <div class="modify_button">
+                            <a href="ubahAcara/{{ $acara->id }}"><img src="assets/icon/edit.png" alt=""></a>
+                        </div>
+        
+                        <div class="modify_button">
+                            <a href=""><img src="assets/icon/trash.png" alt=""></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
                 <div class="card">
                     <h3>{{ $acara->title }}</h3>
                     <div class="pengajar">
@@ -189,7 +215,7 @@
         </div>
 
         {{-- belummss --}}
-        <a href="">Tambah Acara Baru</a>
+        <a href="">Tambah Acara Relawan Baru</a>
     </div>
     
 
