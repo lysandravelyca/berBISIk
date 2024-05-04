@@ -71,9 +71,7 @@
     {{-- container tuh isinya card cardnya --}}
     <div class="container">
         @foreach ($daftarAcara as $acara)
-
         <a href="acara/{{ $acara->id }}">
-
         {{-- c2 isinya satu card --}}
         <div class="c2">
             <div class="tipe">
@@ -81,7 +79,6 @@
             </div>
     
             <div class="kelas_card">
-                
                 <div class="img_container">
                     {{-- <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="">
                     <div class="modify_button">
@@ -90,6 +87,7 @@
 
                     {{-- ada yang salah keknya gabisa a href di dalam a href jadinya href buat nge
                         redirect ke detail acara error :) --}}
+                        <!-- vallen tambahin a href kebawah di bagian card biar bisa di pencet juga bawahnya" -->
                         
                     <div class="img_kelas">
                         <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="">
@@ -109,6 +107,8 @@
                 
 
                 <div class="card">
+                <!-- tambahin a href disini karena emang gambar sama card itu beda container -->
+                <a href="acara/{{ $acara->id }}">
                     <h3>{{ $acara->title }}</h3>
                     <div class="pengajar">
                         <div class="profil_pengajar">
