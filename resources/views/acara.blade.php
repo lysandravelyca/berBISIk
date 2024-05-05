@@ -112,7 +112,7 @@
                     <h3>{{ $acara->title }}</h3>
                     <div class="pengajar">
                         <div class="profil_pengajar">
-                            <img src="{{$acara->instructors->photo}}" alt="">
+                            <img src="{{ asset('assets/fotoPengajar/'.$acara->instructors->photo)  }}" alt="">
                         </div>
             
                         <div class="deskripsi_pengajar">

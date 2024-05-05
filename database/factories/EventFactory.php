@@ -19,6 +19,8 @@ class EventFactory extends Factory
         $types = EventType::pluck('id')->toArray();
         $instructor = Instructor::pluck('id')->toArray();
 
+                
+
         $titles = [
             'Pengajaran Bahasa Isyarat Indonesia',
             'Strategi Pengajaran BISINDO yang Efektif',
@@ -32,12 +34,25 @@ class EventFactory extends Factory
             'Pembelajaran Sederhana dan Praktis BISINDO'
         ];
 
+        $photo = [
+            'Sample1.png',
+            'Sample2.png',
+            'Sample3.png',
+            'Sample4.png',
+            'Sample5.png',
+            'Sample6.png',
+            'Sample7.png',
+            'Sample8.png',
+            'Sample9.png',
+        ];
+
         return [
             'event_type_id' => $faker->randomElement($types),
             'instructor_id' => $faker->randomElement($instructor),
             'title' => $faker->randomElement($titles),
             'price' => $faker->numberBetween(30, 150) * 1000,
-            'location' => $faker->address()
+            'location' => $faker->address(),
+            'photo' => $faker->randomElement($photo)
         ];
     }
 }
