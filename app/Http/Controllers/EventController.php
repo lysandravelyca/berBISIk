@@ -68,5 +68,27 @@ class EventController extends Controller
         return redirect('/ubahJadwalAcara'.'/'. $id . '?jumlahSesi=' . $request->session);
     }
 
+    public function delete($id)
+    {
+        $event = Event::FindOrFail($id);
+        return view('/hapusAcara', ['acara' => $event]);
+    } 
+
+    public function destroy($id)
+    {
+
+        $deleteEvent = Event::FindOrFail($id);
+        $deleteEvent->event_details()->delete();
+        $deleteEvent->event_schedules()->delete();
+        $deleteEvent->delete();
+
+        // if($deleteStudent){
+        //     Session::flash('status', 'success');
+        //     Session::flash('message', 'delete student success!');
+        // }
+
+        return redirect('/acara');
+        
+    }
     
 }

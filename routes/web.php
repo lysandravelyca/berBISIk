@@ -54,7 +54,8 @@ Route::get('/ubahAcara/{id}', [EventController::class, 'edit']);
 Route::put('/ubahAcara/{id}', [EventController::class, 'update']);
 Route::get('/ubahJadwalAcara/{id}', [EventScheduleController::class, 'edit']);
 Route::put('/ubahJadwalAcara/{id}', [EventScheduleController::class, 'update']);
-
+Route::get('/hapusAcara/{id}', [EventController::class, 'delete']);
+Route::delete('/hapusAcara/{id}', [EventController::class, 'destroy']);
 // Route::get('/acara', [VolunteerEventController::class, 'index']);
 
 Route::get('/tambahPengajar', [InstructorController::class, 'create']);

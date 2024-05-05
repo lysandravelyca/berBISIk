@@ -97,7 +97,7 @@
                         </div>
         
                         <div class="modify_button">
-                            <a href=""><img src="assets/icon/trash.png" alt=""></a>
+                            <a href="hapusAcara/{{ $acara->id }}"><img src="assets/icon/trash.png" alt=""></a>
                         </div>
                     </div>
                     
