@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('volunteer_events', function (Blueprint $table) {
             $table->id();
-            $table->string('Title');
-            $table->string('Location');
-            $table->string('Photo');
+            $table->string('title');
+            $table->string('location');
+            $table->string('photo');
             $table->timestamps();
         });
     }

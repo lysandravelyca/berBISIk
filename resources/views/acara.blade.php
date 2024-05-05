@@ -1,10 +1,14 @@
 @extends('layout/layout')
 
+<link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoAja.png') }}">
+
 @section('title', 'Acara')
 
 <body>
     <!-- css -->
     <link rel="stylesheet" href="{{ asset('css/acara.css') }}">
+    {{-- js --}}
+<script src="{{asset('js/acara.js') }}" defer></script>
 </body>
 
 @section('content')
@@ -67,9 +71,7 @@
     {{-- container tuh isinya card cardnya --}}
     <div class="container">
         @foreach ($daftarAcara as $acara)
-
         <a href="acara/{{ $acara->id }}">
-
         {{-- c2 isinya satu card --}}
         <div class="c2">
             <div class="tipe">
@@ -77,7 +79,6 @@
             </div>
     
             <div class="kelas_card">
-                
                 <div class="img_container">
                     {{-- <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="">
                     <div class="modify_button">
@@ -86,6 +87,7 @@
 
                     {{-- ada yang salah keknya gabisa a href di dalam a href jadinya href buat nge
                         redirect ke detail acara error :) --}}
+                        <!-- vallen tambahin a href kebawah di bagian card biar bisa di pencet juga bawahnya" -->
                         
                     <div class="img_kelas">
                         <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="">
@@ -105,6 +107,8 @@
                 
 
                 <div class="card">
+                <!-- tambahin a href disini karena emang gambar sama card itu beda container -->
+                <a href="acara/{{ $acara->id }}">
                     <h3>{{ $acara->title }}</h3>
                     <div class="pengajar">
                         <div class="profil_pengajar">
@@ -134,6 +138,7 @@
                     </div>
         
                     {{-- ini keknya ada cara yang lebih singkat cmn gw gatau caranya --}}
+                    {{-- https://youtu.be/q1xhbc-oKnc --}}
                     <div class="rating">
                         <img src="assets/icon/Star 1.png" alt="">
                         <img src="assets/icon/Star 1.png" alt="">
@@ -215,9 +220,9 @@
     
 
     <div class="container">
-        {{-- @foreach($daftarRelawan as $relawan) --}}
+        @foreach($daftarVolunteer as $relawan)
 
-        {{-- <a href="acara/{{ $relawan->id }}"> --}}
+        <a href="acara/{{ $relawan->id }}">
 
         <div class="c2_relawan">
             <div class="tipe">
@@ -226,38 +231,39 @@
             </div>
     
             <div class="kelas_card">
-                {{-- <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="img_kelas"> --}}
+                <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="img_kelas">
                 <div class="card">
-                    {{-- <h3>{{ $relawan->Title }}</h3> --}}
-                    <h3>Judul Acara Relawan</h3>
+                    <h3>{{ $relawan->Title }}</h3>
+                    {{-- <h3>Judul Acara Relawan</h3> --}}
                     <h3>Lorem ipsum dolor sit amet</h3>
         
                     <div class="icon_relawan">
                         <img src="assets/icon/Group 50.png" alt="">
-                        {{-- <h3>{{ $relawan->Location }}</h3> --}}
+                        <h3>{{ $relawan->Location }}</h3>
                         <h3>Jl.Melati 10 Alam Sutera, Tangerang</h3>
                     </div>
         
                     <div class="icon_relawan">
                         <img src="assets/icon/calendar.png" alt="">
-                        <h3>5 Maret 2024</h3>
+                        <h3>{{ $relawan->volunteer_event_schedule->date }}</h3>
+                        {{-- <h3>5 Maret 2024</h3> --}}
                     </div>
         
                     <div class="icon_relawan">
                         <img src="assets/icon/clock time.png" alt="">
+                        <h3>{{ $relawan->volunteer_event_schedule->time_start }} - {{ $relawan->volunteer_event_schedule->time_end }}</h3>
                         <h3>16.00 - 18.00 WIB</h3>
                     </div>
                 </div>
             </div>
         </div>
         
-        {{-- </a>
+        </a>
 
-        @endforeach --}}
+        @endforeach
     </div>
 </div>
 
-{{-- js --}}
-<script src="{{asset('js/acara.js') }}"></script>
+
 
 @endsection

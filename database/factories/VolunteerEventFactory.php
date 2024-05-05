@@ -21,7 +21,7 @@ class VolunteerEventFactory extends Factory
 
         $titles = [
             'Berpeluang dalam BISINDO: Menjadi Bagian dari Tim Panitia dan Penerjemah',
-            'SLangkah Awal dalam Dunia Bisindo: Workshop untuk Calon Panitia',
+            'Selangkah Awal dalam Dunia Bisindo: Workshop untuk Calon Panitia',
             'Membangun Jembatan Komunikasi',
             'Mengajar BISINDO untuk Pemula',
             'Menjadi Relawan Acara dan Penerjemah Profesional'

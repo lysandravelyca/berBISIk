@@ -1,5 +1,7 @@
 @extends('layout/layout')
 
+<link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoAja.png') }}">
+
 @section('title', 'Kamus')
 
 <body>

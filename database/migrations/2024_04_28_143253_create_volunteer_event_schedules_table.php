@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('volunteer_event_schedules', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Volunteer_Eventsid')->required();
-            $table->foreign('Volunteer_Eventsid')->references('id')->on('volunteer_events')->onDelete('restrict');
-            $table->date('Date_Start')->required();
-            $table->date('Date_End')->required();
-            $table->time('Time_Start')->required();
-            $table->time('Time_End')->required();
+            $table->unsignedBigInteger('volunteer_events_id')->required();
+            $table->foreign('volunteer_events_id')->references('id')->on('volunteer_events')->onDelete('restrict');
+            $table->date('date')->required();
+            $table->string('name')->required();
+            $table->time('time_start')->required();
+            $table->time('time_end')->required();
             $table->timestamps();
         });
     }
