@@ -27,12 +27,25 @@ class InstructorFactory extends Factory
             'Pengajar Bahasa Isyarat',
             'Komunikator Tuna Rungu'
         ];
+
+        $photo = [
+            'Sample1.png',
+            'Sample2.png',
+            'Sample3.png',
+            'Sample4.png',
+            'Sample5.png',
+            'Sample6.png',
+            'Sample7.png',
+            'Sample8.png',
+            'Sample9.png',
+        ];
         
 
         return [
             'name' => $faker->name(),
             'description' => $faker->text(300),
-            'job' => $faker->randomElement($job_titles)
+            'job' => $faker->randomElement($job_titles),
+            'photo' => $faker->randomElement($photo)
         ];
     }
 }

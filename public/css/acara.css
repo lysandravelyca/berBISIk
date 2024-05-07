@@ -193,6 +193,7 @@
 .c2{
     width: 292px;
     height: 399px;
+    margin: 10px;
 }
 
 .c2 h3{
@@ -218,12 +219,15 @@
     height: 160px;
     width: 280px;
     padding: 0;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .modify_button_container {
     display: flex;
     justify-content: flex-end;
     position: relative;
+    margin-top: -150px;
+    margin-right: 10px;
 }
 
 .modify_button img{
@@ -237,10 +241,13 @@
     background-color: white;    
     border-radius: 10px;
     margin: -15px 15px 0px;
+    width: 280px;
+    height: 360px;
 }
 
 .card{
     padding: 0 20px 10px;
+    width: 280px;
 }
 
 .icon{
@@ -258,7 +265,31 @@
     color: gray;
 }
 
+/* ini logika buat picture gak stretch */
+.profil_pengajar{
+    border-radius: 100%;
+    width: 30px; /* Set your desired width */
+    height: 30px; /* Set your desired height */
+    overflow: hidden; /* This will hide any parts of the image that exceed the container */
+    position: relative; /* Required for absolute positioning of the image */
+}
 
+.profil_pengajar img {
+    position: absolute;
+    width: auto; /* This will allow the image to resize proportionally */
+    height: 100%; /* This will ensure the image fills the entire container vertically */
+    left: 50%; /* Center the image horizontally */
+    top: 50%; /* Center the image vertically */
+    transform: translate(-50%, -50%); /* Center the image precisely */
+    
+}
+
+/* .profil_pengajar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    overflow: hidden;
+} */
 
 .pengajar{
     display: flex;
@@ -340,4 +371,8 @@
 .icon_relawan h3{
     margin-left: 5px;
     color: gray;
+}
+
+.img_container{
+    height: 160px;
 }

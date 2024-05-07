@@ -14,15 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('volunteer_event_details', function (Blueprint $table) {
-            $table->unsignedBigInteger('Event_id')->required();
-            $table->foreign('Event_id')->references('id')->on('volunteer_events')->onDelete('restrict');
-            $table->string('Criteria')->required();
-            $table->string('Benefit')->required();
-            $table->string('Short_Description')->required();
-            $table->string('Location')->required();
-            $table->integer('Seat')->required();
-            $table->string('Whatsapp_Link')->required();
-            $table->string('Zoom_Link')->required();
+            $table->unsignedBigInteger('event_id')->required();
+            $table->foreign('event_id')->references('id')->on('volunteer_events')->onDelete('restrict');
+            $table->string('criteria')->required();
+            $table->string('benefit')->required();
+            $table->string('short_description')->required();
+            $table->string('location')->required();
+            $table->integer('seat')->required();
+            $table->string('whatsapp_link')->required();
+            $table->string('zoom_link')->required();
             $table->timestamps();
         });
     }

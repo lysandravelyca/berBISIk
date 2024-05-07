@@ -93,10 +93,10 @@
 }
  
 .kotak img{
-    max-width: 100%; 
-    max-height: 100%; 
-    /* z-index: 2; */
+    /* pakai ini untuk sesuain gambarnya semua */
     position: relative;
+    max-width: 150px;
+    height: 150px;
 }
 
 .boxkata{

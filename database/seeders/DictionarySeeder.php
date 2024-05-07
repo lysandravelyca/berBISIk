@@ -25,7 +25,9 @@ class DictionarySeeder extends Seeder
         }
 
         $wordsSample = ['halo', 'selamat', 'hari', 'semua', 'aku', 'temanteman', 'bahasaisyarat', 'orang', 'indonesia', 'untuk', 
-        'disabilitas', 'tema', 'internasional', 'tahun', 'tuli', 'mengucapkan', 'tepuktangan', 'perempuan'];
+        'disabilitas', 'tema', 'internasional', 'tahun', 'tuli', 'mengucapkan', 'tepuktangan', 'perempuan', 'januari', 'februari',
+        'maret', 'april', 'mei', 'juni', 'juli', 'agustus', 'september', 'oktober', 'november', 'desember', 'senin',
+        'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'];
 
         $words = [];
         foreach($wordsSample as $word){
