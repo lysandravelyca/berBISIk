@@ -325,6 +325,7 @@
 
 .c2_relawan h3{
     font-size: 14px;
+    margin-top: 10px;
 }
 
 .judul2_relawan{
@@ -348,7 +349,6 @@
     justify-content: left;
     /* margin: auto; */
     padding: 32px;
-    padding-bottom: 48px;
 }
 
 .judul_relawan h2{
@@ -361,16 +361,18 @@
 .icon_relawan{
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .icon_relawan img{
     height: 16px;
+    margin-top: 2px;
 }
 
 .icon_relawan h3{
     margin-left: 5px;
     color: gray;
+    margin-top: 0;
 }
 
 .img_container{

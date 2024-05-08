@@ -214,45 +214,62 @@
             <h2>Bantu Menjadi Relawan</h2>    
         </div>
 
-        {{-- belummss --}}
-        <a href="">Tambah Acara Relawan Baru</a>
+        <a href="Volunteer/tambahVolunteer">Tambah Acara Relawan Baru</a>
     </div>
     
 
     <div class="container">
         @foreach($daftarVolunteer as $relawan)
 
+        {{-- masih salah ke detail acaranya --}}
         <a href="acara/{{ $relawan->id }}">
 
         <div class="c2_relawan">
             <div class="tipe">
-                {{-- apakah ini harus dijadikan satu tabel sendiri? --}}
-                <p>Tipe: Panitia/Penerjemah</p>
+                @if (rand(1,100) % 2 == 0)
+                    <p>Panitia</p>
+                @else
+                    <p>Penerjemah</p>
+                @endif
             </div>
     
             <div class="kelas_card">
-                <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="img_kelas">
+                <div class="img_container">
+                        
+                    <div class="img_kelas">
+                        <img src="{{ asset('assets/fotoAcara/'.$relawan->photo)  }}" alt="">
+                    </div>
+                    
+                    <div class="modify_button_container">
+                        <div class="modify_button">
+                            <a href="ubahVolunteer/{{ $relawan->id }}"><img src="assets/icon/edit.png" alt=""></a>
+                        </div>
+        
+                        <div class="modify_button">
+                            <a href="hapusVolunteer/{{ $relawan->id }}"><img src="assets/icon/trash.png" alt=""></a>
+                        </div>
+                    </div>
+                    
+                </div>
+
                 <div class="card">
-                    <h3>{{ $relawan->Title }}</h3>
-                    {{-- <h3>Judul Acara Relawan</h3> --}}
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <a href="acara/{{ $relawan->id }}">
+                    <h3>{{ $relawan->title }}</h3>
         
                     <div class="icon_relawan">
-                        <img src="assets/icon/Group 50.png" alt="">
-                        <h3>{{ $relawan->Location }}</h3>
-                        <h3>Jl.Melati 10 Alam Sutera, Tangerang</h3>
+                        <img src="assets/icon/location.png" alt="">
+                        <h3>{{ $relawan->location}}</h3>
                     </div>
         
                     <div class="icon_relawan">
                         <img src="assets/icon/calendar.png" alt="">
-                        <h3>{{ $relawan->volunteer_event_schedule->date }}</h3>
-                        {{-- <h3>5 Maret 2024</h3> --}}
+                        <h3>{{ $relawan->volunteer_event_schedules->first()->date->format('j M Y') }}</h3>
                     </div>
         
                     <div class="icon_relawan">
-                        <img src="assets/icon/clock time.png" alt="">
-                        <h3>{{ $relawan->volunteer_event_schedule->time_start }} - {{ $relawan->volunteer_event_schedule->time_end }}</h3>
-                        <h3>16.00 - 18.00 WIB</h3>
+                        <img src="assets/icon/clocktime.png" alt="">
+                        <h3>{{ substr($relawan->volunteer_event_schedules->first()->time_start, 0, -3) }} - 
+                            {{ substr($relawan->volunteer_event_schedules->first()->time_end, 0, -3)}} WIB</h3>
                     </div>
                 </div>
             </div>

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class VolunteerEventDetail extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = 'event_id';
 }

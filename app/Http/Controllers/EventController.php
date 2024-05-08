@@ -10,13 +10,15 @@ use App\Models\Instructor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\VolunteerEventController;
 use App\Models\VolunteerEvent;
+use App\Models\VolunteerEventDetail;
+use App\Models\VolunteerEventSchedule;
 
 class EventController extends Controller
 {
     public function index()
     {
         $event = Event::with('instructors', 'event_types', 'event_schedules')->get();
-        $VolunteerEvent = VolunteerEvent::with('volunteer_event_details', 'volunteer_event_schedule')->get();
+        $VolunteerEvent = VolunteerEvent::with('volunteer_event_schedules')->get();
         // $VolunteerEvent = VolunteerEventController::getVolunteerEvents();
         return view('acara', ['daftarAcara' => $event], ['daftarVolunteer' => $VolunteerEvent]);
     }

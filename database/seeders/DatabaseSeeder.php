@@ -30,7 +30,10 @@ class DatabaseSeeder extends Seeder
             EventTypeSeeder::class,
             EventSeeder::class,
             EventDetailSeeder::class,
-            EventScheduleSeeder::class
+            EventScheduleSeeder::class,
+            VolunteerEventSeeder::class,
+            VolunteerDetailSeeder::class,
+            VolunteerEventScheduleSeeder::class
         ]);
     }
 }

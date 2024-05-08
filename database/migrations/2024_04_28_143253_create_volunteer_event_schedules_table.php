@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('volunteer_event_schedules', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('volunteer_events_id')->required();
-            $table->foreign('volunteer_events_id')->references('id')->on('volunteer_events')->onDelete('restrict');
+            $table->unsignedBigInteger('volunteer_event_id')->required();
+            $table->foreign('volunteer_event_id')->references('id')->on('volunteer_events')->onDelete('restrict');
             $table->date('date')->required();
             $table->string('name')->required();
             $table->time('time_start')->required();

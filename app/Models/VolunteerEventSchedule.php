@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class VolunteerEventSchedule extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'date' => 'date'
+    ];
 }
