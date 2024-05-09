@@ -36,11 +36,22 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
+        // if ($request->title)
+
+        $request->validate([
+            'title' => 'required|regex:/^[a-zA-Z\s]+$/', // cuma boleh huruf
+            'short_description' => 'required|max:2  ', // min 20 (krn desc jdi hrusnya bole anggka dan simbol)
+            'benefit' => 'required|regex:/^[a-zA-Z\s]+$/', // cma boleh huruf 
+            
+        ]);
+
         $photoFileName = time() . '-' . $request->title . '.' . $request->photo->extension();
         $request->photo->move(public_path('assets\fotoAcara'), $photoFileName);
+        
 
         session()->put('photo_file_name', $photoFileName);
         session()->put('event_data', $request->except('photo'));
+
         
         return redirect('/tambahJadwalAcara?jumlahSesi=' . $request->session);
     }
