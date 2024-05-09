@@ -81,3 +81,20 @@ input #file-upload-button{
     background-color: #5F2A5D;
     color: #F9EEE1;
 }
+
+.alert {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+
+.alert ul li {
+    margin-left: 15%; /* Adjust as needed */
+}
+
+.alert ul li {
+    font-weight: bold;
+    font-size: 14px;
+    color: red;
+}
