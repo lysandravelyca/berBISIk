@@ -122,7 +122,8 @@
 
             <div class="input">
                 <label for="">Biaya</label>
-                <input name="price" type="text" id="price" value="{{old('price')}}">
+                <span>Rp </span>
+                <input placeholder="Rp xxx" name="price" type="text" id="price" value="{{old('price')}}">
             </div>
 
             @if ($errors->any())
