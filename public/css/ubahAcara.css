@@ -8,6 +8,11 @@ textarea {
     resize: none;
 }
 
+h1{
+    color: #5F2A5D;
+    margin: 50px;
+}
+
 .card{
     margin: 50px;
     background-color: #F9EEE1;
