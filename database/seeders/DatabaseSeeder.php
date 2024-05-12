@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\EventDetail;
 use App\Models\EventSchedule;
+use App\Models\UsersEvent;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -30,7 +31,11 @@ class DatabaseSeeder extends Seeder
             EventTypeSeeder::class,
             EventSeeder::class,
             EventDetailSeeder::class,
-            EventScheduleSeeder::class
+            EventScheduleSeeder::class,
+            RoleSeeder::class,
+            UserSeeder::class,
+            UsersEventSeeder::class,
+            ReviewSeeder::class
         ]);
     }
 }

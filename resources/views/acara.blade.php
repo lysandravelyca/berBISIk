@@ -109,7 +109,7 @@
                 <div class="card">
                 <!-- tambahin a href disini karena emang gambar sama card itu beda container -->
                 <a href="acara/{{ $acara->id }}">
-                    <h3>{{ $acara->title }}</h3>
+                    <h3 class="judul_acara">{{ $acara->title }}</h3>
                     <div class="pengajar">
                         <div class="profil_pengajar">
                             <img src="{{ asset('assets/fotoPengajar/'.$acara->instructors->photo)  }}" alt="">
@@ -122,7 +122,7 @@
                     </div>
                     
                     <div class="icon">
-                        <img src="assets/icon/calendar.png" alt="">
+                        <img src="assets/icon/calendar.png" alt="" >
                         <h3>
                             {{ $acara->event_schedules->first()->date->format('j M Y')}}
                             @if ( count($acara->event_schedules) > 1)

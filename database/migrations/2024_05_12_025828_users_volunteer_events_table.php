@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('event_id')->required();
-            $table->foreign('event_id')->references('id')->on('events')->onDelete('restrict');
+        Schema::create('users_volunteer_events', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id')->required();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
-            $table->integer('rating')->unsigned()->required();
-            $table->string('comment', 255)->required();
+            $table->unsignedBigInteger('volunteer_event_id')->required();
+            $table->foreign('volunteer_event_id')->references('id')->on('volunteer_events')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('users_volunteer_events');
     }
 };

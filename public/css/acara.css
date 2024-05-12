@@ -201,6 +201,7 @@
 }
 
 .c2 p{
+    margin-left: 5px;
     font-size: 10px;
 }
 
@@ -246,14 +247,21 @@
 }
 
 .card{
-    padding: 0 20px 10px;
+    padding: 10px 20px 10px;
     width: 280px;
+}
+
+.judul_acara {
+    display: flex;
+    height: 35px;
+    /* align-items: center; */
 }
 
 .icon{
     display: flex;
     flex-direction: row;
     /* color: gray; */
+    align-items: center;
 }
 
 .icon img{
