@@ -10,13 +10,17 @@ use App\Models\Instructor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\VolunteerEventController;
 use App\Models\VolunteerEvent;
+use App\Models\VolunteerEventDetail;
+use App\Models\VolunteerEventSchedule;
+use App\Http\Requests\tambahAcaraRequest;
+
 
 class EventController extends Controller
 {
     public function index()
     {
         $event = Event::with('instructors', 'event_types', 'event_schedules')->get();
-        $VolunteerEvent = VolunteerEvent::with('volunteer_event_details', 'volunteer_event_schedule')->get();
+        $VolunteerEvent = VolunteerEvent::with('volunteer_event_schedules')->get();
         // $VolunteerEvent = VolunteerEventController::getVolunteerEvents();
         return view('acara', ['daftarAcara' => $event], ['daftarVolunteer' => $VolunteerEvent]);
     }
@@ -34,13 +38,28 @@ class EventController extends Controller
         return view('tambahAcara', ['daftarTipeAcara' => $eventType, 'daftarPengajar' => $instructor]);
     }
 
-    public function store(Request $request)
+    public function store(tambahAcaraRequest $request)
     {
+        // if ($request->title)
+        
+        // $validated = $request->validate([
+        //     'title' => 'required|regex:/^[a-zA-Z\s]+$/', // cuma boleh huruf
+        //     'short_description' => 'required|max:2  ', // min 20 (krn desc jdi hrusnya bole anggka dan simbol)
+        //     'benefit' => 'required|regex:/^[a-zA-Z\s]+$/', // cma boleh huruf 
+        //     'seat' => 'required|numeric',
+        //     'price' => ['required', 'regex:/^Rp\s\d+(,\d{3})*(\.\d{1,2})?$/', 'not_in:Rp']
+            
+        // ]);
+
+        
+
         $photoFileName = time() . '-' . $request->title . '.' . $request->photo->extension();
         $request->photo->move(public_path('assets\fotoAcara'), $photoFileName);
+        
 
         session()->put('photo_file_name', $photoFileName);
         session()->put('event_data', $request->except('photo'));
+
         
         return redirect('/tambahJadwalAcara?jumlahSesi=' . $request->session);
     }

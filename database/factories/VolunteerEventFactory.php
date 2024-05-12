@@ -20,16 +20,29 @@ class VolunteerEventFactory extends Factory
         $faker = faker::create();
 
         $titles = [
-            'Berpeluang dalam BISINDO: Menjadi Bagian dari Tim Panitia dan Penerjemah',
-            'Selangkah Awal dalam Dunia Bisindo: Workshop untuk Calon Panitia',
+            'Menjadi Bagian dari Tim Panitia dan Penerjemah',
+            'Workshop untuk Calon Panitia',
             'Membangun Jembatan Komunikasi',
             'Mengajar BISINDO untuk Pemula',
             'Menjadi Relawan Acara dan Penerjemah Profesional'
         ];
 
+        $photo = [
+            'Sample1.png',
+            'Sample2.png',
+            'Sample3.png',
+            'Sample4.png',
+            'Sample5.png',
+            'Sample6.png',
+            'Sample7.png',
+            'Sample8.png',
+            'Sample9.png',
+        ];
+
         return [
             'title' => $faker->randomElement($titles),
-            'location' => $faker->address()
+            'location' => $faker->address(),
+            'photo' =>$faker->randomElement($photo)            
         ];
     }
 }

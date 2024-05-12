@@ -32,6 +32,11 @@ class DatabaseSeeder extends Seeder
             EventSeeder::class,
             EventDetailSeeder::class,
             EventScheduleSeeder::class,
+            EventScheduleSeeder::class,
+            // Je ini ku komen dulu ya soalnya masih error
+            // VolunteerEventSeeder::class,
+            // VolunteerDetailSeeder::class,
+            // VolunteerEventScheduleSeeder::class,
             RoleSeeder::class,
             UserSeeder::class,
             UsersEventSeeder::class,

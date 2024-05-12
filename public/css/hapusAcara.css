@@ -1,0 +1,55 @@
+.case{
+
+    margin: 50px;
+    background-color: #F9EEE1;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+h3{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+
+}
+
+.submit{
+
+   margin-top: 5%;
+
+}
+
+button{
+
+    border: 1px solid #5F2A5D;
+    padding: 10px 15px;
+    margin: 50px;
+    margin-top: 0;
+    border-radius: 20px;
+    background-color: #5F2A5D;
+    color: #F9EEE1;
+}
+
+.submit a{
+
+    border: 1px solid #5F2A5D;
+    padding: 10px 15px;
+    margin: 50px;
+    margin-top: 0;
+    border-radius: 20px;
+    background-color: #5F2A5D;
+    color: #F9EEE1;
+    
+}
+
+.case2{
+
+    display:flex;
+    justify-content: center;
+}
+
+
+
+

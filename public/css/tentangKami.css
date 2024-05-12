@@ -219,11 +219,43 @@
 
 }
 
+.bisik .bisi{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bisik .bisi .satu{
+
+    width: 30%;
+    height: 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../assets/bubble1.png");
+
+}
+
 .bisi span{
 
     
     color: #FF885E;
 
+}
+
+.all{
+
+    display: flex;
+}
+
+.rating{
+
+    display: flex;
+}
+
+.rating img{
+
+    width: 20%;
+    height: 100%;
 }
 
 .member{
@@ -413,6 +445,8 @@
     align-items: center;
 
 }
+
+
 .semua h1{
 
     font-size: 60px;
@@ -425,6 +459,7 @@
 
     font-size: 20px;
 }
+
 
 .faq h2{
 

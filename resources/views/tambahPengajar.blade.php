@@ -4,7 +4,7 @@
 
 <body>
     <!-- css -->
-    {{-- <link rel="stylesheet" href="{{ asset('css/tambahAcara.css')  }}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/tambahPengajar.css')  }}"> 
 </body>
 
 @section('content')
