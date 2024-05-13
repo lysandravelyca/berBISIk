@@ -73,14 +73,20 @@ class VolunteerEventController extends Controller
         else{
             $photoFile = null;
         }
-            
+        
+        session()->put('photo_file_name', $photoFile);
+        session()->put('volunteer_event_data', $request->except('photo'));
+
         $volunteerData = session()->get('volunteer_event_data');
-        $fileName = session()->get('photo_file_name');
+        $photoFile = session()->get('photo_file_name');
 
         $volunteer = VolunteerEvent::findOrFail($id);
         $volunteer->title = $volunteerData['title'];
         $volunteer->location = $volunteerData['location'];
-        $volunteer->photo = $fileName;
+        if($request->photo != null){
+            $volunteer->photo = $photoFile;
+        }
+        
         $volunteer->save();
 
         $volunteerDetail = VolunteerEventDetail::where('volunteer_event_id', $id)->firstOrFail();
@@ -98,6 +104,9 @@ class VolunteerEventController extends Controller
         $volunteerSchedule->time_start = $volunteerData['time_start'];
         $volunteerSchedule->time_end = $volunteerData['time_end'];
         $volunteerSchedule->save();
+
+        $volunteer->save();
+        // dd($volunteer->title);
 
         return redirect('/acara');
         

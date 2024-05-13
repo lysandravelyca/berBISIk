@@ -9,5 +9,5 @@ class VolunteerEventDetail extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'event_id';
+    protected $primaryKey = 'volunteer_event_id';
 }

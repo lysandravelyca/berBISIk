@@ -12,7 +12,7 @@
     @csrf
     @method('PUT')
 
-    <h1>Ubah Volunteer</h1>
+    <h1>Ubah Acara Relawan</h1>
 
     <div class="card">
 
@@ -24,6 +24,11 @@
         <div class="input">
             <label for="">Deskripsi Singkat</label>
             <textarea name="short_description" type="text" id="short_description">{{ $volunteer->volunteer_event_details->short_description }}</textarea>
+        </div>
+
+        <div class="input">
+            <label for="">Kriteria</label>
+            <textarea name="criteria" type="text" id="criteria">{{ $volunteer->volunteer_event_details->criteria }}</textarea>
         </div>
 
         <div class="input">
@@ -62,23 +67,23 @@
         
     </div>
     
-    <h1>Ubah Jadwal Acara</h1>
+    <h1>Ubah Jadwal Acara Relawan</h1>
 
-    <div>
-        <div>
+    <div class="card">
+        <div class="input">
             <label for="">Nama Sesi</label>
             <textarea name="name" type="text" id="name">{{ $volunteer->volunteer_event_schedules->name }}</textarea>
         </div>
 
-        <div>
+        <div class="input">
             <label for="">Tanggal</label>
             <input name="date" type="date" id="date" value={{ $volunteer->volunteer_event_schedules->date }}>
         </div>
-        <div>
+        <div class="input">
             <label for="">Waktu Mulai</label>
             <input name="time_start" type="time" id="time_start" value={{ $volunteer->volunteer_event_schedules->time_start }}>
         </div>
-        <div>
+        <div class="input">
             <label for="">Waktu Selesai</label>
             <input name="time_end" type="time" id="time_end" value={{ $volunteer->volunteer_event_schedules->time_end }}>
         </div>
