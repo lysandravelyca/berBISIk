@@ -8,6 +8,7 @@ use App\Http\Controllers\EventScheduleController;
 use App\Http\Controllers\DictionaryLetterController;
 use App\Http\Controllers\VolunteerEventController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,17 +21,20 @@ use App\Http\Controllers\InstructorController;
 |
 */
 
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+
+
 Route::get('/', function () {
     return view('beranda');
-});
+})->middleware('auth');
 
 Route::get('/kamus', function(){
     return view('kamus');
 });
 
-// Route::get('/acara', function(){
-//     return view('acara');
-// });
+Route::get('/register', function(){
+    return view('register');
+});
 
 Route::get('/tentangKami', function(){
     return view('tentangKami');
