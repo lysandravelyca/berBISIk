@@ -24,7 +24,7 @@ class VolunteerEventDetailFactory extends Factory
             'criteria' =>$faker->text($faker->numberBetween(50, 100)),
             'benefit' =>$faker->paragraph(1),
             'short_description' =>$faker->text($faker->numberBetween(200, 255)),
-            'seat' =>$faker->numberBetween(10,100),
+            'seat' =>$faker->numberBetween(1,40),
             'whatsapp_link' => 'https://www.whatsapp.com/',
             'zoom_link' => 'https://zoom.us/'
         ];
