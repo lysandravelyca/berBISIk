@@ -1,0 +1,195 @@
+/* ini untuk bagian container yang bisa di scroll kiri kanan */
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 1190px;
+    overflow-x: scroll;
+}
+
+.container::-webkit-scrollbar {
+    width: 2em;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #5F2A5D;
+    border-radius: 100vw;
+    width: 2em;
+}
+
+.container::-webkit-scrollbar-thumb {
+    width: 2em;
+    background: #FABEA9;
+    border:.25em solid #5F2A5D;
+    width: 2em;
+    border-radius: 100vw;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #FF885E;
+    width: 2em;
+    border-radius: 100vw; 
+} 
+
+/* ini untuk bagian profile cardnya */
+/* yang ini polkadotnya manual, kalo mau pake background image tinggal diganti (belum sempurna) */
+.profcard{
+    display: flex;
+    height: 100vh;
+    background-color: #F9EEE1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle, #5F2A5D 15%, transparent 16%) 80px 150px,
+                radial-gradient(circle, #5F2A5D 30%, transparent 31%) 150px 50px,
+                radial-gradient(circle, #5F2A5D 20%, transparent 21%) 200px 180px,
+                radial-gradient(circle, #5F2A5D 25%, transparent 26%) 100px 250px,
+                radial-gradient(circle, #5F2A5D 30%, transparent 31%) 10000px 25000px,
+                #F9EEE1; /* Warna latar belakang kotak */
+    background-size: 50px 50px, 70px 70px, 40px 40px, 60px 60px, 45px 45px; /* Ukuran polkadot yang berbeda-beda */
+    background-repeat: no-repeat;
+}
+
+.header{
+    font-size: 24px;
+    color: #5F2A5D;
+    font-weight: bold;
+    margin-left: -67%;
+    margin-top: 3%;
+}
+
+.card{
+    margin-top: 3%;
+    width: 980px;
+    height: 400px;
+    /* background-color: #5F2A5D; Warna ungu */
+    background-image: linear-gradient(to bottom, #5F2A5D 70%, #ffffff89 30%);
+    border-radius: 25px;
+    margin-bottom: 8%;
+    z-index: 1;
+}
+
+.btn{
+    border: none;
+    background-color: #f68af668;
+    font-size: 14px;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+	margin-top: 17%;  
+    margin-left: 85%;
+    z-index: 2;
+    width: 120px;
+    height: 50px;
+}
+
+.btn2{
+    border: none;
+    background-color: #5F2A5D;
+    font-size: 14px;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    display:inline-block;
+    border-radius: 25px;
+    font-weight: bold;
+	margin-top: 4%;  
+    margin-left: 85%;
+    z-index: 2;
+    width: 120px;
+    height: 50px;
+}
+
+
+/* ini untuk bagian history kelas */
+.history{
+    background-image: url(../assets/acara/Group\ 427320762.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 78px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 555px;
+}
+
+
+.judul2_history{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.judul2_history a{
+    color: black;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-right: 40px;
+}
+
+
+.judul_history{
+    display: flex;
+    justify-content: left;
+    /* margin: auto; */
+    padding: 32px;
+    margin-top: 2%;
+}
+
+.judul_history h2{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #5F2A5D;
+}
+
+
+/* ini untuk bagian kelas yang sedang berjalan */
+.current{
+    background-image: url(../assets/acara/Group\ 42.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 78px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 555px;   
+}
+
+.judul2_current{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.judul2_current a{
+    color: black;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-right: 40px;
+}
+
+.judul_current{
+    display: flex;
+    justify-content: left;
+    /* margin: auto; */
+    padding: 32px;
+}
+
+.judul_current h2{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #ffffff;
+}
