@@ -20,13 +20,20 @@
                     <br>
                 </div>
 
-                <form>
-                    <input type="text" class="text-box" placeholder="Email Anda" />
+                <form method="POST" action="">
+                    @csrf
+                    <input type="email" name="email" class="text-box" placeholder="Email Anda" required/>
                     <br>
-                    <input type="password" class="text-box2" placeholder="Kata Sandi" />
+                    <input type="password" name="password" class="text-box2" placeholder="Kata Sandi" required/>
                     <br>
                     <button type="submit">Masuk</button>
                 </form>
+
+                @if(Session::has('status'))
+                <div class="alert" role="alert">
+                    {{Session::get('message')}}
+                </div>
+                @endif
 
                 <div class="text">
                     <br>

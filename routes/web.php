@@ -9,6 +9,7 @@ use App\Http\Controllers\DictionaryLetterController;
 use App\Http\Controllers\VolunteerEventController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
-
+Route::post('/login', [AuthController::class, 'authenticating']);
 
 Route::get('/', function () {
     return view('beranda');
