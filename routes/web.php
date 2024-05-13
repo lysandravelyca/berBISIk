@@ -32,9 +32,9 @@ Route::get('/kamus', function(){
     return view('kamus');
 });
 
-// Route::get('/acara', function(){
-//     return view('acara');
-// });
+Route::get('/register', function(){
+    return view('register');
+});
 
 Route::get('/tentangKami', function(){
     return view('tentangKami');
