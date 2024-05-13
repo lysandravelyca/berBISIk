@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\EventDetail;
 use App\Models\EventSchedule;
+use App\Models\UsersEvent;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -31,9 +32,15 @@ class DatabaseSeeder extends Seeder
             EventSeeder::class,
             EventDetailSeeder::class,
             EventScheduleSeeder::class,
-            VolunteerEventSeeder::class,
-            VolunteerDetailSeeder::class,
-            VolunteerEventScheduleSeeder::class
+            EventScheduleSeeder::class,
+            // Je ini ku komen dulu ya soalnya masih error
+            // VolunteerEventSeeder::class,
+            // VolunteerDetailSeeder::class,
+            // VolunteerEventScheduleSeeder::class,
+            RoleSeeder::class,
+            UserSeeder::class,
+            UsersEventSeeder::class,
+            ReviewSeeder::class
         ]);
     }
 }

@@ -165,11 +165,73 @@
         </div>  
         
         <div class="bisik">
+            <div class="bisi">
 
-        <div class="bisi">
-          <h1><span>BISI</span>KAN MEREKA </h1>
-        </div>
+                <h1><span>BISI</span>KAN MEREKA </h1>
 
+                <div class="satu">
+
+                    <div class="jeno">
+
+                        <div class="all" >
+
+                            <div class="nama">
+
+                                <h2>JENO</h2>
+                                <p>Mahasiswa</p>
+                            </div>
+
+                                <div class="rating">
+                                    <img src="assets/tang.png" alt="">
+                                    <img src="assets/tang.png" alt="">
+                                    <img src="assets/tang.png" alt="">
+                                    <img src="assets/tang.png" alt="">
+                                    <img src="assets/tang.png" alt="">
+                                </div>
+                        </div>
+                        
+
+                        <div class=text>
+                            <p>Saya sering lihat penerjemah bahasa isyarat di TV
+                                dan saya tertarik untuk belajar tapi sulit untuk dipahami sendiri.
+                                Setelah mengikuti pembelajaran di berBISIk, materi terasa lebih
+                                mudah karena dibimbing sampai bisa. Pengajarnya juga
+                                memastikan sampai saya paham</p>
+                        </div>
+        
+                        
+                    </div>  
+
+                    <div class="Melisa">
+                        <h2>MELISA</h2>
+                        <p>Pelajar</p>
+                        <p>Sebagai seseorang yang baru memulai belajar bahasa isyarat, saya sangat
+                            terkesan dengan pengalaman menggunakan website pembelajaran ini. Materi 
+                            yang disajikan sangat mudah dipahami dan interaktif. Saya merasa semakin 
+                            percaya diri dalam berkomunikasi dengan penyandang tunarungu.</p>
+                    </div>
+
+                    <div class="Mark">
+                        <h2>MARK</h2>
+                        <p>Pekerja</p>
+                        <p>Saya sering lihat penerjemah bahasa isyarat di TV
+                            dan saya tertarik untuk belajar tapi sulit untuk dipahami sendiri.
+                            Setelah mengikuti pembelajaran di berBISIk, materi terasa lebih
+                            mudah karena dibimbing sampai bisa. Pengajarnya juga
+                            memastikan sampai saya paham</p>
+                    </div>
+
+                    <div class="Rachel">
+                        <h2>RACHEL</h2>
+                        <p>Ibu Rumah Tangga</p>
+                        <p>Selain mendapatkan materi, saya juga mendapat kesempatan untuk mengikuti 
+                            kegiatan volunteer melalui platform ini. Pengalaman ini sangat berharga bagi 
+                            saya karena saya bisa langsung mengaplikasikan apa yang telah dipelajari dalam 
+                            situasi nyata. </p>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div class="faq">

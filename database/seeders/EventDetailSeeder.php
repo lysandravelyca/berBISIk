@@ -26,7 +26,6 @@ class EventDetailSeeder extends Seeder
                 EventDetail::factory()->create([
                     'event_id' => $event->id
                 ]);
- 
             }
             else{
                 EventDetail::factory()->create([
