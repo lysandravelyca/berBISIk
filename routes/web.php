@@ -73,7 +73,7 @@ Route::post('/jadwalAcara', [EventScheduleController::class, 'store']);
 
 Route::get('/volunteer/{id}', [VolunteerEventController::class, 'show']);
 Route::get('/tambahVolunteer', [VolunteerEventController::class, 'create']);
-Route::post('/acara', [VolunteerEventController::class, 'store']);
+Route::post('/volunteer', [VolunteerEventController::class, 'store']);
 Route::get('/ubahVolunteer/{id}', [VolunteerEventController::class, 'edit']);
 Route::put('/ubahVolunteer/{id}', [VolunteerEventController::class, 'update']);
 Route::get('/hapusVolunteer/{id}', [VolunteerEventController::class, 'delete']);

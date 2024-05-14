@@ -22,7 +22,7 @@
         @for ($i = 0; $i < request()->query('jumlahSesi') ;$i++)
 
         <div class="case">
-            <label for="">Sesi {{ $i+1 }}</label>
+            <label class="section" for="">Sesi {{ $i+1 }}</label>
             <div class="input">
                 <label for="">Nama Sesi</label>
                 <input name="name{{ $i }}" type="text" id="name{{ $i }}">
@@ -30,7 +30,7 @@
 
             <div class="input">
                 <label for="">Deskripsi</label>
-                <input name="description{{ $i }}" type="text" id="description{{ $i }}">
+                <textarea  name="description{{ $i }}" type="text" id="description{{ $i }}" cols="60" rows="6"></textarea>
             </div>
 
             <div class="input">

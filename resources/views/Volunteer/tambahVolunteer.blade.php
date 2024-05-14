@@ -8,7 +8,7 @@
 </body>
 
 @section('content')
-    <form method="POST" action="acara" enctype="multipart/form-data">
+    <form method="POST" action="volunteer" enctype="multipart/form-data">
         @csrf
 
         <h1>Tambah Acara Relawan</h1>

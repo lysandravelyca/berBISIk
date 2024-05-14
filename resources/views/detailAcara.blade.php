@@ -9,7 +9,7 @@
 <div class="container">
     <div class="info">
         <div class="img_kelas">
-            <img src="{{ asset('assets/fotoAcara/kotak.png') }}" alt="">
+            <div class="kotak"></div>
             <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="foto_acara">
         </div>
 

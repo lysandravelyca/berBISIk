@@ -24,20 +24,20 @@ class EventController extends Controller
         // $VolunteerEvent = VolunteerEventController::getVolunteerEvents();
         return view('acara', ['daftarAcara' => $event], ['daftarVolunteer' => $VolunteerEvent]);
     }
-
+    
     public function show($id)
     {
         $event = Event::with('instructors', 'event_types', 'event_schedules')->findOrFail($id);
         return view('detailAcara', ['acara' => $event]);
     }    
-
+    
     public function create()
     {
         $eventType = EventType::select('id', 'name')->get();
         $instructor = Instructor::select('id', 'name')->orderBy('name', 'asc')->get();
         return view('tambahAcara', ['daftarTipeAcara' => $eventType, 'daftarPengajar' => $instructor]);
     }
-
+    
     public function store(tambahAcaraRequest $request)
     {
         // if ($request->title)
@@ -48,18 +48,15 @@ class EventController extends Controller
         //     'benefit' => 'required|regex:/^[a-zA-Z\s]+$/', // cma boleh huruf 
         //     'seat' => 'required|numeric',
         //     'price' => ['required', 'regex:/^Rp\s\d+(,\d{3})*(\.\d{1,2})?$/', 'not_in:Rp']
-            
         // ]);
-
         
-
-        $photoFileName = time() . '-' . $request->title . '.' . $request->photo->extension();
-        $request->photo->move(public_path('assets\fotoAcara'), $photoFileName);
+        // if($request->photo){
+            $photoFileName = time() . '-' . $request->title . '.' . $request->photo->extension();
+            $request->photo->move(public_path('assets\fotoAcara'), $photoFileName);
+            session()->put('photo_file_name', $photoFileName);
+        // }
         
-
-        session()->put('photo_file_name', $photoFileName);
         session()->put('event_data', $request->except('photo'));
-
         
         return redirect('/tambahJadwalAcara?jumlahSesi=' . $request->session);
     }
