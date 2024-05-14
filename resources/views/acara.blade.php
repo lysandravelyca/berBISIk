@@ -214,7 +214,7 @@
             <h2>Bantu Menjadi Relawan</h2>    
         </div>
 
-        <a href="Volunteer/tambahVolunteer">Tambah Acara Relawan Baru</a>
+        <a href="tambahVolunteer">Tambah Acara Relawan Baru</a>
     </div>
     
 
@@ -222,7 +222,7 @@
         @foreach($daftarVolunteer as $relawan)
 
         {{-- masih salah ke detail acaranya --}}
-        <a href="acara/{{ $relawan->id }}">
+        <a href="volunteer/{{ $relawan->id }}">
 
         <div class="c2_relawan">
             <div class="tipe">
@@ -237,7 +237,7 @@
                 <div class="img_container">
                         
                     <div class="img_kelas">
-                        <img src="{{ asset('assets/fotoAcara/'.$relawan->photo)  }}" alt="">
+                        <img src="{{ asset('assets/fotoVolunteer/'.$relawan->photo)  }}" alt="">
                     </div>
                     
                     <div class="modify_button_container">
@@ -253,7 +253,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="acara/{{ $relawan->id }}">
+                    <a href="volunteer/{{ $relawan->id }}">
                     <h3>{{ $relawan->title }}</h3>
         
                     <div class="icon_relawan">
@@ -263,13 +263,13 @@
         
                     <div class="icon_relawan">
                         <img src="assets/icon/calendar.png" alt="">
-                        <h3>{{ $relawan->volunteer_event_schedules->first()->date->format('j M Y') }}</h3>
+                        <h3>{{ $relawan->volunteer_event_schedules->date->format('j M Y') }}</h3>
                     </div>
         
                     <div class="icon_relawan">
                         <img src="assets/icon/clocktime.png" alt="">
-                        <h3>{{ substr($relawan->volunteer_event_schedules->first()->time_start, 0, -3) }} - 
-                            {{ substr($relawan->volunteer_event_schedules->first()->time_end, 0, -3)}} WIB</h3>
+                        <h3>{{ substr($relawan->volunteer_event_schedules->time_start, 0, -3) }} - 
+                            {{ substr($relawan->volunteer_event_schedules->time_end, 0, -3)}} WIB</h3>
                     </div>
                 </div>
             </div>
