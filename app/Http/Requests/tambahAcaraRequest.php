@@ -73,9 +73,6 @@ class tambahAcaraRequest extends FormRequest
             'whatsapp_link' => 'Link whatsapp wajib diisi.',
             'zoom_link' => 'Link zoom wajib diisi.',
 
-        
-            
-
         ];
     }
     

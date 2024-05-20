@@ -25,28 +25,68 @@
             <label class="section" for="">Sesi {{ $i+1 }}</label>
             <div class="input">
                 <label for="">Nama Sesi</label>
-                <input name="name{{ $i }}" type="text" id="name{{ $i }}">
+                <input name="name{{ $i }}" type="text" id="name{{ $i }}" value="{{ old('name' . $i) }}">
             </div>
+
+            @if ($errors->has('name' . $i))
+                <div class="alert alert-danger">
+                    <ul>
+                        <li>{{ $errors->first('name' . $i) }}</li>
+                    </ul>
+                </div>
+            @endif
 
             <div class="input">
                 <label for="">Deskripsi</label>
-                <textarea  name="description{{ $i }}" type="text" id="description{{ $i }}" cols="60" rows="6"></textarea>
+                <textarea name="description{{ $i }}" type="text" id="description{{ $i }}" cols="60" rows="6">{{ old('description' . $i) }}</textarea>
             </div>
+
+            @if ($errors->has("description$i"))
+            <div class="alert alert-danger">
+                <ul>
+                    <li>{{ $errors->first("description$i") }}</li>
+                </ul>
+            </div>
+            @endif
 
             <div class="input">
                 <label for="">Tanggal</label>
-                <input name="date{{ $i }}" type="date" id="date{{ $i }}">
+                <input name="date{{ $i }}" type="date" id="date{{ $i }}"  value="{{ old('date' . $i) }}">
             </div>
+
+            @if ($errors->has("date$i"))
+            <div class="alert alert-danger">
+                <ul>
+                    <li>{{ $errors->first("date$i") }}</li>
+                </ul>
+            </div>
+            @endif
 
             <div class="input">
                 <label for="">Waktu Mulai</label>
-                <input name="time_start{{ $i }}" type="time" id="time_start{{ $i }}">
+                <input name="time_start{{ $i }}" type="time" id="time_start{{ $i }}"  value="{{ old('time_start' . $i) }}">
             </div>
+
+            @if ($errors->has("time_start$i"))
+            <div class="alert alert-danger">
+                <ul>
+                    <li>{{ $errors->first("time_start$i") }}</li>
+                </ul>
+            </div>
+            @endif
 
             <div class="input">
                 <label for="">Waktu Selesai</label>
-                <input name="time_end{{ $i }}" type="time" id="time_end{{ $i }}">
+                <input name="time_end{{ $i }}" type="time" id="time_end{{ $i }}"  value="{{ old('time_end' . $i) }}">
             </div>
+
+            @if ($errors->has("time_end$i"))
+            <div class="alert alert-danger">
+                <ul>
+                    <li>{{ $errors->first("time_end$i") }}</li>
+                </ul>
+            </div>
+            @endif
         </div>
         @endfor
 
