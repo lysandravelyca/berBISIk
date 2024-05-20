@@ -25,15 +25,43 @@
                     <br>
                 </div>
 
-                <form>
-                    <input type="text" class="text-box" placeholder="Email Anda" />
+                <form method="POST" action="register">
+                    @csrf
+                    <input value="{{ old('email') }}" name="email" type="email" class="text-box" placeholder="Email Anda" required/>
                     <br>
-                    <input type="password" class="text-box2" placeholder="Kata Sandi" />
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                <li>{{ $errors->first('email') }}</li>
+                            </ul>
+                        </div>
+                    @endif
+                    <input type="password" name="password" id="password" class="text-box2" placeholder="Kata Sandi" required/>
                     <br>
-                    <input type="password" class="text-box2" placeholder="Ulangi Kata Sandi" />
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                <li>{{ $errors->first('password') }}</li>
+                            </ul>
+                        </div>
+                    @endif
+                    <input type="password" name="password_confirmation" id="password_confirmation" class="text-box2" placeholder="Ulangi Kata Sandi" required/>
                     <br>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                <li>{{ $errors->first('password_confirmation') }}</li>
+                            </ul>
+                        </div>
+                    @endif
                     <button type="submit">Buat Akun</button>
                 </form>
+
+                @if(Session::has('status'))
+                <div class="alert" role="alert">
+                    {{Session::get('message')}}
+                </div>
+                @endif
 
                 <div class="text">
                     <br>

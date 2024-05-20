@@ -18,7 +18,6 @@ class EventScheduleController extends Controller
 
     public function store(tambahJadwalAcaraRequest $request)
     {
-
         $eventData = session()->get('event_data');
         $fileName = session()->get('photo_file_name');
 

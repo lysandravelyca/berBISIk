@@ -64,7 +64,9 @@
             <h2>Kelas yang Tersedia</h2>
         </div>
     
+        @if(Auth::user()->role_id == 2)
         <a href="tambahAcara">Tambah Acara Baru</a>
+        @endif
         
     </div>
     
@@ -92,7 +94,8 @@
                     <div class="img_kelas">
                         <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="">
                     </div>
-                    
+
+                    @if(Auth::user()->role_id == 2)
                     <div class="modify_button_container">
                         <div class="modify_button">
                             <a href="ubahAcara/{{ $acara->id }}"><img src="assets/icon/edit.png" alt=""></a>
@@ -102,6 +105,7 @@
                             <a href="hapusAcara/{{ $acara->id }}"><img src="assets/icon/trash.png" alt=""></a>
                         </div>
                     </div>
+                    @endif
                     
                 </div>
                 
@@ -214,7 +218,9 @@
             <h2>Bantu Menjadi Relawan</h2>    
         </div>
 
+        @if(Auth::user()->role_id == 2)
         <a href="tambahVolunteer">Tambah Acara Relawan Baru</a>
+        @endif
     </div>
     
 
@@ -240,6 +246,7 @@
                         <img src="{{ asset('assets/fotoVolunteer/'.$relawan->photo)  }}" alt="">
                     </div>
                     
+                    @if(Auth::user()->role_id == 2)
                     <div class="modify_button_container">
                         <div class="modify_button">
                             <a href="ubahVolunteer/{{ $relawan->id }}"><img src="assets/icon/edit.png" alt=""></a>
@@ -249,6 +256,7 @@
                             <a href="hapusVolunteer/{{ $relawan->id }}"><img src="assets/icon/trash.png" alt=""></a>
                         </div>
                     </div>
+                    @endif
                     
                 </div>
 

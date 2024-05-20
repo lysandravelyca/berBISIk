@@ -40,16 +40,6 @@ class EventController extends Controller
     
     public function store(tambahAcaraRequest $request)
     {
-        // if ($request->title)
-        
-        // $validated = $request->validate([
-        //     'title' => 'required|regex:/^[a-zA-Z\s]+$/', // cuma boleh huruf
-        //     'short_description' => 'required|max:2  ', // min 20 (krn desc jdi hrusnya bole anggka dan simbol)
-        //     'benefit' => 'required|regex:/^[a-zA-Z\s]+$/', // cma boleh huruf 
-        //     'seat' => 'required|numeric',
-        //     'price' => ['required', 'regex:/^Rp\s\d+(,\d{3})*(\.\d{1,2})?$/', 'not_in:Rp']
-        // ]);
-        
         // if($request->photo){
             $photoFileName = time() . '-' . $request->title . '.' . $request->photo->extension();
             $request->photo->move(public_path('assets\fotoAcara'), $photoFileName);

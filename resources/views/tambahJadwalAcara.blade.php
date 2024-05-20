@@ -19,10 +19,10 @@
         <label for="">Jumlah Sesi</label>
         <input name="session" type="number" value="{{ request()->query('jumlahSesi') }}" readonly> --}}
 
-        @for ($i = 0; $i < request()->query('jumlahSesi') ;$i++)
+        @for ($i = 1; $i <= request()->query('jumlahSesi') ;$i++)
 
         <div class="case">
-            <label class="section" for="">Sesi {{ $i+1 }}</label>
+            <label class="section" for="">Sesi {{ $i }}</label>
             <div class="input">
                 <label for="">Nama Sesi</label>
                 <input name="name{{ $i }}" type="text" id="name{{ $i }}" value="{{ old('name' . $i) }}">

@@ -9,6 +9,7 @@ use App\Http\Controllers\DictionaryLetterController;
 use App\Http\Controllers\VolunteerEventController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -24,6 +25,10 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticating']);
+
+Route::get('/register', [RegisterController::class, 'create'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
+
 
 Route::get('/', function () {
     return view('beranda');
@@ -50,6 +55,10 @@ Route::get('/kamusHuruf', [DictionaryLetterController::class, 'index'])->name('k
 // Route::get('/kamus', [KamusController::class, 'kamus'])->name('kamus')   ;
 
 Route::get('/kamus', [DictionaryController::class, 'index'])->name('kamus');
+
+// untuk bedain page
+
+
 
 Route::get('/acara', [EventController::class, 'index']);
 Route::get('/acara/{id}', [EventController::class, 'show']);

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use Illuminate\Support\Str;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -48,12 +51,12 @@ class AuthController extends Controller
         // }
 
         if (Auth::attempt($credentials)) {
-            if ($user->role_id == 1) { // Assuming role_id 2 is for admin
-                Auth::logout();
-                Session::flash('status', 'failed');
-                Session::flash('message', 'You do not have permission to access this page.');
-                return redirect('/login');
-            }
+            // if ($user->role_id == 1) { // Assuming role_id 2 is for admin
+            //     Auth::logout();
+            //     Session::flash('status', 'failed');
+            //     Session::flash('message', 'You do not have permission to access this page.');
+            //     return redirect('/login');
+            // }
 
             $request->session()->regenerate();
             return redirect()->intended('/');
@@ -64,4 +67,5 @@ class AuthController extends Controller
 
        return redirect('/login');
     }
+
 }

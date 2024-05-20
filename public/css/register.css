@@ -114,3 +114,20 @@ a{
     font-weight: 600;
     text-decoration:none;
 }
+
+.alert {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+
+.alert ul li {
+    margin-left: 0.4%; /* Adjust as needed */
+}
+
+.alert ul li {
+    font-weight: bold;
+    font-size: 14px;
+    color: red;
+}
