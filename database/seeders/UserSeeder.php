@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -28,7 +29,8 @@ class UserSeeder extends Seeder
                 'role_id' => '2',
                 'name' => $admin, 
                 'email' => $admin . '@gmail.com',
-                'password' => '123',
+                // 'password' => '123',
+                'password' => Hash::make('123'), 
                 'phone' => '123',
                 'email_verified_at' => Carbon::now(),
                 'remember_token' => Str::random(10),

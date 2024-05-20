@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\tambahJadwalAcaraRequest;
 use Carbon\Carbon;
 use App\Models\Event;
 use App\Models\EventDetail;
@@ -15,7 +16,7 @@ class EventScheduleController extends Controller
         return view('tambahJadwalAcara');
     }
 
-    public function store(Request $request)
+    public function store(tambahJadwalAcaraRequest $request)
     {
 
         $eventData = session()->get('event_data');
@@ -39,8 +40,7 @@ class EventScheduleController extends Controller
         $eventDetail->whatsapp_link = $eventData['whatsapp_link'];
         $eventDetail->zoom_link = $eventData['zoom_link'];
         $eventDetail->save();
-
-
+        
         for ($i = 0; $i < $eventDetail->session; $i++) {
             $eventSchedule = new EventSchedule;
             $eventSchedule->event_id = $event->id;
