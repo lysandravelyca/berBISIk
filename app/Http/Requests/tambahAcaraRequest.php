@@ -66,15 +66,7 @@ class tambahAcaraRequest extends FormRequest
             'seat.required' => 'Jumlah peserta wajib diisi.',
             'seat' => 'Jumlah peserta hanya boleh numerik.',
             'price.required' => 'Biaya wajib diisi.',
-            // 'price.not_in' => 'Harus di awali dengan Rp' ,
             'price.numeric' => 'Biaya hanya boleh terdiri dari angka.',
-            // 'price' => [
-            //     'required' => 'Biaya wajib di isi' ,
-            //     'not_in' => 'Harga harus diawali dengan Rp',
-            //     'regex' =>'di isi dengan numerik' ,
-                
-            // ],
-            
             'location.required' => 'Lokasi wajib diisi.',
             'location' => 'Lokasi harus diawali dengan "Jalan"',
             'photo.required' => 'Photo wajib di isi.',
