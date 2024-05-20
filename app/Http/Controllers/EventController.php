@@ -90,6 +90,8 @@ class EventController extends Controller
         $deleteEvent = Event::FindOrFail($id);
         $deleteEvent->event_details()->delete();
         $deleteEvent->event_schedules()->delete();
+        $deleteEvent->reviews()->delete();
+        $deleteEvent->users_events()->delete();
         $deleteEvent->delete();
 
         // if($deleteStudent){

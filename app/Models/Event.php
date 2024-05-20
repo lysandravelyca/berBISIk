@@ -28,4 +28,14 @@ class Event extends Model
     {
         return $this->hasOne(EventDetail::class);
     }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'event_id', 'id');
+    }
+
+    public function users_events()
+    {
+        return $this->hasMany(UsersEvent::class, 'event_id', 'id');
+    }
 }
