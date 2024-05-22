@@ -81,26 +81,17 @@
         <div class="ikhitisar">
             <h1>Ikhitisar Kelas</h1>
             {{-- masi manual isi dropdown belom ada dbnya--}}
-            <div class="a">
-                <div class="minggu">
-                    <h3>Minggu ke-1</h3>
-                    <i class="icon fa-solid fa-caret-down"></i>
+            @foreach ($acara->event_schedules as $jadwal)
+                <div class="a">
+                    <div class="minggu">
+                        <h3>{{ $jadwal->name }}</h3>
+                        <i class="icon fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="isiminggu">
+                        <p>{{ $jadwal->description }}</p>
+                    </div>
                 </div>
-                <div class="isiminggu">
-                    <p>Konten minggu ini adalah</p>
-                </div>
-            </div>
-            <div class="a">
-                <div class="minggu">
-                    <h3>Minggu ke-2</h3>
-                    <i class="icon fa-solid fa-caret-down"></i>
-                </div>
-                <div class="isiminggu">
-                    <p>Konten minggu ini adalah</p>
-                </div>
-            </div>
-        </div>
-        
+            @endforeach
 
         <div class="bisik">
             <div class="bisi">
