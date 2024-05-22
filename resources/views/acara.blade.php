@@ -160,55 +160,6 @@
         </a>
         @endforeach
     </div>
-
-    {{-- <div class="container"> 
-        <div class="c2">
-            <div class="tipe">
-                <p>Tipe: Kelas/Seminar/Webinar</p>
-            </div>
-    
-            <div class="kelas_card">
-                <img src="" alt="" class="img_kelas">
-                <div class="card">
-                    <h3>Judul Kelas/Seminar/Webinar</h3>
-                    <h3>Lorem ipsum dolor sit amet</h3>
-        
-                    <div class="pengajar">
-                        <div class="profil_pengajar">
-                            <img src="" alt="">
-                        </div>
-            
-                        <div class="deskripsi_pengajar">
-                            <p>Nama Pengajar/Speaker/Trainer</p>
-                            <p>Pekerjaan Pengajar/Speaker</p>
-                        </div>
-                    </div>
-        
-                    <div class="tanggal">
-                        <img src="" alt="">
-                        <h3>5 Maret 2024 - 7 May 2024</h3>
-                    </div>
-        
-                    <div class="jam">
-                        <img src="" alt="">
-                        <h3>16.00 - 18.00 WIB</h3>
-                    </div>
-        
-                    <div class="rating">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="" class="abu">
-                        <h3>4.0</h3>
-                    </div>
-        
-                    <h3>FREE/Total Pembayaran</h3>
-                </div>
-                
-            </div>
-        </div>
-    </div> --}}
 </div>
 
 <div class="relawan">
@@ -231,13 +182,13 @@
         <a href="volunteer/{{ $relawan->id }}">
 
         <div class="c2_relawan">
-            <div class="tipe">
+            {{-- <div class="tipe">
                 @if (rand(1,100) % 2 == 0)
                     <p>Panitia</p>
                 @else
                     <p>Penerjemah</p>
                 @endif
-            </div>
+            </div> --}}
     
             <div class="kelas_card">
                 <div class="img_container">

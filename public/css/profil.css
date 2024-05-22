@@ -68,6 +68,10 @@
     z-index: 1;
 }
 
+.card img {
+    height: 20rem;
+}
+
 .btn{
     border: none;
     background-color: #f68af668;
@@ -192,4 +196,138 @@
     align-items: center;
     padding: 20px;
     color: #ffffff;
+}
+
+/* Acara yang dimiliki user */
+.tipe_kelas{
+    font-size: 14px;
+    font-weight: 500;
+    color: #5F2A5D;
+}
+
+.judul_kelas{
+    font-weight: bold;
+}
+
+.sesi_kelas{
+    font-size: 14px;
+}
+
+.kelas{
+    background-image: url(../assets/acara/Group\ 42.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 78px;
+    margin-top: -120px;
+    /* kalo responsive dia bakal ttp hiks */
+    width: 1286px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 596px;
+}
+
+.c2{
+    width: 292px;
+    height: 399px;
+    margin: 10px;
+}
+
+.c2 h3{
+    font-size: 14px;
+}
+
+.c2 p{
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.tipe{
+    background-color: #FFDA93;
+    padding: 10px 15px;
+    font-size: 14px;
+    width: max-content;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.img_kelas img{
+    position: relative;
+    height: 160px;
+    width: 280px;
+    padding: 0;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+}
+
+.modify_button_container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: -150px;
+    margin-right: 10px;
+}
+
+.modify_button img{
+    z-index: 10;
+    position: relative;
+    width: 33px;
+    height: 33px;
+}
+
+.kelas_card{
+    background-color: white;    
+    border-radius: 10px;
+    margin: -15px 15px 0px;
+    width: 280px;
+    height: 360px;
+}
+
+.card{
+    padding: 10px 20px 10px;
+    width: 280px;
+}
+
+.judul_acara {
+    display: flex;
+    height: 35px;
+    /* align-items: center; */
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    /* color: gray; */
+    align-items: center;
+}
+
+.icon img{
+    height: 16px;
+}
+
+.icon h3{
+    margin-left: 5px;
+    color: gray;
+}
+
+/* ini logika buat picture gak stretch */
+.profil_pengajar{
+    border-radius: 100%;
+    width: 30px; /* Set your desired width */
+    height: 30px; /* Set your desired height */
+    overflow: hidden; /* This will hide any parts of the image that exceed the container */
+    position: relative; /* Required for absolute positioning of the image */
+}
+
+.profil_pengajar img {
+    position: absolute;
+    width: auto; /* This will allow the image to resize proportionally */
+    height: 100%; /* This will ensure the image fills the entire container vertically */
+    left: 50%; /* Center the image horizontally */
+    top: 50%; /* Center the image vertically */
+    transform: translate(-50%, -50%); /* Center the image precisely */
+    
 }

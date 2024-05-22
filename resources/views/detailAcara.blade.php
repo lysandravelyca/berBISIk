@@ -60,7 +60,7 @@
                     <div>
                         <h3>{{ 'Rp'.number_format($acara->price, 0, ',', '.') }}</h3>
                     </div>
-                    <a href="#">Daftar Sekarang</a>
+                    <a href="daftarAcara/{{ $acara->id }}">Daftar Sekarang</a>
                 </div>
             </div>
         </div>   

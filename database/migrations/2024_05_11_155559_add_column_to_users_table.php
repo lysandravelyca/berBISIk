@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('phone', 20)->after('name')->required();
             $table->unsignedBigInteger('role_id')->after('id')->required();
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('restrict');
+            $table->string('photo', 255)->nullable();
         });
     }
 
@@ -31,6 +32,7 @@ return new class extends Migration
             $table->dropForeign(['role_id']);
             $table->dropColumn('role_id');
             $table->dropColumn('phone');
+            $table->dropColumn('photo');
         });
     }
 };

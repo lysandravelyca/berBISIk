@@ -32,6 +32,7 @@ class UserSeeder extends Seeder
                 // 'password' => '123',
                 'password' => Hash::make('123'), 
                 'phone' => '123',
+                'photo' => 'Sample1.png',
                 'email_verified_at' => Carbon::now(),
                 'remember_token' => Str::random(10),
                 'created_at' => Carbon::now(),

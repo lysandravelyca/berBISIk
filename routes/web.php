@@ -10,6 +10,7 @@ use App\Http\Controllers\VolunteerEventController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -71,6 +72,9 @@ Route::put('/ubahJadwalAcara/{id}', [EventScheduleController::class, 'update']);
 Route::get('/hapusAcara/{id}', [EventController::class, 'delete']);
 Route::delete('/hapusAcara/{id}', [EventController::class, 'destroy']);
 // Route::get('/acara', [VolunteerEventController::class, 'index']);
+Route::get('/acara/daftarAcara/{id}', [EventController::class, 'register']);
+Route::post('/daftarAcara/{id}', [EventController::class, 'confirm']);
+// Route::post('/acara/daftarAcara/{id}', [EventController::class, 'confirm']);
 
 Route::get('/tambahPengajar', [InstructorController::class, 'create']);
 Route::post('/pengajar', [InstructorController::class, 'store']);
@@ -87,3 +91,5 @@ Route::get('/ubahVolunteer/{id}', [VolunteerEventController::class, 'edit']);
 Route::put('/ubahVolunteer/{id}', [VolunteerEventController::class, 'update']);
 Route::get('/hapusVolunteer/{id}', [VolunteerEventController::class, 'delete']);
 Route::delete('/hapusVolunteer/{id}', [VolunteerEventController::class, 'destroy']);
+
+Route::get('/profil', [UserController::class, 'show']);

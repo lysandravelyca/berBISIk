@@ -19,11 +19,25 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+
+        $photo = [
+            'Sample1.png',
+            'Sample2.png',
+            'Sample3.png',
+            'Sample4.png',
+            'Sample5.png',
+            'Sample6.png',
+            'Sample7.png',
+            'Sample8.png',
+            'Sample9.png',
+        ];
+
         return [
             'role_id' => '1',
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'phone' => '123',
+            'photo' => fake()->randomElement($photo),
             'email_verified_at' => now(),
             'password' => Hash::make('abc'), // password
             'remember_token' => Str::random(10),

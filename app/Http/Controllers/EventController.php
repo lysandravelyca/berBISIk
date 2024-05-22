@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use App\Models\EventDetail;
-use App\Models\EventSchedule;
 use App\Models\EventType;
 use App\Models\Instructor;
+use App\Models\UsersEvent;
+use App\Models\EventDetail;
 use Illuminate\Http\Request;
-use App\Http\Controllers\VolunteerEventController;
+use App\Models\EventSchedule;
 use App\Models\VolunteerEvent;
 use App\Models\VolunteerEventDetail;
+use Illuminate\Support\Facades\Auth;
 use App\Models\VolunteerEventSchedule;
 use App\Http\Requests\tambahAcaraRequest;
-
+use App\Http\Controllers\VolunteerEventController;
 
 class EventController extends Controller
 {
@@ -101,6 +102,20 @@ class EventController extends Controller
 
         return redirect('/acara');
         
+    }
+
+    public function register($id)
+    {
+        return view('/daftarAcara', compact('id'));
+    }
+
+    public function confirm(Request $request, $id)
+    {
+       $usersEvent = new UsersEvent();
+       $usersEvent->user_id = Auth::user()->id;
+       $usersEvent->event_id = $id;
+       $usersEvent->save();
+       return redirect('/profil');
     }
     
 }
