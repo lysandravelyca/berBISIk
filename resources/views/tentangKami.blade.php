@@ -132,7 +132,7 @@
         </div>
 
         <div class="ly">
-            <h1>PENGEMBANG WEB/h1>
+            <h1>PENGEMBANG WEB</h1>
             <P>Lysandra Velyca</P>
         </div>
 
@@ -140,10 +140,7 @@
             <h1>PERANCANG GRAFIS</h1>
             <p>Vallen Charissa Gunawan</p>
         </div>
-
-
     </div>
-
 
         <div class="semua">
             <div class="peserta">
