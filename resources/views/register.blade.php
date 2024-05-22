@@ -27,33 +27,27 @@
 
                 <form method="POST" action="register">
                     @csrf
-                    <input value="{{ old('email') }}" name="email" type="email" class="text-box" placeholder="Email Anda" required/>
-                    <br>
+                    <input value="{{ old('email') }}" name="email" type="email" class="text-box" placeholder="Email Anda" />
+                
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
-                                <li>{{ $errors->first('email') }}</li>
+                                <span>{{ $errors->first('email') }}</span>
                             </ul>
                         </div>
                     @endif
-                    <input type="password" name="password" id="password" class="text-box2" placeholder="Kata Sandi" required/>
                     <br>
+                    <input type="password" name="password" id="password" class="text-box2" placeholder="Kata Sandi" />
+                    <br>
+                    <input type="password" name="password_confirmation" id="password_confirmation" class="text-box2" placeholder="Ulangi Kata Sandi" />
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
-                                <li>{{ $errors->first('password') }}</li>
+                                <span>{{ $errors->first('password') }}</span>
                             </ul>
                         </div>
                     @endif
-                    <input type="password" name="password_confirmation" id="password_confirmation" class="text-box2" placeholder="Ulangi Kata Sandi" required/>
                     <br>
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                <li>{{ $errors->first('password_confirmation') }}</li>
-                            </ul>
-                        </div>
-                    @endif
                     <button type="submit">Buat Akun</button>
                 </form>
 

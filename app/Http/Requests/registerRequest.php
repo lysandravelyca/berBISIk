@@ -24,23 +24,21 @@ class registerRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required|unique:email|email',
-            'password' => 'required',
-            'password_confirmation' => ['required', function ($password, $password_confirmation, $fail){
-                if (strcmp($password, $password_confirmation) == 0){
-                    $fail('Confirm Password tidak sama dengan Password');
-                }
-            }],
+
+            'email' => 'required|email|unique:users,email', // email gabole sama kek di db
+            'password' => 'required|string|min:6|confirmed',
         ];
     }
 
-    public function message(){
+    public function messages(){
 
         return[
             'email.required' => 'Email wajib diisi',
-            'email.unique' => 'Email sudah digunakan',
-            'password.required' => 'Password wajib diisi',
-            'password_confirmation.required' => 'Confirm password wajib diisi',
+            'email.email' => 'Alamat email tidak valid',
+            'email.unique' => 'Email tersebut sudah ada, mohon ganti yang lain',
+            'password.required' => 'Kata sandi wajib diisi ',
+            'password.confirmed' => 'Kata sandi tidak sama',
+            'password' => 'Kata sandi minima 6 huruf'
         ];
     }
 }

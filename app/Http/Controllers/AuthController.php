@@ -19,6 +19,14 @@ class AuthController extends Controller
 
     }
 
+    public function logout(Request $request){
+
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
+    }
+
     public function authenticating(Request $request)
     {
         // Session::flash('email', $request->email);

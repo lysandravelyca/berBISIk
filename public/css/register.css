@@ -116,17 +116,14 @@ a{
 }
 
 .alert {
-    padding: 5px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    /* padding: 5px; */
+    /* margin-bottom: 5px; */
+    /* border-radius: 4px; */
 }
 
 
-.alert ul li {
-    margin-left: 0.4%; /* Adjust as needed */
-}
-
-.alert ul li {
+.alert ul span  {
+    text-decoration: none;
     font-weight: bold;
     font-size: 14px;
     color: red;

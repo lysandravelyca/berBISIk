@@ -18,25 +18,9 @@ class RegisterController extends Controller
         return view('register');
     }
 
-    public function store(Request $request){
-
-        $pass = $request->password;
-
-        $credential = $request->validate([
-            'email' => ['required', 'unique:email'],
-            'password' => ['required'],
-            // 'password_confirmation' => ['required', function ($password_confirmation, $fail){
-            //     if (strcmp($pass, $password_confirmation) == 0){
-            //         $fail('Confirm Password tidak sama dengan Password');
-            //     }
-            // }],
-            'password_confirmation' => ['required'],
-        ]);
-
-        // if (Auth::attempt($credential)){
-            
+    public function store(registerRequest $request){
+        
             $user = new User;
-
             $user->role_id = '1';
             $user->name = fake()->name();
             $user->email = $request->email;
@@ -49,7 +33,6 @@ class RegisterController extends Controller
             $user->save();
     
             return redirect()->intended('/');
-        // }
-        // return redirect('/register');
+
     }
 }

@@ -48,6 +48,12 @@
                     <a href="/profil" class="nav-link">Profile</a>
                 </li>
             </ul>
+
+            <ul>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">Logout</a>
+                </li>
+            </ul>
         </nav>
     </header>
     <!-- header end -->

@@ -24,32 +24,32 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/login', [AuthController::class, 'authenticating']);
-
-Route::get('/register', [RegisterController::class, 'create'])->name('register');
-Route::post('/register', [RegisterController::class, 'store']);
-
-
 Route::get('/', function () {
     return view('beranda');
 })->middleware('auth');
-
-Route::get('/kamus', function(){
-    return view('kamus');
-});
 
 Route::get('/register', function(){
     return view('register');
 });
 
+Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
+Route::post('/login', [AuthController::class, 'authenticating'])->middleware('guest');
+Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
+Route::get('/register', [RegisterController::class, 'create'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/kamus', function(){
+    return view('kamus');
+})->middleware('auth');
+
+
 Route::get('/tentangKami', function(){
     return view('tentangKami');
-});
+})->middleware('auth');
 
 Route::get('/profil', function(){
     return view('profil');
-});
+})->middleware('auth');
 
 Route::get('/kamusHuruf', [DictionaryLetterController::class, 'index'])->name('kamus.huruf');
 
@@ -57,7 +57,6 @@ Route::get('/kamusHuruf', [DictionaryLetterController::class, 'index'])->name('k
 
 Route::get('/kamus', [DictionaryController::class, 'index'])->name('kamus');
 
-// untuk bedain page
 
 
 
