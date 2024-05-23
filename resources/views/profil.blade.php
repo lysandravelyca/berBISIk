@@ -15,14 +15,16 @@
             Profil Saya
         </div>
         <div class="card">
-            @if (Auth::user()->photo != null)
-                <img src="{{ asset('assets/fotoUser/' . Auth::user()->photo) }}" alt="">
-            @else
-                {{-- kasih image sample --}}
-                <img src="" alt="">
-            @endif
-            <div class="btn">Ubah Cover</div>
-            <div class="btn2">Ubah Profil</div>
+                @if (Auth::user()->photo != null)
+                    <img src="{{ asset('assets/fotoUser/' . Auth::user()->photo) }}" alt="">
+                @else
+                    {{-- kasih image sample --}}
+                    <img src="" alt="">
+                @endif
+            <div class = "buttons">
+                <div class="btn">Ubah Cover</div>
+                <div class="btn2">Ubah Profil</div>
+            </div>  
         </div>
 
     </div>
@@ -64,7 +66,7 @@
 
                             </div>
 
-                            <div class="card">
+                            <div class="cardKelas">
                                 <!-- tambahin a href disini karena emang gambar sama card itu beda container -->
                                 <a href="acara/{{ $acaraUser->events->id }}">
                                     <h3 class="judul_acara">{{ $acaraUser->events->title }}</h3>
@@ -121,8 +123,9 @@
         <div class="judul2_current">
             <div class="judul_current">
                 <img src="assets/acara/Group 43.png" alt="">
-                <h2>Acara yang terdaftar</h2>
+                <h2>Kelas yang Sedang Berlangsung</h2>
             </div>
+        </div>
             <div class="container">
                 @foreach($daftarAcaraRelawanUser as $acaraRelawanUser)
                 <a href="volunteer/{{ $acaraRelawanUser->volunteer_events->id }}">
@@ -148,7 +151,7 @@
                             
                         </div>
         
-                        <div class="card">
+                        <div class="cardKelas">
                             <a href="volunteer/{{ $acaraRelawanUser->volunteer_events->id }}">
                             <h3>{{ $acaraRelawanUser->volunteer_events->title }}</h3>
                 

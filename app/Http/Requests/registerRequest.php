@@ -38,7 +38,7 @@ class registerRequest extends FormRequest
             'email.unique' => 'Email tersebut sudah ada, mohon ganti yang lain',
             'password.required' => 'Kata sandi wajib diisi ',
             'password.confirmed' => 'Kata sandi tidak sama',
-            'password' => 'Kata sandi minima 6 huruf'
+            'password' => 'Kata sandi minimal 6 huruf'
         ];
     }
 }
