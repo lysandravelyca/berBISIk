@@ -58,8 +58,6 @@ Route::get('/kamusHuruf', [DictionaryLetterController::class, 'index'])->name('k
 Route::get('/kamus', [DictionaryController::class, 'index'])->name('kamus');
 
 
-
-
 Route::get('/acara', [EventController::class, 'index']);
 Route::get('/acara/{id}', [EventController::class, 'show']);
 Route::get('/tambahAcara', [EventController::class, 'create']);
@@ -73,6 +71,8 @@ Route::delete('/hapusAcara/{id}', [EventController::class, 'destroy']);
 // Route::get('/acara', [VolunteerEventController::class, 'index']);
 Route::get('/acara/daftarAcara/{id}', [EventController::class, 'register']);
 Route::post('/daftarAcara/{id}', [EventController::class, 'confirm']);
+
+
 // Route::post('/acara/daftarAcara/{id}', [EventController::class, 'confirm']);
 
 Route::get('/tambahPengajar', [InstructorController::class, 'create']);
