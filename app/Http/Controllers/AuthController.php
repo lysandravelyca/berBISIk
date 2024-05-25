@@ -36,7 +36,7 @@ class AuthController extends Controller
             'password' => ['required'], 
         ]);
 
-        $user = \App\Models\User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->first();
         if (!$user) {
             Session::flash('status', 'failed');
             Session::flash('message', 'User not found');

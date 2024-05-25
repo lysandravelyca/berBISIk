@@ -325,7 +325,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 555px;
+    height: 600px;
+    justify-content: center;
 }
 
 .c2_relawan{
@@ -386,4 +387,13 @@
 
 .img_container{
     height: 160px;
+}
+
+.relawan .kelas-card{
+    margin-top: 0;
+}
+
+.relawan .container{
+    height: 390px;
+    align-items: center;
 }
