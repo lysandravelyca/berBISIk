@@ -106,9 +106,10 @@ class EventController extends Controller
 
     public function register($id)
     {
-        return view('/daftarAcara', compact('id'));
+        $event = Event::find($id);
+        return view('/daftarAcara', compact('id','event'));
     }
-
+    
     public function confirm(Request $request, $id)
     {
        $usersEvent = new UsersEvent();
@@ -117,5 +118,4 @@ class EventController extends Controller
        $usersEvent->save();
        return redirect('/profil');
     }
-    
 }
