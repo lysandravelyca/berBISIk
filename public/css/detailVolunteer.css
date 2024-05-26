@@ -1,3 +1,17 @@
+* {
+    font-family: 'Poppins';
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(95, 42, 93);
+    font-weight: 600;
+}
+
+p{
+    font-size: 16px;
+}
+
 .img_kelas {
     position: relative;
 }
@@ -114,4 +128,8 @@
     font-size: 0.35em;
     vertical-align: middle;
     color: #F9EEE1;
+}
+
+.desc_acara li{
+    color: black;
 }
