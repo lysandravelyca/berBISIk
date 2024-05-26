@@ -188,6 +188,7 @@ button{
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 4%;
 }
 
 button:hover {
