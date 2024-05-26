@@ -1,0 +1,91 @@
+.img_kelas {
+    position: relative;
+}
+
+.kotak {
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    background-color: #FF885E;
+    width: 25.7vw;
+    height: 30.7vw;
+    border-radius: 30px;
+}
+
+.foto_acara {
+    position: relative;
+    width: 25.7vw;
+    height: 30.7vw;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.info {  
+    background-color: #F9EEE1;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    /* margin-bottom: 50px; */
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 0 0 80px 80px;
+    justify-content: flex-start;
+}
+
+.detail {
+    padding: 3%;
+    width: 100%;
+}
+
+.jadwal_acara {
+    background-color: #FF885E;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5%;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.infojadwal{
+    margin-left:10px;
+}
+
+.jadwal_acara span,
+.jadwal_acara h3 {
+    color: #ffffff;
+}
+
+.fa-regular {
+    color: #ffffff;
+    margin-right: 4px;
+}
+
+.daftar{
+    text-align: center;
+    margin-left: 20%;
+}
+
+.daftar a {
+    border: none;
+    background-color: #5F2A5D;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    display:inline-block;
+    border-radius: 25px;
+	margin-top: 2%;  
+    transition: background-color 0.3s ease;
+}
+
+.daftar a:hover {
+    background-color: #F9EEE1; 
+    color: #5F2A5D;
+}
+
+.back{
+    background-color: #F9EEE1;
+    padding-top: 1%;
+    padding-left: 2%;   
+}

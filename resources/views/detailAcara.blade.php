@@ -8,6 +8,7 @@
 <div class="back">
     <a href="/acara">< Kembali</a>
 </div>
+
 <div class="container">
     <div class="info">
         <div class="img_kelas">
