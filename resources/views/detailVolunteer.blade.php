@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/detailVolunteer.css') }}">
 <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
 @section('content')
+
 <div class="back">
     <a href="/acara">< Kembali</a>
 </div>
@@ -64,5 +65,30 @@
                 </div>
             </div>
         </div>   
+    </div>
+
+    <div class="pekerjaan">
+        <div class="detil">
+            <h1>Detil Pekerjaan</h1>
+        </div>
+        <div class="kriteria">
+            <h3>Kriteria Relawan:</h3>
+            <ul>
+                @foreach(explode("\n", $volunteer->volunteer_event_details->criteria) as $criteria)
+                    @if (strpos($criteria, '.') !== false)
+                        <?php $points = explode('.', $criteria); ?>
+                        @foreach($points as $key => $point)
+                            @if ($loop->last && $key === count($points) - 1)
+                                <li>{{ $point }}</li>
+                            @else
+                                <li><i class="fa-solid fa-circle circle"></i> {{ $point }}</li>
+                            @endif
+                        @endforeach
+                    @else
+                        <li>{{ $criteria }}</li>
+                    @endif
+                @endforeach
+            </ul>
+        </div>
     </div>
 </div>

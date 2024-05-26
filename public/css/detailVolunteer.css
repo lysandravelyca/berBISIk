@@ -89,3 +89,29 @@
     padding-top: 1%;
     padding-left: 2%;   
 }
+
+.pekerjaan{
+    background-color: #5F2A5D;
+    padding: 3%; 
+    border-radius: 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 8%;
+}
+
+.detil h1{
+    color: #F9EEE1;
+    margin-bottom: 8%;
+}
+
+.kriteria h3, li{
+    color:#F9EEE1;
+}
+
+.circle{
+    font-size: 0.35em;
+    vertical-align: middle;
+    color: #F9EEE1;
+}
