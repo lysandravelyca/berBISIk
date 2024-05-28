@@ -21,6 +21,14 @@ class VolunteerEventSeeder extends Seeder
         VolunteerEvent::truncate();
         Schema::enableForeignKeyConstraints();
 
-        VolunteerEvent::factory()->count(10)->create();
+        VolunteerEvent::factory()->count(20)->create([
+            'status_id' => 1
+        ]);
+
+        VolunteerEvent::factory()->count(10)->create([
+            'status_id' => 2
+        ]);
+
+        // VolunteerEvent::factory()->count(10)->create();
     }
 }

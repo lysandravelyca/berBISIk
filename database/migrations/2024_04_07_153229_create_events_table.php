@@ -23,6 +23,8 @@ return new class extends Migration
             $table->integer('price')->unsigned()->required();
             $table->string('location', 255)->required();
             $table->string('photo', 255)->nullable();
+            $table->unsignedBigInteger('status_id')->required();
+            $table->foreign('status_id')->references('id')->on('statuses')->onDelete('restrict');
             $table->timestamps();
         });
     }

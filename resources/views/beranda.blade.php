@@ -25,7 +25,7 @@
                     <p>#BerbahasaIsyaratIndonesiaAsik</p>
                 </div>
                 <div>
-                    <button class="btn">Kamus BISINDO</button>
+                    <a href="/kamus"><button class="btn" onclick="/kamus">Kamus BISINDO</button></a>
                 </div>
             </div>
            
@@ -142,7 +142,7 @@
                          Tuli serta pengajaran Bisindo dasar
                     </p>
                     <br><br>
-                    <a href="#">Lebih Detail ></a>
+                    <a href="/acara">Lebih Detail ></a>
                 </div>
 
                 <div class="box">
@@ -152,7 +152,7 @@
                         program inklusif bagi komunitas tuli dengan <span>Ber</span><span>BISI</span><span>k</span>
                     </p>
                     <br>
-                    <a href="#">Lebih Detail ></a>
+                    <a href="/acara">Lebih Detail ></a>
                 </div>
 
                 <div class="box">
@@ -162,7 +162,7 @@
                         mengetahui lebih lanjut tentang bahasa isyarat
                     </p>
                     <br>
-                    <a href="#">Lebih Detail ></a>
+                    <a href="/acara">Lebih Detail ></a>
                 </div>
 
                 <div class="box">
@@ -170,7 +170,7 @@
                     <h2>Kelas Daring</h2>
                     <p>Sesi pembelajaran BISINDO secara daring bersama tim <span>Ber</span><span>BISI</span><span>k</span></p>
                     <br><br>
-                    <a href="#">Lebih Detail ></a>
+                    <a href="/acara">Lebih Detail ></a>
                 </div>
             </div>
     </section>
@@ -212,7 +212,7 @@
                 
             </div>
             <div class="btnKamii">
-                <button class="btnKami">Tentang Kami</button>
+                <a href="/tentangKami"><button class="btnKami">Tentang Kami</button></a>
             </div>
             
             <div class="tangan">

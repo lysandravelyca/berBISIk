@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\EventType;
 use App\Models\Instructor;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Faker\Factory as faker;
 
@@ -17,9 +18,7 @@ class EventFactory extends Factory
         $faker = faker::create();
 
         $types = EventType::pluck('id')->toArray();
-        $instructor = Instructor::pluck('id')->toArray();
-
-                
+        $instructor = Instructor::pluck('id')->toArray();      
 
         $titles = [
             'Pengajaran Bahasa Isyarat Indonesia',

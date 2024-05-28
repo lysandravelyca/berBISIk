@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Event;
 use App\Models\EventSchedule;
+use App\Models\Status;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Database\Factories\EventScheduleFactory;
 use Illuminate\Support\Facades\Schema;

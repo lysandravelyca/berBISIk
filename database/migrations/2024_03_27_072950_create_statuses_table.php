@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('volunteer_events', function (Blueprint $table) {
+        Schema::create('statuses', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('location');
-            $table->string('photo');
-            $table->unsignedBigInteger('status_id')->required();
-            $table->foreign('status_id')->references('id')->on('statuses')->onDelete('restrict');
+            $table->string('name', 50)->required();
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('volunteer_events');
+        Schema::dropIfExists('statuses');
     }
 };

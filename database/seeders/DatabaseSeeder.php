@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             DictionarySeeder::class,
+            StatusSeeder::class,
             InstructorSeeder::class,
             EventTypeSeeder::class,
             EventSeeder::class,
