@@ -19,15 +19,15 @@ class DictionarySeeder extends Seeder
         Dictionary::truncate();
 
         $alphabets = [];
-        for ($i = 97; $i <= 122; $i++) {
+        for ($i = 65; $i <= 90; $i++) {
             $letter = chr($i); // Mengonversi kode ASCII menjadi huruf
             $alphabets[] = ['word' => $letter, 'picture' => $letter . '.png'];
         }
 
-        $wordsSample = ['halo', 'selamat', 'hari', 'semua', 'aku', 'temanteman', 'bahasaisyarat', 'orang', 'indonesia', 'untuk', 
-        'disabilitas', 'tema', 'internasional', 'tahun', 'tuli', 'mengucapkan', 'tepuktangan', 'perempuan', 'januari', 'februari',
-        'maret', 'april', 'mei', 'juni', 'juli', 'agustus', 'september', 'oktober', 'november', 'desember', 'senin',
-        'selasa', 'rabu', 'kamis', 'jumat', 'sabtu', 'minggu'];
+        $wordsSample = ['Halo', 'Selamat', 'Hari', 'Semua', 'Aku', 'TemanTeman', 'BahasaIsyarat', 'Orang', 'Indonesia', 'Untuk', 
+        'Disabilitas', 'Tema', 'Internasional', 'Tahun', 'Tuli', 'Mengucapkan', 'TepukTangan', 'Perempuan', 'Januari', 'Februari',
+        'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember', 'Senin',
+        'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
 
         $words = [];
         foreach($wordsSample as $word){

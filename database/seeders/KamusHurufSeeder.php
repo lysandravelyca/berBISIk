@@ -18,133 +18,133 @@ class KamusHurufSeeder extends Seeder
         // ini blm kapital, keknya imagenya gabisaaa :(
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "a",
-            "asset" => 'assets/kamus/huruf/a.png'
+            "huruf"=> "A",
+            "asset" => 'assets/kamus/huruf/A.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "b",
-            "asset" => "assets/kamus/huruf/b.png"
+            "huruf"=> "B",
+            "asset" => "assets/kamus/huruf/B.png"
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "c",
-            "asset" => "assets/kamus/huruf/c.png"
+            "huruf"=> "C",
+            "asset" => "assets/kamus/huruf/C.png"
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "d",
-            "asset" => 'assets/kamus/huruf/d.png'
+            "huruf"=> "D",
+            "asset" => 'assets/kamus/huruf/D.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "e",
-            "asset" => 'assets/kamus/huruf/e.png'
+            "huruf"=> "E",
+            "asset" => 'assets/kamus/huruf/E.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "f",
-            "asset" => 'assets/kamus/huruf/f.png'
+            "huruf"=> "F",
+            "asset" => 'assets/kamus/huruf/F.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "g",
-            "asset" => 'assets/kamus/huruf/g.png'
+            "huruf"=> "G",
+            "asset" => 'assets/kamus/huruf/G.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "h",
-            "asset" => 'assets/kamus/huruf/h.png'
+            "huruf"=> "H",
+            "asset" => 'assets/kamus/huruf/H.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "i",
-            "asset" => 'assets/kamus/huruf/i.png'
+            "huruf"=> "I",
+            "asset" => 'assets/kamus/huruf/I.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "j",
-            "asset" => 'assets/kamus/huruf/j.png'
+            "huruf"=> "J",
+            "asset" => 'assets/kamus/huruf/J.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "k",
-            "asset" => 'assets/kamus/huruf/k.png'
+            "huruf"=> "K",
+            "asset" => 'assets/kamus/huruf/K.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "l",
-            "asset" => 'assets/kamus/huruf/l.png'
+            "huruf"=> "L",
+            "asset" => 'assets/kamus/huruf/L.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "m",
-            "asset" => 'assets/kamus/huruf/m.png'
+            "huruf"=> "M",
+            "asset" => 'assets/kamus/huruf/M.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "n",
-            "asset" => 'assets/kamus/huruf/n.png'
+            "huruf"=> "N",
+            "asset" => 'assets/kamus/huruf/N.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "o",
-            "asset" => 'assets/kamus/huruf/o.png'
+            "huruf"=> "O",
+            "asset" => 'assets/kamus/huruf/O.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "p",
-            "asset" => 'assets/kamus/huruf/p.png'
+            "huruf"=> "P",
+            "asset" => 'assets/kamus/huruf/P.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "q",
-            "asset" => 'assets/kamus/huruf/q.png'
+            "huruf"=> "Q",
+            "asset" => 'assets/kamus/huruf/Q.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "r",
-            "asset" => 'assets/kamus/huruf/r.png'
+            "huruf"=> "R",
+            "asset" => 'assets/kamus/huruf/R.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "s",
-            "asset" => 'assets/kamus/huruf/s.png'
+            "huruf"=> "S",
+            "asset" => 'assets/kamus/huruf/S.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "t",
-            "asset" => 'assets/kamus/huruf/t.png'
+            "huruf"=> "T",
+            "asset" => 'assets/kamus/huruf/T.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "u",
-            "asset" => 'assets/kamus/huruf/u.png'
+            "huruf"=> "U",
+            "asset" => 'assets/kamus/huruf/U.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "v",
-            "asset" => 'assets/kamus/huruf/v.png'
+            "huruf"=> "V",
+            "asset" => 'assets/kamus/huruf/V.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "w",
-            "asset" => 'assets/kamus/huruf/w.png'
+            "huruf"=> "W",
+            "asset" => 'assets/kamus/huruf/W.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "x",
-            "asset" => 'assets/kamus/huruf/x.png'
+            "huruf"=> "X",
+            "asset" => 'assets/kamus/huruf/X.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "y",
-            "asset" => 'assets/kamus/huruf/y.png'
+            "huruf"=> "Y",
+            "asset" => 'assets/kamus/huruf/Y.png'
         ]);
 
         $kamusHuruf = KamusHuruf::create([
-            "huruf"=> "z",
-            "asset" => 'assets/kamus/huruf/z.png'
+            "huruf"=> "Z",
+            "asset" => 'assets/kamus/huruf/Z.png'
         ]);
     }
 }
