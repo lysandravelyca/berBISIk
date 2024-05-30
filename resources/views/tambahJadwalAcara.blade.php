@@ -77,8 +77,7 @@
 
             <div class="input">
                 <label for="">Waktu Selesai</label>
-                <input name="time_end{{ $i }}" type="time" id="time_end{{ $i }}"  value="{{ old('time_end' . $i) }}">
-            </div>
+                <input name="time_end{{ $i }}" type="time" id="time_end{{ $i }}" value="{{ old('time_end' . $i) }}">
 
             @if ($errors->has("time_end$i"))
             <div class="alert alert-danger">
