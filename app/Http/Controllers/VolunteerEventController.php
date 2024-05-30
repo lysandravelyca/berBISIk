@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UsersVolunteerEvent;
 use App\Models\VolunteerEvent;
 use App\Models\VolunteerEventDetail;
 use App\Models\VolunteerEventSchedule;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class VolunteerEventController extends Controller
 {
@@ -126,5 +128,20 @@ class VolunteerEventController extends Controller
         $deleteEvent->delete();
 
         return redirect('/acara');
+    }
+
+    public function register($id)
+    {
+        $volunteerEvent = VolunteerEvent::find($id);
+        return view('/daftarVolunteer', compact('id','volunteerEvent'));
+    }
+    
+    public function confirm(Request $request, $id)
+    {
+       $volUsersEvent = new UsersVolunteerEvent();
+       $volUsersEvent->user_id = Auth::user()->id;
+       $volUsersEvent->volunteer_event_id = $id;
+       $volUsersEvent->save();
+       return redirect('/profil');
     }
 }
