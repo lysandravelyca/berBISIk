@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="daftar">
-                    <a href="daftarAcara/{{ $volunteer->id }}">Daftar Sekarang</a>
+                    <a href="daftarVolunteer/{{ $volunteer->id }}">Daftar Sekarang</a>
                 </div>
             </div>
         </div>   

@@ -31,7 +31,7 @@
         <div class="judul2_history">
             <div class="judul_history">
                 <img src="assets/acara/Group 63.png" alt="">
-                <h2>Acara yang terdaftar</h2>
+                <h2>Kelas yang terdaftar</h2>
             </div>
         </div>
         <div class="container">
@@ -120,7 +120,7 @@
         <div class="judul2_current">
             <div class="judul_current">
                 <img src="assets/acara/Group 43.png" alt="">
-                <h2>Kelas yang Sedang Berlangsung</h2>
+                <h2>Acara Relawan yang Sedang Berlangsung</h2>
             </div>
         </div>
         <div class="container">

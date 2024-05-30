@@ -19,10 +19,12 @@ class EventScheduleController extends Controller
 
     public function store(tambahJadwalAcaraRequest $request)
     {
+
         $eventData = session()->get('event_data');
         $fileName = session()->get('photo_file_name');
 
         $event = new Event;
+        $event->status_id = 1;
         $event->event_type_id = $eventData['event_type_id']; 
         $event->instructor_id = $eventData['instructor_id'];
         $event->title = $eventData['title'];
@@ -30,7 +32,7 @@ class EventScheduleController extends Controller
         $event->location = $eventData['location'];
         $event->photo = $fileName;
         $event->status_id = 1;
-        $event->save();
+        $event->save(); 
 
         $eventDetail = new EventDetail;
         $eventDetail->event_id = $event->id;
@@ -41,8 +43,6 @@ class EventScheduleController extends Controller
         $eventDetail->whatsapp_link = $eventData['whatsapp_link'];
         $eventDetail->zoom_link = $eventData['zoom_link'];
         $eventDetail->save();
-
-        $currentDate = Carbon::now();
         
         for ($i = 1; $i <= $eventDetail->session; $i++) {
             $eventSchedule = new EventSchedule;
@@ -53,14 +53,14 @@ class EventScheduleController extends Controller
             $eventSchedule->time_start = $request->input('time_start'.$i);
             $eventSchedule->time_end =$request->input('time_end'.$i);
 
-            // if($eventSchedule->date->isBefore($currentDate)){
-            //     $event->status_id = 2;
-            // }
-            // else{
-            //     $event->status_id = 1;
-            // }
+            if($eventSchedule->date->isBefore($currentDate)){
+                $event->status_id = 2;
+            }
+            else{
+                $event->status_id = 1;
+            }
 
-            $eventSchedule->save();
+            $event->save();
         }
 
         session()->forget('event_data');
