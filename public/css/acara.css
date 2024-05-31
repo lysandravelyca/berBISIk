@@ -402,3 +402,17 @@
     color: #5D5D5D;
     margin-right: 4px;
 }
+
+.rating i {
+    color: #ffcc00;
+}
+
+.rating i.fa-regular {
+    color: #ddd;
+}
+
+.rating span {
+    color: #FF885E;
+    margin-left: 5px;
+    font-size: 1em;
+}
