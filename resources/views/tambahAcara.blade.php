@@ -189,7 +189,7 @@
         
        
         
-        <button type="submit">Selanjuttnya</button>
+        <button type="submit">Selanjutnya</button>
         
 
     </form>

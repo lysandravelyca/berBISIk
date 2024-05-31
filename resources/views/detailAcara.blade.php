@@ -83,7 +83,6 @@
 
         <div class="ikhitisar">
             <h1>Ikhitisar Kelas</h1>
-            {{-- masi manual isi dropdown belom ada dbnya--}}
             @foreach ($acara->event_schedules as $jadwal)
                 <div class="a">
                     <div class="minggu">

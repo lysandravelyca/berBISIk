@@ -14,10 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('phone', 20)->after('name')->required();
-            $table->unsignedBigInteger('role_id')->after('id')->required();
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('restrict');
-            $table->string('photo', 255)->nullable();
+            if (!Schema::hasColumn('users', 'phone')) {
+                $table->string('phone', 20)->after('name')->required();
+            }
+            if (!Schema::hasColumn('users', 'role_id')) {
+                $table->unsignedBigInteger('role_id')->after('id')->required();
+                $table->foreign('role_id')->references('id')->on('roles')->onDelete('restrict');
+            }
+            if (!Schema::hasColumn('users', 'photo')) {
+                $table->string('photo', 255)->nullable();
+            }
         });
     }
 
@@ -29,10 +35,16 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign(['role_id']);
-            $table->dropColumn('role_id');
-            $table->dropColumn('phone');
-            $table->dropColumn('photo');
+            if (Schema::hasColumn('users', 'role_id')) {
+                $table->dropForeign(['role_id']);
+                $table->dropColumn('role_id');
+            }
+            if (Schema::hasColumn('users', 'phone')) {
+                $table->dropColumn('phone');
+            }
+            if (Schema::hasColumn('users', 'photo')) {
+                $table->dropColumn('photo');
+            }
         });
     }
 };
