@@ -98,7 +98,6 @@
         <div class="bisik">
             <div class="bisi">
                 <h1><span>BISI</span>Kan Mereka </h1>
-                {{-- reviewewww --}}
                 <div class="reviews">
                     @foreach($acara->reviews as $review)
                         <div class="reviewbox">
@@ -118,16 +117,6 @@
                                     <span>{{ $review->rating }}.0</span>
                                 </div>
                             </div>
-                            {{-- <div class="rating">
-                                @for ($i = 0; $i < 5; $i++)
-                                    @if ($i < $review->rating)
-                                        <i class="fa-solid fa-star"></i>
-                                    @else
-                                        <i class="fa-regular fa-star"></i>
-                                    @endif
-                                @endfor
-                                <span>{{ $review->rating }}.0</span>
-                            </div> --}}
                             <p class="comment">{{ $review->comment }}</p>
                         </div>
                     @endforeach

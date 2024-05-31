@@ -1,6 +1,7 @@
 @extends('layout/layout')
 
 <link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoAja.png') }}">
+<script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
 
 @section('title', 'Acara')
 
@@ -126,7 +127,8 @@
                     </div>
                     
                     <div class="icon">
-                        <img src="assets/icon/calendar.png" alt="" >
+                        <i class="fa-regular fa-calendar"></i>
+                        {{-- <img src="assets/icon/calendar.png" alt="" > --}}
                         <h3>
                             {{ $acara->event_schedules->first()->date->format('j M Y')}}
                             @if ( count($acara->event_schedules) > 1)
@@ -136,7 +138,8 @@
                     </div>
         
                     <div class="icon">
-                        <img src="assets/icon/clocktime.png" alt="">
+                        <i class="fa-regular fa-clock"></i>
+                        {{-- <img src="assets/icon/clocktime.png" alt=""> --}}
                         <h3>{{ substr($acara->event_schedules->first()->time_start, 0, -3) }} - 
                             {{ substr($acara->event_schedules->first()->time_end, 0, -3)}} WIB</h3>
                     </div>
@@ -216,17 +219,20 @@
                     <h3>{{ $relawan->title }}</h3>
         
                     <div class="icon_relawan">
-                        <img src="assets/icon/location.png" alt="">
+                        <i class="fa-regular fa-compass"></i>
+                        {{-- <img src="assets/icon/location.png" alt=""> --}}
                         <h3>{{ $relawan->location}}</h3>
                     </div>
         
                     <div class="icon_relawan">
-                        <img src="assets/icon/calendar.png" alt="">
+                        <i class="fa-regular fa-calendar"></i>
+                        {{-- <img src="assets/icon/calendar.png" alt=""> --}}
                         <h3>{{ $relawan->volunteer_event_schedules->date->format('j M Y') }}</h3>
                     </div>
         
                     <div class="icon_relawan">
-                        <img src="assets/icon/clocktime.png" alt="">
+                        <i class="fa-regular fa-clock"></i>
+                        {{-- <img src="assets/icon/clocktime.png" alt=""> --}}
                         <h3>{{ substr($relawan->volunteer_event_schedules->time_start, 0, -3) }} - 
                             {{ substr($relawan->volunteer_event_schedules->time_end, 0, -3)}} WIB</h3>
                     </div>

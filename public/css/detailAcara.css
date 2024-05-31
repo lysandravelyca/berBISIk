@@ -185,7 +185,7 @@ p{
     transition: transform 0.2s;
     color: #5F2A5D;
 }
-
+ 
 .icon.active {
     transform: rotate(-180deg);
 }
