@@ -161,17 +161,6 @@
                         @endfor
                         <span>{{ number_format($avgrating, 1) }}</span>
                     </div>
-
-                    {{-- ini keknya ada cara yang lebih singkat cmn gw gatau caranya --}}
-                    {{-- https://youtu.be/q1xhbc-oKnc --}}                   
-                    {{-- <div class="rating">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="" class="abu">
-                        <h3>4.0</h3>
-                    </div> --}}
         
                     <h3>Rp{{ number_format($acara->price, 0,',', '.')  }}</h3>
                 </div>

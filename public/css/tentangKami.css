@@ -264,7 +264,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 100px;
 }
 
 .member .img1 img{
@@ -407,6 +407,23 @@
   
 }
 
+.nama{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nama h1{
+    font-size: 24;
+}
+
+.nama p{
+    font-size: 16;
+}
+
+.el, .jeje,.jessy,.ly,.val{
+    text-align: center;
+}
 
 .semua{
     
@@ -460,6 +477,9 @@
     font-size: 20px;
 }
 
+.faq{
+    padding: 3%;
+}
 
 .faq h2{
 
@@ -474,11 +494,11 @@
 .a {
 
     background-color: #F9EEE1;
-    padding: 16px 16px;
+    padding: 30px 30px;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 15px;
-    border-radius: 2px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
@@ -486,6 +506,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.question h4{
+    color: rgb(95, 42, 93);
+    font-size: 20;
 }
 
 .icon {
