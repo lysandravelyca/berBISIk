@@ -510,7 +510,7 @@
 
 .question h4{
     color: rgb(95, 42, 93);
-    font-size: 20;
+    font-size: 16;
 }
 
 .icon {
@@ -523,6 +523,7 @@
 }
 
 .answer {
+    padding-top: 1%;
     color: #666;
     max-height: 0;
     overflow: hidden;
