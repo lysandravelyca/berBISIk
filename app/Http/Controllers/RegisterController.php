@@ -43,6 +43,7 @@ class RegisterController extends Controller
         $user->remember_token = Str::random(10);
         $user->created_at = Carbon::now();
         $user->updated_at = Carbon::now();
+        $user->last_activity = Carbon::now();
         $user->save();
 
         // if (Auth::attempt($credentials)) {

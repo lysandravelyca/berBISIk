@@ -16,7 +16,9 @@ class UserController extends Controller
     public function show()
     {
         $currentDate = Carbon::now();
+        $user = Auth::user();
         $userId = Auth::user()->id;
+        $userRoleId = $user->role_id;
 
         $userEvent = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules')
             ->where('user_id', $userId)
@@ -27,8 +29,16 @@ class UserController extends Controller
 
         $userVolunteerEvent = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')
                                 ->where('user_id', $userId)->get();
+        
+        $loggedInUsers = null;
+        if ($userRoleId == 2) {
+            $loggedInUsers = User::all()->map(function ($user) {
+                $user->isActive = $user->last_activity ? Carbon::parse($user->last_activity)->gt(Carbon::now()->subMinutes(1)) : false;
+                return $user;
+            });
+        }
                                 
-        return view('profil', ['daftarAcaraUser' => $userEvent, 'daftarAcaraRelawanUser' => $userVolunteerEvent]);
+        return view('profil', ['daftarAcaraUser' => $userEvent, 'daftarAcaraRelawanUser' => $userVolunteerEvent, 'loggedInUsers' => $loggedInUsers]);
 
     }
 

@@ -177,4 +177,25 @@
             @endforeach
         </div>
     </div>
+
+    @if(Auth::user()->role_id == 2)
+        <div class="loggedin">
+            <div>
+                <h2>User yang sedang login</h2>
+            </div>
+            <div class="container">
+                <ul>
+                    @foreach($loggedInUsers as $loggedInUser)
+                        <li>
+                            {{-- image profil --}}
+                            {{ $loggedInUser->name }} ({{ $loggedInUser->email }})
+                            @if ($loggedInUser->isActive)
+                            <p>- Active</p>
+                            @endif
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    @endif
 @endsection

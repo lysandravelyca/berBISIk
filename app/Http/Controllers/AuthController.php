@@ -67,6 +67,7 @@ class AuthController extends Controller
             // }
 
             $request->session()->regenerate();
+            Auth::user()->update(['last_activity' => Carbon::now()]);
             return redirect()->intended('/');
         }
 

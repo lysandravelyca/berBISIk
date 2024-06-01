@@ -24,7 +24,7 @@ h1{
     width: 200px;
 }
 
-select, input ,textarea{
+select, input{
     border: 1px solid #5F2A5D;
     border-radius: 10px;
     padding: 5px;
