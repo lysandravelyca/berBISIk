@@ -24,7 +24,7 @@ class tambahAcaraRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|alpha', // cuma boleh huruf
+            'title' => 'required|', // cuma boleh huruf
             'short_description' => ['required', function ($attribute, $value, $fail) {
                 if (str_word_count($value) < 5) {
                     $fail('Input harus memiliki minimal 5 kata.');
@@ -58,7 +58,6 @@ class tambahAcaraRequest extends FormRequest
     {
         return [
             'title.required' => 'Judul acara wajib diisi.',
-            'title.alpha' => 'Judul acara hanya boleh mengandung alfabet.',
             'short_description.required' => 'Deskripsi singkat wajib diisi.',
             'short_description' => 'Deskripsi singkat minimal terdiri dari 5 kata.',
             'benefit.required' => 'Keuntungan wajib diisi.',

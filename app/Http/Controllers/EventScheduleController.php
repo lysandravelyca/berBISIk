@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\tambahAcaraRequest;
 use App\Http\Requests\tambahJadwalAcaraRequest;
 use Carbon\Carbon;
 use App\Models\Event;
@@ -17,8 +18,10 @@ class EventScheduleController extends Controller
         return view('tambahJadwalAcara');
     }
 
-    public function store(tambahJadwalAcaraRequest $request)
+    // ga bisa pake tambahAcaraRequest kalo ga dia bakal null
+    public function store(Request $request)
     {
+        // dd($request->input('name' . 1));
 
         $eventData = session()->get('event_data');
         $fileName = session()->get('photo_file_name');
@@ -43,14 +46,14 @@ class EventScheduleController extends Controller
         $eventDetail->zoom_link = $eventData['zoom_link'];
         $eventDetail->save();
         
-        for ($i = 0; $i < $eventDetail->session; $i++) {
+        for ($i = 1; $i <= $eventDetail->session; $i++) {
             $eventSchedule = new EventSchedule;
             $eventSchedule->event_id = $event->id;
-            $eventSchedule->name = $request->input('name'.$i);
-            $eventSchedule->description = $request->input('description'.$i);
-            $eventSchedule->date = $request->input('date'.$i);
-            $eventSchedule->time_start = $request->input('time_start'.$i);
-            $eventSchedule->time_end =$request->input('time_end'.$i);
+            $eventSchedule->name = $request->input('name' . $i);
+            $eventSchedule->description = $request->input('description' . $i);
+            $eventSchedule->date = $request->input('date' . $i);
+            $eventSchedule->time_start = $request->input('time_start' . $i);
+            $eventSchedule->time_end =$request->input('time_end' . $i);
             $eventSchedule->save();
         }
 
