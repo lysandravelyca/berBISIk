@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\tambahAcaraRequest;
 use App\Http\Requests\tambahJadwalAcaraRequest;
 use Carbon\Carbon;
 use App\Models\Event;
@@ -17,8 +18,10 @@ class EventScheduleController extends Controller
         return view('tambahJadwalAcara');
     }
 
-    public function store(tambahJadwalAcaraRequest $request)
+    // ga bisa pake tambahAcaraRequest kalo ga dia bakal null
+    public function store(Request $request)
     {
+        // dd($request->input('name' . 1));
 
         $eventData = session()->get('event_data');
         $fileName = session()->get('photo_file_name');
@@ -52,15 +55,7 @@ class EventScheduleController extends Controller
             $eventSchedule->date = $request->input('date'.$i);
             $eventSchedule->time_start = $request->input('time_start'.$i);
             $eventSchedule->time_end =$request->input('time_end'.$i);
-
-            if($eventSchedule->date->isBefore($currentDate)){
-                $event->status_id = 2;
-            }
-            else{
-                $event->status_id = 1;
-            }
-
-            $event->save();
+            $eventSchedule->save();
         }
 
         session()->forget('event_data');
