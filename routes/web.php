@@ -91,4 +91,7 @@ Route::put('/ubahVolunteer/{id}', [VolunteerEventController::class, 'update']);
 Route::get('/hapusVolunteer/{id}', [VolunteerEventController::class, 'delete']);
 Route::delete('/hapusVolunteer/{id}', [VolunteerEventController::class, 'destroy']);
 
-Route::get('/profil', [UserController::class, 'show']);
+Route::get('/profil', [UserController::class, 'show'])->name('profile.show');
+Route::get('/editProfile', [UserController::class, 'edit'])->name('profile.edit');
+Route::put('/updateProfile', [UserController::class, 'update'])->name('profile.update');
+

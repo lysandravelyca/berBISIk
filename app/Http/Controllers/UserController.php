@@ -8,6 +8,8 @@ use App\Models\UsersVolunteerEvent;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
 
 class UserController extends Controller
 {
@@ -26,7 +28,41 @@ class UserController extends Controller
         $userVolunteerEvent = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')
                                 ->where('user_id', $userId)->get();
                                 
-        return view('/profil', ['daftarAcaraUser' => $userEvent, 'daftarAcaraRelawanUser' => $userVolunteerEvent]);
+        return view('profil', ['daftarAcaraUser' => $userEvent, 'daftarAcaraRelawanUser' => $userVolunteerEvent]);
 
+    }
+
+    public function edit()
+    {
+        $user = Auth::user();
+        return view('editProfil', compact('user'));
+    }
+
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+        
+        $request->validate([
+            
+        ]);
+
+        $user->name = $request->input('name');
+        $user->phone = $request->input('phone');
+        $user->email = $request->input('email');
+
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->input('password'));
+        }
+
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('assets/fotoUser'), $filename);
+            $user->photo = $filename;
+        }
+
+        $user->save();
+
+        return redirect()->route('profile.show')->with('success', 'Profil berhasil diubah');
     }
 }

@@ -22,7 +22,9 @@
             @endif
             <div class="buttons">
                 <div class="btn">Ubah Cover</div>
-                <div class="btn2">Ubah Profil</div>
+                <a href="{{ route('profile.edit') }}">
+                    <div class="btn2">Ubah Profil</div>
+                </a>                 
             </div>  
         </div>
     </div>
