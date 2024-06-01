@@ -28,7 +28,7 @@ class EventController extends Controller
     
     public function show($id)
     {
-        $event = Event::with('instructors', 'event_types', 'event_schedules')->findOrFail($id);
+        $event = Event::with('instructors', 'event_types', 'event_schedules', 'reviews.user')->findOrFail($id);
         return view('detailAcara', ['acara' => $event]);
     }    
     

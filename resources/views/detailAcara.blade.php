@@ -83,7 +83,6 @@
 
         <div class="ikhitisar">
             <h1>Ikhitisar Kelas</h1>
-            {{-- masi manual isi dropdown belom ada dbnya--}}
             @foreach ($acara->event_schedules as $jadwal)
                 <div class="a">
                     <div class="minggu">
@@ -99,7 +98,29 @@
         <div class="bisik">
             <div class="bisi">
                 <h1><span>BISI</span>Kan Mereka </h1>
-                {{-- reviewewww --}}
+                <div class="reviews">
+                    @foreach($acara->reviews as $review)
+                        <div class="reviewbox">
+                            <div class="userinfo">
+                                <img src="{{ asset('assets/fotoUsers/'.$review->user->photo) }}" class="fotouser">
+                                <div class="namauser">
+                                    <h3>{{ $review->user->name }}</h3>
+                                </div>
+                                <div class="rating">
+                                    @for ($i = 0; $i < 5; $i++)
+                                        @if ($i < $review->rating)
+                                            <i class="fa-solid fa-star"></i>
+                                        @else
+                                            <i class="fa-regular fa-star"></i>
+                                        @endif
+                                    @endfor
+                                    <span>{{ $review->rating }}.0</span>
+                                </div>
+                            </div>
+                            <p class="comment">{{ $review->comment }}</p>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

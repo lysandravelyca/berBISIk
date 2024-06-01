@@ -34,6 +34,7 @@ class EventScheduleController extends Controller
         $event->price = $eventData['price'];
         $event->location = $eventData['location'];
         $event->photo = $fileName;
+        $event->status_id = 1;
         $event->save(); 
 
         $eventDetail = new EventDetail;
@@ -49,16 +50,17 @@ class EventScheduleController extends Controller
         for ($i = 1; $i <= $eventDetail->session; $i++) {
             $eventSchedule = new EventSchedule;
             $eventSchedule->event_id = $event->id;
-            $eventSchedule->name = $request->input('name' . $i);
-            $eventSchedule->description = $request->input('description' . $i);
-            $eventSchedule->date = $request->input('date' . $i);
-            $eventSchedule->time_start = $request->input('time_start' . $i);
-            $eventSchedule->time_end =$request->input('time_end' . $i);
+            $eventSchedule->name = $request->input('name'.$i);
+            $eventSchedule->description = $request->input('description'.$i);
+            $eventSchedule->date = $request->input('date'.$i);
+            $eventSchedule->time_start = $request->input('time_start'.$i);
+            $eventSchedule->time_end =$request->input('time_end'.$i);
             $eventSchedule->save();
         }
 
         session()->forget('event_data');
         return redirect('/acara');
+        
     }
 
     public function edit($id)
@@ -119,6 +121,7 @@ class EventScheduleController extends Controller
             $eventSchedule->time_end =$request->input('time_end'.$i);
             $eventSchedule->save();
         }
+        
         // dd($event->event_schedules);
 
         // If the new quantity is less than the old quantity, delete extra event schedules

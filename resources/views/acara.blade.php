@@ -1,6 +1,7 @@
 @extends('layout/layout')
 
 <link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoAja.png') }}">
+<script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
 
 @section('title', 'Acara')
 
@@ -126,7 +127,7 @@
                     </div>
                     
                     <div class="icon">
-                        <img src="assets/icon/calendar.png" alt="" >
+                        <i class="fa-regular fa-calendar"></i>
                         <h3>
                             {{ $acara->event_schedules->first()->date->format('j M Y')}}
                             @if ( count($acara->event_schedules) > 1)
@@ -136,20 +137,29 @@
                     </div>
         
                     <div class="icon">
-                        <img src="assets/icon/clocktime.png" alt="">
+                        <i class="fa-regular fa-clock"></i>
                         <h3>{{ substr($acara->event_schedules->first()->time_start, 0, -3) }} - 
                             {{ substr($acara->event_schedules->first()->time_end, 0, -3)}} WIB</h3>
                     </div>
-        
-                    {{-- ini keknya ada cara yang lebih singkat cmn gw gatau caranya --}}
-                    {{-- https://youtu.be/q1xhbc-oKnc --}}
+                    
                     <div class="rating">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="">
-                        <img src="assets/icon/Star 1.png" alt="" class="abu">
-                        <h3>4.0</h3>
+                        @php
+                            $total = 0;
+                            $jumlahuser = count($acara->reviews);
+                            foreach ($acara->reviews as $review) {
+                                $total += $review->rating;
+                            }
+                            $avgrating = $jumlahuser > 0 ? $total / $jumlahuser : 0;
+                        @endphp
+                    
+                        @for ($i = 0; $i < 5; $i++)
+                            @if ($i < $avgrating)
+                                <i class="fa-solid fa-star"></i>
+                            @else
+                                <i class="fa-regular fa-star"></i>
+                            @endif
+                        @endfor
+                        <span>{{ number_format($avgrating, 1) }}</span>
                     </div>
         
                     <h3>Rp{{ number_format($acara->price, 0,',', '.')  }}</h3>
@@ -216,24 +226,23 @@
                     <h3>{{ $relawan->title }}</h3>
         
                     <div class="icon_relawan">
-                        <img src="assets/icon/location.png" alt="">
+                        <i class="fa-regular fa-compass"></i>
                         <h3>{{ $relawan->location}}</h3>
                     </div>
         
                     <div class="icon_relawan">
-                        <img src="assets/icon/calendar.png" alt="">
+                        <i class="fa-regular fa-calendar"></i>
                         <h3>{{ $relawan->volunteer_event_schedules->date->format('j M Y') }}</h3>
                     </div>
         
                     <div class="icon_relawan">
-                        <img src="assets/icon/clocktime.png" alt="">
+                        <i class="fa-regular fa-clock"></i>
                         <h3>{{ substr($relawan->volunteer_event_schedules->time_start, 0, -3) }} - 
                             {{ substr($relawan->volunteer_event_schedules->time_end, 0, -3)}} WIB</h3>
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div>       
         </a>
 
         @endforeach

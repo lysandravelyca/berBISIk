@@ -24,7 +24,7 @@ class tambahAcaraRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|', // cuma boleh huruf
+            'title' => 'required|alpha', // cuma boleh huruf
             'short_description' => ['required', function ($attribute, $value, $fail) {
                 if (str_word_count($value) < 5) {
                     $fail('Input harus memiliki minimal 5 kata.');
@@ -68,7 +68,7 @@ class tambahAcaraRequest extends FormRequest
             'price.numeric' => 'Biaya hanya boleh terdiri dari angka.',
             'location.required' => 'Lokasi wajib diisi.',
             'location' => 'Lokasi harus diawali dengan "Jalan"',
-            'photo.required' => 'Photo wajib di isi.',
+            'photo.required' => 'Photo wajib diisi.',
             'whatsapp_link' => 'Link whatsapp wajib diisi.',
             'zoom_link' => 'Link zoom wajib diisi.',
 

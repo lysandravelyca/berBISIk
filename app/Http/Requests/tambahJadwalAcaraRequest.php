@@ -24,9 +24,9 @@ class tambahJadwalAcaraRequest extends FormRequest
     public function rules()
     {
         $rules = [];
-        $numberOfFields = 255;  
+        $numberOfFields = 12;  
     
-        for ($i = 1; $i < $numberOfFields; $i++) {
+        for ($i = 1; $i <= $numberOfFields; $i++) {
             $rules["name$i"] = 'required';
             $rules["description$i"] = 'required';
             $rules["date$i"] = 'required';
@@ -40,9 +40,9 @@ class tambahJadwalAcaraRequest extends FormRequest
     public function messages()
     {
         $messages = [];
-        $numberOfFields = 255; 
+        $numberOfFields = 12; 
 
-        for ($i = 1; $i < $numberOfFields; $i++) {
+        for ($i = 1; $i <= $numberOfFields; $i++) {
             $messages["name$i.required"] = "Nama sesi $i wajib diisi.";
             $messages["description$i.required"] = "Deskripsi sesi $i wajib diisi.";
             $messages["date$i.required"] = "Tanggal sesi $i wajib diisi.";

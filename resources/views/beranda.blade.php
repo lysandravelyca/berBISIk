@@ -25,7 +25,7 @@
                     <p>#BerbahasaIsyaratIndonesiaAsik</p>
                 </div>
                 <div>
-                    <a href="/kamus"><button class="btn" onclick="/kamus">Kamus BISINDO</button></a>
+                    <a href="/kamus"><button class="btn" >Kamus BISINDO</button></a>
                 </div>
             </div>
            
@@ -82,16 +82,29 @@
         <div class="process-wrapper">
             <div id="progress-bar-container">
                 <ul>
-                    <li class="step step01 active"><div class="step-inner">SOLIDARITAS</div></li>
-                    <li class="step step02"><div class="step-inner">INKLUSI</div></li>
-                    <li class="step step03"><div class="step-inner">BUDAYA</div></li>
-                    <li class="step step04"><div class="step-inner">KARIR</div></li>
+                    <li class="step step01 active">
+                        <div class="step-inner">SOLIDARITAS</div>
+                    </li>
+
+                    <li class="step step02">
+                        <div class="step-inner">INKLUSI</div>
+                    </li>
+
+                    <li class="step step03">
+                        <div class="step-inner">BUDAYA</div>
+                    </li>
+
+                    <li class="step step04">
+                        <div class="step-inner">KARIR</div>
+                    </li>
                 </ul>
                 
                 <div id="line">
                     <div id="line-progress"></div>
                 </div>
             </div>
+
+         -
 
             <div id="progress-content-section">
                 <div class="section-content discovery active">
