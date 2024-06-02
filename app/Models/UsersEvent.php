@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,7 +14,7 @@ class UsersEvent extends Model
 
     public $incrementing = false;
     protected $keyType = 'array';
-
+    protected $fillable = ['user_id', 'event_id', 'session_done'];
 
     protected $casts = [
         'user_id' => 'integer',

@@ -22,11 +22,11 @@ class UsersEventFactory extends Factory
         $events = Event::with('event_details')->get();
         $randomEvent = $events->random();
         $session = $randomEvent->event_details->session;
-        $randomSession = $faker->numberBetween(0, $session);
+        // $randomSession = $faker->numberBetween(0, $session);
 
         return [
-            'event_id' => $randomEvent->id,
-            'session_done'=> $randomSession
+            'event_id' => $randomEvent->id /**,
+            'session_done'=> $randomSession */
         ];
     }
 }

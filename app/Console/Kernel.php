@@ -2,6 +2,9 @@
 
 namespace App\Console;
 
+use App\Console\Commands\UpdateSessionDone;
+use App\Http\Controllers\UserController;
+use App\Models\UsersEvent;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -16,6 +19,16 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        
+        $schedule->command('update:session_done')->daily();
+        
+        // $schedule->call(function(){
+        //     UsersEvent::UpdateSessionDone();
+        // })->everyMinute();
+        
+        // $schedule->call(function(){
+        //     UserController::updateSessionDone();
+        // })->everyMinute();
     }
 
     /**
