@@ -41,7 +41,7 @@ class UserController extends Controller
             });
         }
 
-        $events = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules')
+        $events = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules', 'events.reviews')
         ->where('user_id', $userId)
         ->whereHas('events.event_details', function ($query){
             $query->whereColumn('users_events.session_done', 'event_details.session');

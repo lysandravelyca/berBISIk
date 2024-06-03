@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div class="history">
+    <div class="history_acara">
         <div class="judul_history">
             <img src="assets/acara/Group 43.png" alt="">
             <h2>Kelas yang terdaftar</h2>
@@ -93,14 +93,11 @@
                                         </div>
                                     </div>
 
-                                    {{-- ini mau dibuat progress bar kah? --}}
                                     <div class="progress">
                                         <p>sesi {{ $acaraUser->session_done }}/ {{ $acaraUser->events->event_details->session }}</p>
 
                                         <div class="progress_bar">
-                                            <div class="sesi_bar">
-
-                                            </div>
+                                            <span class="value-percentage">0%</span>
                                         </div>
                                     </div>
 
@@ -109,10 +106,10 @@
                                         <i class="fa-regular fa-calendar" style="color: white"></i>
                                         <h3>
                                             {{ $acaraUser->events->event_schedules->first()->date->format('j M Y') }}
-                                            @if (count($acaraUser->events->event_schedules) > 1)
+                                            {{-- @if (count($acaraUser->events->event_schedules) > 1)
                                                 -
                                                 {{ $acaraUser->events->event_schedules->last()->date->format('j M Y') }}
-                                            @endif
+                                            @endif --}}
                                         </h3>
 
                                         <i class="fa-regular fa-clock" style="color: white"></i>
@@ -125,12 +122,12 @@
                                     <div class="icon_link">
                                         <div class="icon_wa">
                                             <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                            <p>Link Grup</p>
+                                            <a href="{{ $acaraUser->events->event_details->whatsapp_link }}"><p>Link Grup</p></a>
                                         </div>
 
                                         <div class="icon_zoom">
                                             <i class="fa fa-video-camera" aria-hidden="true"></i>
-                                            <p>Link Zoom</p>
+                                            <a href="{{ $acaraUser->events->event_details->zoom_link }}"><p>Link Zoom</p></a>
                                         </div>
                                     </div>
 
@@ -144,18 +141,17 @@
         </div>
     </div>
 
-    <div class="current">
-        <div class="judul2_current">
-            <div class="judul_current">
-                <img src="assets/acara/Group 63.png" alt="">
-                <h2>Acara Relawan yang Sedang Berlangsung</h2>
-            </div>
+    <div class="history_relawan">
+        <div class="judul_history">
+            <img src="assets/acara/Group 63.png" alt="">
+            <h2 style="color: #F9EEE1">Acara Relawan yang sudah terdaftar</h2>
         </div>
+
         <div class="container">
             @foreach($daftarAcaraRelawanUser as $acaraRelawanUser)
                 <a href="volunteer/{{ $acaraRelawanUser->volunteer_events->id }}">
-                    <div class="c2_relawan">
-                        <div class="kelas_card">
+                    <div class="c2">
+                        <div class="relawan_card">
                             <div class="img_container">
                                 <div class="img_kelas">
                                     <img src="{{ asset('assets/fotoVolunteer/'.$acaraRelawanUser->volunteer_events->photo) }}" alt="">
@@ -179,21 +175,30 @@
                                 <a href="volunteer/{{ $acaraRelawanUser->volunteer_events->id }}">
                                     <h3>{{ $acaraRelawanUser->volunteer_events->title }}</h3>
                         
-                                    <div class="icon_relawan">
-                                        <img src="assets/icon/location.png" alt="">
+                                    <div class="icon_location">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <h3>{{ $acaraRelawanUser->volunteer_events->location}}</h3>
                                     </div>
                         
-                                    <div class="icon_relawan">
-                                        <img src="assets/icon/calendar.png" alt="">
+                                    <div class="icon_tanggal">
+                                        <i class="fa-regular fa-calendar" style="color: white"></i>
                                         <h3>{{ $acaraRelawanUser->volunteer_events->volunteer_event_schedules->date->format('j M Y') }}</h3>
-                                    </div>
-                        
-                                    <div class="icon_relawan">
-                                        <img src="assets/icon/clocktime.png" alt="">
-                                        <h3>{{ substr($acaraRelawanUser->volunteer_events->volunteer_event_schedules->time_start, 0, -3) }} - 
-                                            {{ substr($acaraRelawanUser->volunteer_events->volunteer_event_schedules->time_end, 0, -3)}} WIB
+
+                                        <i class="fa-regular fa-clock" style="color: white"></i>
+                                        <h3>{{ substr($acaraRelawanUser->volunteer_events->volunteer_event_schedules->time_start, 0, -3) }} WIB
                                         </h3>
+                                    </div>
+
+                                    <div class="icon_link">
+                                        <div class="icon_wa">
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            <a href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->whatsapp_link }}"><p>Link Grup</p></a>
+                                        </div>
+
+                                        <div class="icon_zoom">
+                                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                            <a href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->zoom_link }}"><p>Link Zoom</p></a>
+                                        </div>
                                     </div>
                                 </a>
                             </div>
@@ -206,18 +211,16 @@
 
     {{-- acara yg udh dilewatin --}}
     <div class="riwayat">
-        <div class="judul2_current">
-            <div class="judul_current">
-                <img src="assets/acara/Group 43.png" alt="">
-                <h2>Riwayat Acara-acara yang sudah dilalui</h2>
-            </div>
+        <div class="judul_history">
+            <img src="assets/acara/Group 43.png" alt="">
+            <h2>Riwayat scara-acara yang sudah dilalui</h2>
         </div>
 
         <div class="container">
             @foreach($daftarRiwayatAcaraRelawan as $acaraRelawanUser)
                 <a href="volunteer/{{ $acaraRelawanUser->volunteer_events->id }}">
-                    <div class="c2_relawan">
-                        <div class="kelas_card">
+                    <div class="c2">
+                        <div class="relawan_card">
                             <div class="img_container">
                                 <div class="img_kelas">
                                     <img src="{{ asset('assets/fotoVolunteer/'.$acaraRelawanUser->volunteer_events->photo) }}" alt="">
@@ -241,21 +244,25 @@
                                 <a href="volunteer/{{ $acaraRelawanUser->volunteer_events->id }}">
                                     <h3>{{ $acaraRelawanUser->volunteer_events->title }}</h3>
                         
-                                    <div class="icon_relawan">
-                                        <img src="assets/icon/location.png" alt="">
+                                    <div class="icon_location">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <h3>{{ $acaraRelawanUser->volunteer_events->location}}</h3>
                                     </div>
                         
-                                    <div class="icon_relawan">
-                                        <img src="assets/icon/calendar.png" alt="">
+                                    <div class="icon_tanggal">
+                                        <i class="fa-regular fa-calendar" style="color: white"></i>
                                         <h3>{{ $acaraRelawanUser->volunteer_events->volunteer_event_schedules->date->format('j M Y') }}</h3>
-                                    </div>
-                        
-                                    <div class="icon_relawan">
-                                        <img src="assets/icon/clocktime.png" alt="">
-                                        <h3>{{ substr($acaraRelawanUser->volunteer_events->volunteer_event_schedules->time_start, 0, -3) }} - 
-                                            {{ substr($acaraRelawanUser->volunteer_events->volunteer_event_schedules->time_end, 0, -3)}} WIB
+
+                                        <i class="fa-regular fa-clock" style="color: white"></i>
+                                        <h3>{{ substr($acaraRelawanUser->volunteer_events->volunteer_event_schedules->time_start, 0, -3) }} WIB
                                         </h3>
+                                    </div>
+
+                                    <div class="icon_link">
+                                        <div class="icon_wa">
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            <a href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->whatsapp_link }}"><p>Link Grup</p></a>
+                                        </div>
                                     </div>
                                 </a>
                             </div>
@@ -265,82 +272,79 @@
             @endforeach
 
             @foreach ($daftarRiwayatAcara as $acaraUser)
-            <a href="acara/{{ $acaraUser->events->id }}">
-                <div class="c2">
-                    <div class="tipe">
-                        <p>{{ $acaraUser->events->event_types->name }}</p>
-                    </div>
+                <a href="acara/{{ $acaraUser->events->id }}">
+                    <div class="c2">
+                        <div class="tipe">
+                            <p>{{ $acaraUser->events->event_types->name }}</p>
+                        </div>
 
-                    <div class="kelas_card">
-                        <div class="img_container">
-                            <div class="img_kelas">
-                                <img src="{{ asset('assets/fotoAcara/' . $acaraUser->events->photo) }}" alt="">
+                        <div class="kelas_card">
+                            <div class="img_container">
+                                <div class="img_kelas">
+                                    <img src="{{ asset('assets/fotoAcara/' . $acaraUser->events->photo) }}" alt="">
+                                </div>
+
+                                @if (Auth::user()->role_id == 2)
+                                    <div class="modify_button_container">
+                                        <div class="modify_button">
+                                            <a href="ubahAcara/{{ $acaraUser->events->id }}"><img src="assets/icon/edit.png" alt=""></a>
+                                        </div>
+
+                                        <div class="modify_button">
+                                            <a href="hapusAcara/{{ $acaraUser->events->id }}"><img src="assets/icon/trash.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                @endif
+
                             </div>
 
-                            @if (Auth::user()->role_id == 2)
-                                <div class="modify_button_container">
-                                    <div class="modify_button">
-                                        <a href="ubahAcara/{{ $acaraUser->events->id }}"><img src="assets/icon/edit.png" alt=""></a>
+                            <div class="cardKelas">
+                                <a href="acara/{{ $acaraUser->events->id }}">
+                                    <h3 class="judul_acara">{{ $acaraUser->events->title }}</h3>
+                                    
+                                    <div class="pengajar">
+                                        <div class="profil_pengajar">
+                                            <img src="{{ asset('assets/fotoPengajar/' . $acaraUser->events->instructors->photo) }}" alt="">
+                                        </div>
+
+                                        <div class="deskripsi_pengajar">
+                                            <p>{{ $acaraUser->events->instructors->name }}</p>
+                                            <p>{{ $acaraUser->events->instructors->job }}</p>
+                                        </div>
                                     </div>
 
-                                    <div class="modify_button">
-                                        <a href="hapusAcara/{{ $acaraUser->events->id }}"><img src="assets/icon/trash.png" alt=""></a>
+                                    {{-- masih rusak ratingnya --}}
+                                    <div class="rating">
+                                        {{-- @php
+                                            $total = 0;
+                                            $jumlahuser = count($acaraUser->reviews);
+                                            foreach ($acaraUser->reviews as $review) {
+                                                $total += $review->rating;
+                                            }
+                                            $avgrating = $jumlahuser > 0 ? $total / $jumlahuser : 0;
+                                        @endphp --}}
+                                    
+                                        @for ($i = 0; $i < 5; $i++)
+                                            @if ($i < 3)
+                                                <i class="fa-solid fa-star"></i>
+                                            @else
+                                                <i class="fa-regular fa-star"></i>
+                                            @endif
+                                        @endfor
+                                        <span>{{ number_format(3, 1) }}</span>
                                     </div>
-                                </div>
-                            @endif
 
-                        </div>
-
-                        <div class="cardKelas">
-                            <!-- tambahin a href disini karena emang gambar sama card itu beda container -->
-                            <a href="acara/{{ $acaraUser->events->id }}">
-                                <h3 class="judul_acara">{{ $acaraUser->events->title }}</h3>
-                                <div class="pengajar">
-                                    <div class="profil_pengajar">
-                                        <img src="{{ asset('assets/fotoPengajar/' . $acaraUser->events->instructors->photo) }}" alt="">
+                                    <div class="icon_link">
+                                        <div class="icon_wa">
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            <a href="{{ $acaraUser->events->event_details->whatsapp_link }}"><p>Link Grup</p></a>
+                                        </div>
                                     </div>
-
-                                    <div class="deskripsi_pengajar">
-                                        <p>{{ $acaraUser->events->instructors->name }}</p>
-                                        <p>{{ $acaraUser->events->instructors->job }}</p>
-                                    </div>
-                                </div>
-
-                                <div class="icon">
-                                    <img src="assets/icon/calendar.png" alt="">
-                                    <h3>
-                                        {{ $acaraUser->events->event_schedules->first()->date->format('j M Y') }}
-                                        @if (count($acaraUser->events->event_schedules) > 1)
-                                            -
-                                            {{ $acaraUser->events->event_schedules->last()->date->format('j M Y') }}
-                                        @endif
-                                    </h3>
-                                </div>
-
-                                <div class="icon">
-                                    <img src="assets/icon/clocktime.png" alt="">
-                                    <h3>{{ substr($acaraUser->events->event_schedules->first()->time_start, 0, -3) }}
-                                        -
-                                        {{ substr($acaraUser->events->event_schedules->first()->time_end, 0, -3) }}
-                                        WIB
-                                    </h3>
-                                </div>
-
-                                <div class="rating">
-                                    <img src="assets/icon/Star 1.png" alt="">
-                                    <img src="assets/icon/Star 1.png" alt="">
-                                    <img src="assets/icon/Star 1.png" alt="">
-                                    <img src="assets/icon/Star 1.png" alt="">
-                                    <img src="assets/icon/Star 1.png" alt="" class="abu">
-                                    <h3>4.0</h3>
-                                </div>
-
-                                <h3>Sudah terdaftar</h3>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
             @endforeach
         </div>
     </div>
