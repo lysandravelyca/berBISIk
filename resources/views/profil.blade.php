@@ -16,10 +16,10 @@
         <div class="card">
             <div class="user">
                 @if (Auth::user()->photo != null)
-                    <img src="{{ asset('assets/fotoUser/' . Auth::user()->photo) }}" alt="">
+                    <img src="{{ asset('assets/fotoUser/' . Auth::user()->photo) }}" alt="" class="foto">
                 @else
                     {{-- kasih image sample --}}
-                    <img src="" alt="">
+                    <img src="" alt="" class="foto">
                 @endif
 
                 <div class="data_profil">
