@@ -47,13 +47,23 @@
                 <li class="nav-item">
                     <a href="/profil" class="nav-link">Profile</a>
                 </li>
-            </ul>
-
-            <ul>
+                
                 <li class="nav-item">
                     <a href="/logout" class="nav-link">Logout</a>
                 </li>
             </ul>
+<!-- 
+            <ul>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">Logout</a>
+                </li>
+            </ul> -->
+
+            <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <!-- header end -->
@@ -91,4 +101,18 @@
     </footer> 
     <!-- footer end  -->
 </body>
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}))
+    </script>
 </html>

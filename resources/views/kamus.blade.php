@@ -32,7 +32,7 @@
             <div class="result" id="result">
                 @if(isset($kamusCari) && count($kamusCari) > 0)
                     <p class="res">Bahasa Isyarat dari</p>
-                    <div class="container1">
+                    <div class="container2">
                         @foreach ($kamusCari as $kata)
                             <div class="kotak">
                             @if (file_exists(public_path('assets/kamus/kata/' . $kata->picture)))
@@ -51,7 +51,7 @@
                 @endif
             </div>     
     </div>
-
+ 
     <div>
         <h2 class="katadsr">KATA DASAR BAHASA ISYARAT</h2>
         <div class="kata-dasar">

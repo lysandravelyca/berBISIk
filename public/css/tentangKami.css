@@ -2,11 +2,11 @@
     font-family: 'Poppins';
 }
 .header{
-    
     height: 50vh;
+    background-image: url("../assets/tentangKami2.png");
     background-size:cover;
-    background-image: url("../assets/tentangKami.png");
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,11 +14,12 @@
     
 }
 
-.tinggi img{
+section {
+    padding: 2rem 6%;
+}
 
-    width: 12%;
-    margin-top: 150px; 
-    margin-bottom: -40px;
+.visi-section, .misi-section {
+    padding: 2rem 0;
 }
 
 .header span{
@@ -28,6 +29,10 @@
     font-weight: 700;
     margin-bottom: -25px;
     
+}
+
+.header img {
+    width: 10vw;
 }
 
 .header span :first-child{
@@ -52,7 +57,7 @@
 }
 
 .judul{
-    
+    text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
 }
@@ -62,8 +67,6 @@
 .judul span{
 
     font-weight: 600;
-    display: flex;
-	justify-content: center;
 	font-family: 'poppins';
     font-size: 64px;
     color:rgb(95, 42, 93) ;
@@ -88,7 +91,7 @@
     background-color: #A98FA8;
     display: flex;
     align-items:center;
-    gap:100px;
+    gap: 2.5rem;
     text-align: right;
    
 }
@@ -96,11 +99,11 @@
 .visi span{
 
     color: white;
-    font-size: 265px;
+    font-size: 15vw;
     font-weight: bolder;
     width:1000px;
     height:0px; 
-    line-height: 78%;
+    line-height: 86%;
     text-align: right;
     
 
@@ -109,11 +112,11 @@
 .visi p{
 
     font-size: 14px;
-    width: 400px;
+    width: 40vw;
     text-align: left;
     margin-left: 15%;
     color: rgb(95, 42, 93);
-
+    margin: 2rem;
 
 }
 
@@ -139,16 +142,16 @@
 .misi span{
 
     color: white;
-    font-size: 265px;
+    font-size: 15vw;
     font-weight: bolder;
-    line-height: 78%;
+    line-height: 94%;
     
 }
 
 .misi p{
-
+    margin: 2rem;
     font-size: 14px;
-    width: 380px;
+    width: 40vw;
     text-align: right;
     color: rgb(95, 42, 93);
 
@@ -258,14 +261,27 @@
     height: 100%;
 }
 
-.member{
-
+.member-container {
     display: flex;
-    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.member{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
     justify-content: center;
     align-items: center;
-    gap: 100px;
 }
+
+.second-row {
+    display: flex;
+    gap: 1rem;
+}
+
 
 .member .img1 img{
 
@@ -293,10 +309,9 @@
 }
 
 .img5 img{
-
     width: 170px;
-    height: 280px;
-    margin-bottom: 24%;
+    height: 240px;
+    /* margin-bottom: 24%; */
 
 }
 .img1, .img2, .img3, .img4, .img5{
@@ -305,6 +320,7 @@
     position: relative;
     align-items: center;
     
+    height: 240px;
 
 }
 
@@ -409,8 +425,10 @@
 
 .nama{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 50px;
+    /* gap: 50px; */
+    text-align: center;
 }
 
 .nama h1{
@@ -421,9 +439,9 @@
     font-size: 16;
 }
 
-.el, .jeje,.jessy,.ly,.val{
+/* .el, .jeje,.jessy,.ly,.val{
     text-align: center;
-}
+} */
 
 .semua{
     
@@ -530,7 +548,93 @@
     transition: max-height 0.2s;
 }
 
+@media(max-width: 1024px) {
+    .visi {
+        gap: 0.5rem;
+    }
+    /* .misi span, .visi span {
+        line-height: 100%;
+    } */
 
+    .misi span, .visi span {
+        line-height: 110%;
+    }
+
+    .visi p, .misi p {
+        width: 50vw;
+        margin: 1rem;
+    }
+
+    
+
+    /* .member-container {
+        flex-wrap: wrap;
+    } */
+
+    .img1, .img2, .img3, .img4, .img5{
+        
+        height: 160px;
+    
+    }
+
+    .img1 img, .img2 img, .img3 img, .img4 img, .img5 img{
+        width: auto;
+        height: 160px;
+    
+    }
+
+    .member .img1 img {
+        width: auto;
+        height: 160px;
+    }
+
+}
+
+@media(max-width: 528px) {
+    .second-row {
+        flex-direction: column;
+    }
+
+    .member {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .img5 .bulet-img5 {
+        width: 90%;
+    }
+
+}
+
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+@media(max-width: 480px){
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .second-row {
+        flex-direction: column;
+    }
+}
 
 
 

@@ -28,11 +28,13 @@ class VolunteerEventFactory extends Factory
         ];
 
         $photo = [
-            'Sample1.jpg',
-            'Sample2.jpg',
-            'Sample3.jpg',
-            'Sample4.jpg',
-            'Sample5.jpg',
+            'Sample1.png',
+            'Sample2.png',
+            'Sample3.png',
+            'Sample4.png',
+            'Sample5.png',
+            'Sample6.png',
+            'Sample7.png'
         ];
 
         return [
