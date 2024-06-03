@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EventDetail;
 use App\Models\EventSchedule;
 use App\Models\User;
 use App\Models\UsersEvent;
@@ -9,6 +10,7 @@ use App\Models\UsersVolunteerEvent;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -21,7 +23,7 @@ class UserController extends Controller
         $userId = Auth::user()->id;
         $userRoleId = $user->role_id;
 
-        $userEvent = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules')
+        $userEvent = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules', 'events.event_details')
             ->where('user_id', $userId)
             // ->whereHas('events.event_schedules', function ($query) use ($currentDate) {
             //     $query->where('date', '>', $currentDate);
@@ -39,20 +41,21 @@ class UserController extends Controller
             });
         }
 
-        // $totalSesi = EventSchedule::where()
         $events = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules')
-            ->where('user_id', $userId)
-            // ->where('session_done', )
-            // ->whereHas('events.event_schedules', function ($query) use ($currentDate) {
-            //     $query->where('date', '<', $currentDate);
-            // })
-        ->get();
+        ->where('user_id', $userId)
+        ->whereHas('events.event_details', function ($query){
+            $query->whereColumn('users_events.session_done', 'event_details.session');
+        })->get();
 
-        $volunteerEvents = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')
-                                ->where('user_id', $userId)->where('volunteer_events.volunteer_events_schedules.date', '<', $currentDate)->get();
+        // dd($events);
+
+        $volunteerEvents = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')->where('user_id', $userId)
+        ->whereHas('volunteer_events.volunteer_event_schedules', function ($query){
+            $query->where('status_id', 2);
+        })->get();
 
                                 
-        return view('profil', ['daftarAcaraUser' => $userEvent, 'daftarAcaraRelawanUser' => $userVolunteerEvent, 'loggedInUsers' => $loggedInUsers]);
+        return view('profil', ['daftarAcaraUser' => $userEvent, 'daftarAcaraRelawanUser' => $userVolunteerEvent, 'loggedInUsers' => $loggedInUsers, 'daftarRiwayatAcara' => $events, 'daftarRiwayatAcaraRelawan' => $volunteerEvents]);
 
     }
 

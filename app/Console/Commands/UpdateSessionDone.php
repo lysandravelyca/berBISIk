@@ -36,9 +36,11 @@ class UpdateSessionDone extends Command
     {
         // event 
         $currentDate = Carbon::now();
+        // $currentTime = $currentDate->format('H:i:s');
 
         $eventSchedules = EventSchedule::where('date', '<', $currentDate)
                                         ->where('status_id', 1)
+                                        ->where('time_end', '<', $currentDate)
                                         ->get();
         
         foreach ($eventSchedules as $schedule) {
@@ -49,6 +51,7 @@ class UpdateSessionDone extends Command
 
         // volunteer event 
         $volunteerEventSchedule = VolunteerEventSchedule::where('date', '<', $currentDate)
+                                                        ->where('time_end', '<', $currentDate)
                                                         ->where('status_id', 1)
                                                         ->get();
         

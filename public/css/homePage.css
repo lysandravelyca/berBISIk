@@ -654,3 +654,196 @@
 }
 
 /* tentang kami end  */
+
+@media (max-width: 1024px) {
+    .mainSlide {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mainSlide h1 {
+        font-size: 48px;
+        text-align: center;
+    }
+    .mainSlide div:nth-child(1) {
+        font-size: 24px;
+        padding: 0;
+        text-align: center;
+    }
+    .mainSlide div:nth-child(1) p {
+        font-size: 20px;
+        margin-right: 0;
+    }
+    .home img {
+        width: 300px;
+        margin-left: 0;
+    }
+    .BisiPic img {
+        width: 250px;
+    }
+    .judulBisi h1 {
+        font-size: 48px;
+    }
+    .txtBisi p {
+        font-size: 18px;
+    }
+    .txtBisi2 p {
+        font-size: 18px;
+    }
+
+	.judulCollab h1 {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .judulCollab p {
+        font-size: 18px; /* Smaller font size */
+        margin-right: 0; /* Remove margin for better alignment */
+    }
+
+    .imgCollab img {
+        width: 120px; /* Smaller image size */
+    }
+
+    .imgCollab2 img {
+        width: 200px; /* Smaller image size */
+        padding-left: 0; /* Remove padding for better alignment */
+    }
+
+    .imgCollab3 img {
+        width: 160px; /* Smaller image size */
+    }
+
+    .imgCollab4 img {
+        width: 180px; /* Smaller image size */
+        padding-right: 0; /* Remove padding for better alignment */
+    }
+
+    .txtCollab {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .judulCollab p {
+        margin-bottom: 20px; /* Add space between text and images */
+    }
+}
+
+@media (max-width: 768px) {
+    .mainSlide h1 {
+        font-size: 36px;
+    }
+    .mainSlide div:nth-child(1) {
+        font-size: 20px;
+    }
+    .mainSlide div:nth-child(1) p {
+        font-size: 18px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .home img {
+        width: 250px;
+    }
+    .BisiPic img {
+        width: 200px;
+    }
+    .judulBisi h1 {
+        font-size: 36px;
+    }
+    .txtBisi p, .txtBisi2 p {
+        font-size: 16px;
+    }
+
+	.judulCollab h1 {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .judulCollab p {
+        font-size: 18px; /* Smaller font size */
+        margin-right: 0; /* Remove margin for better alignment */
+    }
+
+    .imgCollab img {
+        width: 120px; /* Smaller image size */
+    }
+
+    .imgCollab2 img {
+        width: 200px; /* Smaller image size */
+        padding-left: 0; /* Remove padding for better alignment */
+    }
+
+    .imgCollab3 img {
+        width: 160px; /* Smaller image size */
+    }
+
+    .imgCollab4 img {
+        width: 180px; /* Smaller image size */
+        padding-right: 0; /* Remove padding for better alignment */
+    }
+
+    .txtCollab {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .judulCollab p {
+        margin-bottom: 20px; /* Add space between text and images */
+    }
+
+	.product .boxContainer {
+		display: flex;
+		flex-wrap: wrap; /* Added for responsive wrapping */
+		justify-content: center;
+		gap: 3%;
+	}
+	
+	.product .boxContainer .box {
+		background: white;
+		padding: 15px 0;
+		padding-bottom: 25px;
+		border-radius: 20px;
+		width: 100%; /* Adjusted width for responsiveness */
+		max-width: 45%; /* Added for better responsiveness */
+	}
+
+	.heading h1 {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .heading span {
+        font-size: 36px; /* Smaller font size */
+    }
+
+    .product .boxContainer .box {
+        max-width: calc(50% - 30px); /* Adjusted for smaller screens */
+        /* 50% width minus gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .mainSlide h1 {
+        font-size: 24px;
+    }
+    .mainSlide div:nth-child(1) {
+        font-size: 16px;
+    }
+    .mainSlide div:nth-child(1) p {
+        font-size: 14px;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    .home img {
+        width: 200px;
+    }
+    .BisiPic img {
+        width: 150px;
+    }
+    .judulBisi h1 {
+        font-size: 24px;
+    }
+    .txtBisi p, .txtBisi2 p {
+        font-size: 14px;
+    }
+}
+
+/* Additional responsive styles for other sections as needed */
