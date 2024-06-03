@@ -335,38 +335,40 @@
 
     @if(Auth::user()->role_id == 2)
     <div class="loggedin">
-        <div>
-            <h2>User yang sedang login</h2>
+        <div class="judulaktif">
+            <h2>Pengguna yang Sedang Aktif</h2>
         </div>
-        <div class="tabel">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Profile Picture</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($loggedInUsers as $loggedInUser)
-                        <tr>
-                            <td>
-                                @if ($loggedInUser->photo != null)
-                                    <img src="{{ asset('assets/fotoUser/' . $loggedInUser->photo) }}" class="pp">
-                                @else
-                                    <img src="{{ asset('assets/default-profile.png') }}" class="pp">
-                                @endif
-                            </td>
-                            <td>{{ $loggedInUser->name }}</td>
-                            <td>{{ $loggedInUser->email }}</td>
-                            <td class="{{ $loggedInUser->isActive ? 'active' : '' }}">
-                                {{ $loggedInUser->isActive ? 'Active' : 'Inactive' }}
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="containerlist">
+            <div class="list">
+                @foreach($loggedInUsers->slice(0, ceil($loggedInUsers->count() / 2)) as $loggedInUser)
+                    <div class="listnya">
+                        <img src="{{ $loggedInUser->photo ? asset('assets/fotoUser/' . $loggedInUser->photo) : asset('assets/default-profile.png') }}" class="pp">
+                        <div class="namaemailinfo">
+                            <span class="username">{{ $loggedInUser->name }}</span>
+                            <span class="useremail">{{ $loggedInUser->email }}</span>
+                        </div>
+                        <div class="status">
+                            <span class="indicator {{ $loggedInUser->isActive ? 'active' : 'inactive' }}"></span>
+                            <div class="label">{{ $loggedInUser->isActive ? 'Aktif' : 'Tidak Aktif' }}</div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="list">
+                @foreach($loggedInUsers->slice(ceil($loggedInUsers->count() / 2)) as $loggedInUser)
+                    <div class="listnya">
+                        <img src="{{ $loggedInUser->photo ? asset('assets/fotoUser/' . $loggedInUser->photo) : asset('assets/default-profile.png') }}" class="pp">
+                        <div class="namaemailinfo">
+                            <span class="username">{{ $loggedInUser->name }}</span>
+                            <span class="useremail">{{ $loggedInUser->email }}</span>
+                        </div>
+                        <div class="status">
+                            <span class="indicator {{ $loggedInUser->isActive ? 'active' : 'inactive' }}"></span>
+                            <div class="label">{{ $loggedInUser->isActive ? 'Aktif' : 'Tidak Aktif' }}</div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
     @endif

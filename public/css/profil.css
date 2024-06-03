@@ -1,5 +1,5 @@
-/* ini untuk bagian container yang bisa di scroll kiri kanan */
-.container{
+/* ini untuk bagian container yang bisa di scroll atas bawah */
+.container {
     display: flex;
     flex-direction: row;
     width: 1090px;
@@ -8,28 +8,23 @@
 }
 
 .container::-webkit-scrollbar {
-    width: 2em;
+    height: 2em;
 }
 
 .container::-webkit-scrollbar-track {
     background: #5F2A5D;
     border-radius: 100vw;
-    width: 2em;
 }
 
 .container::-webkit-scrollbar-thumb {
-    width: 2em;
     background: #FABEA9;
-    border:.25em solid #5F2A5D;
-    width: 2em;
+    border: .25em solid #5F2A5D;
     border-radius: 100vw;
 }
 
 .container::-webkit-scrollbar-thumb:hover {
     background: #FF885E;
-    width: 2em;
-    border-radius: 100vw; 
-} 
+}
 
 /* ini untuk bagian profile cardnya */
 /* yang ini polkadotnya manual, kalo mau pake background image tinggal diganti (belum sempurna) */
@@ -366,37 +361,126 @@
     
 }
 
-.tabel {
+.loggedin {
+    background: #FFF3E2;
+    border-radius: 20px;
+    padding: 20px;
     width: 90%;
-    border-collapse: collapse;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+    margin: 4%;
 }
 
-.tabel table {
-    width: 80%;
-    border: 1px solid #ddd;
+.judulaktif {
     margin-bottom: 20px;
-    
+    padding-left: 1%;
+    padding-top: 1%;
 }
 
-.tabel th, .tabel td {
+.judulaktif h2 {
+    color: #5F2A5D;
+}
+
+.containerlist {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
     padding: 1%;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-.tabel th {
-    background-color: #f2f2f2;
+.list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.list:last-child {
+    margin-right: 0;
+}
+
+.listnya {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    padding: 2% 5% 2% 5%;
 }
 
 .pp {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    object-fit: cover;
+    margin-right: 15px;
 }
 
-.tabel .active {
-    color: green;
+.namaemailinfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.useremail {
+    font-size: 14px;
+    color: #666;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.indicator.active {
+    background: #28A745;
+}
+
+.indicator.inactive {
+    background: #cfcfcf;
+}
+
+.containerlist {
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.containerlist::-webkit-scrollbar {
+    width: 2em;
+}
+
+.containerlist::-webkit-scrollbar-track {
+    background: #5F2A5D;
+    border-radius: 100vw;
+}
+
+.containerlist::-webkit-scrollbar-thumb {
+    background: #FABEA9;
+    border: .25em solid #5F2A5D;
+    border-radius: 100vw;
+}
+
+.containerlist::-webkit-scrollbar-thumb:hover {
+    background: #FF885E;
 }
