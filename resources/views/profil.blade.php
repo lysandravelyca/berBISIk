@@ -14,12 +14,27 @@
             Profil Saya
         </div>
         <div class="card">
-            @if (Auth::user()->photo != null)
-                <img src="{{ asset('assets/fotoUser/' . Auth::user()->photo) }}" alt="">
-            @else
-                {{-- kasih image sample --}}
-                <img src="" alt="">
-            @endif
+            <div class="user">
+                @if (Auth::user()->photo != null)
+                    <img src="{{ asset('assets/fotoUser/' . Auth::user()->photo) }}" alt="">
+                @else
+                    {{-- kasih image sample --}}
+                    <img src="" alt="">
+                @endif
+
+                <div class="data_profil">
+                    <h2>{{ Auth::user()->name }}</h2>
+
+                    <div class="icon">
+                        <i class="fa fa-phone"></i>
+                        <p>{{ Auth::user()->phone }}</p>
+                        <i class="fa fa-envelope"></i>
+                        <p>{{ Auth::user()->email }}</p>
+                    </div>
+                </div>
+            </div>
+            
+
             <div class="buttons">
                 <div class="btn">Ubah Cover</div>
                 <a href="{{ route('profile.edit') }}">
@@ -30,12 +45,11 @@
     </div>
 
     <div class="history">
-        <div class="judul2_history">
-            <div class="judul_history">
-                <img src="assets/acara/Group 63.png" alt="">
-                <h2>Kelas yang terdaftar</h2>
-            </div>
+        <div class="judul_history">
+            <img src="assets/acara/Group 63.png" alt="">
+            <h2>Kelas yang terdaftar</h2>
         </div>
+        
         <div class="container">
             @foreach ($daftarAcaraUser as $acaraUser)
                 <a href="acara/{{ $acaraUser->events->id }}">

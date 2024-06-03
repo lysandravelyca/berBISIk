@@ -4,8 +4,7 @@
     flex-direction: row;
     width: 1090px;
     overflow-x: scroll;
-    margin-top: 3%;
-    height: 380px;
+    height: fit-content;
 }
 
 .container::-webkit-scrollbar {
@@ -59,6 +58,7 @@
     margin-top: 2%;
 }
 
+
 .card{
     margin-top: 3%;
     width: 900px;
@@ -79,7 +79,7 @@
     width: 100px;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 200px;
+    margin-top: 5%;
 }
 
 .buttons{
@@ -120,45 +120,54 @@
     height: 50px;
 }
 
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 3%;
+}
+
+.data_profil{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    margin-bottom: 4%;
+    margin-left: 5%;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon i{
+    margin-right: 2%;
+}
+
+.icon p{
+    margin-right: 2%;
+}
+
 
 /* ini untuk bagian history kelas */
 .history{
-    background-image: url(../assets/acara/Group\ 427320762.png);
+    background-image: url(../assets/acara/Group\ 427320773.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    margin: 50px;
+    background-size: cover;
+    margin: 6%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 555px;
+    /* width: 1287px; */
+    border-radius: 30px;
 }
-
-
-.judul2_history{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-}
-
-.judul2_history a{
-    color: black;
-    padding: 10px 15px;
-    border: 2px solid black;
-    border-radius: 25px;
-    margin-right: 40px;
-}
-
 
 .judul_history{
     display: flex;
     justify-content: left;
-    /* margin: auto; */
-    padding: 32px;
-    margin-top: 5%;
+    padding: 2%;
 }
 
 .judul_history h2{
