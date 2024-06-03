@@ -23,7 +23,7 @@ class UserController extends Controller
         $userId = Auth::user()->id;
         $userRoleId = $user->role_id;
 
-        $userEvent = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules')
+        $userEvent = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules', 'events.event_details')
             ->where('user_id', $userId)
             // ->whereHas('events.event_schedules', function ($query) use ($currentDate) {
             //     $query->where('date', '>', $currentDate);

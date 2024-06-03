@@ -25,7 +25,7 @@
                 <div class="data_profil">
                     <h2>{{ Auth::user()->name }}</h2>
 
-                    <div class="icon">
+                    <div class="icon_profil">
                         <i class="fa fa-phone"></i>
                         <p>{{ Auth::user()->phone }}</p>
                         <i class="fa fa-envelope"></i>
@@ -46,7 +46,7 @@
 
     <div class="history">
         <div class="judul_history">
-            <img src="assets/acara/Group 63.png" alt="">
+            <img src="assets/acara/Group 43.png" alt="">
             <h2>Kelas yang terdaftar</h2>
         </div>
         
@@ -79,9 +79,9 @@
                             </div>
 
                             <div class="cardKelas">
-                                <!-- tambahin a href disini karena emang gambar sama card itu beda container -->
                                 <a href="acara/{{ $acaraUser->events->id }}">
                                     <h3 class="judul_acara">{{ $acaraUser->events->title }}</h3>
+                                    
                                     <div class="pengajar">
                                         <div class="profil_pengajar">
                                             <img src="{{ asset('assets/fotoPengajar/' . $acaraUser->events->instructors->photo) }}" alt="">
@@ -93,8 +93,20 @@
                                         </div>
                                     </div>
 
-                                    <div class="icon">
-                                        <img src="assets/icon/calendar.png" alt="">
+                                    {{-- ini mau dibuat progress bar kah? --}}
+                                    <div class="progress">
+                                        <p>sesi {{ $acaraUser->session_done }}/ {{ $acaraUser->events->event_details->session }}</p>
+
+                                        <div class="progress_bar">
+                                            <div class="sesi_bar">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{-- bukan jadwal terdekat tapi jadwal paling pertama --}}
+                                    <div class="icon_tanggal">
+                                        <i class="fa-regular fa-calendar" style="color: white"></i>
                                         <h3>
                                             {{ $acaraUser->events->event_schedules->first()->date->format('j M Y') }}
                                             @if (count($acaraUser->events->event_schedules) > 1)
@@ -102,24 +114,24 @@
                                                 {{ $acaraUser->events->event_schedules->last()->date->format('j M Y') }}
                                             @endif
                                         </h3>
-                                    </div>
 
-                                    <div class="icon">
-                                        <img src="assets/icon/clocktime.png" alt="">
-                                        <h3>{{ substr($acaraUser->events->event_schedules->first()->time_start, 0, -3) }}
-                                            -
-                                            {{ substr($acaraUser->events->event_schedules->first()->time_end, 0, -3) }}
+                                        <i class="fa-regular fa-clock" style="color: white"></i>
+                                        <h3>
+                                            {{ substr($acaraUser->events->event_schedules->first()->time_start, 0, -3) }}
                                             WIB
                                         </h3>
                                     </div>
 
-                                    <div class="rating">
-                                        <img src="assets/icon/Star 1.png" alt="">
-                                        <img src="assets/icon/Star 1.png" alt="">
-                                        <img src="assets/icon/Star 1.png" alt="">
-                                        <img src="assets/icon/Star 1.png" alt="">
-                                        <img src="assets/icon/Star 1.png" alt="" class="abu">
-                                        <h3>4.0</h3>
+                                    <div class="icon_link">
+                                        <div class="icon_wa">
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                            <p>Link Grup</p>
+                                        </div>
+
+                                        <div class="icon_zoom">
+                                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                            <p>Link Zoom</p>
+                                        </div>
                                     </div>
 
                                     <h3>Sudah terdaftar</h3>
@@ -135,7 +147,7 @@
     <div class="current">
         <div class="judul2_current">
             <div class="judul_current">
-                <img src="assets/acara/Group 43.png" alt="">
+                <img src="assets/acara/Group 63.png" alt="">
                 <h2>Acara Relawan yang Sedang Berlangsung</h2>
             </div>
         </div>

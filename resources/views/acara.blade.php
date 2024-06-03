@@ -97,15 +97,15 @@
                     </div>
 
                     @if(Auth::user()->role_id == 2)
-                    <div class="modify_button_container">
-                        <div class="modify_button">
-                            <a href="ubahAcara/{{ $acara->id }}"><img src="assets/icon/edit.png" alt=""></a>
+                        <div class="modify_button_container">
+                            <div class="modify_button">
+                                <a href="ubahAcara/{{ $acara->id }}"><img src="assets/icon/edit.png" alt=""></a>
+                            </div>
+            
+                            <div class="modify_button">
+                                <a href="hapusAcara/{{ $acara->id }}"><img src="assets/icon/trash.png" alt=""></a>
+                            </div>
                         </div>
-        
-                        <div class="modify_button">
-                            <a href="hapusAcara/{{ $acara->id }}"><img src="assets/icon/trash.png" alt=""></a>
-                        </div>
-                    </div>
                     @endif
                     
                 </div>
