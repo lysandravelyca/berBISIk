@@ -320,23 +320,40 @@
     </div>
 
     @if(Auth::user()->role_id == 2)
-        <div class="loggedin">
-            <div>
-                <h2>User yang sedang login</h2>
-            </div>
-            <div class="container">
-                <ul>
-                    @foreach($loggedInUsers as $loggedInUser)
-                        <li>
-                            {{-- image profil --}}
-                            {{ $loggedInUser->name }} ({{ $loggedInUser->email }})
-                            @if ($loggedInUser->isActive)
-                            <p>- Active</p>
-                            @endif
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
+    <div class="loggedin">
+        <div>
+            <h2>User yang sedang login</h2>
         </div>
+        <div class="tabel">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Profile Picture</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($loggedInUsers as $loggedInUser)
+                        <tr>
+                            <td>
+                                @if ($loggedInUser->photo != null)
+                                    <img src="{{ asset('assets/fotoUser/' . $loggedInUser->photo) }}" class="pp">
+                                @else
+                                    <img src="{{ asset('assets/default-profile.png') }}" class="pp">
+                                @endif
+                            </td>
+                            <td>{{ $loggedInUser->name }}</td>
+                            <td>{{ $loggedInUser->email }}</td>
+                            <td class="{{ $loggedInUser->isActive ? 'active' : '' }}">
+                                {{ $loggedInUser->isActive ? 'Active' : 'Inactive' }}
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
     @endif
 @endsection

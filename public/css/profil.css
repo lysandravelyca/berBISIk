@@ -356,3 +356,38 @@
     transform: translate(-50%, -50%); /* Center the image precisely */
     
 }
+
+.tabel {
+    width: 90%;
+    border-collapse: collapse;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabel table {
+    width: 80%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    
+}
+
+.tabel th, .tabel td {
+    padding: 1%;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabel th {
+    background-color: #f2f2f2;
+}
+
+.pp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tabel .active {
+    color: green;
+}
