@@ -22,7 +22,8 @@ class VolunteerEventScheduleSeeder extends Seeder
         foreach($volunteers as $volunteer){
             VolunteerEventSchedule::factory()->create([
                 'volunteer_event_id' => $volunteer->id,
-                'name' => 'Hari-H'
+                'name' => 'Hari-H',
+                'status_id' => 1
             ]);
         }
     }

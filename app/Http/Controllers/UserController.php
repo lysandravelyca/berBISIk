@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EventSchedule;
 use App\Models\User;
 use App\Models\UsersEvent;
 use App\Models\UsersVolunteerEvent;
@@ -37,6 +38,19 @@ class UserController extends Controller
                 return $user;
             });
         }
+
+        // $totalSesi = EventSchedule::where()
+        $events = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules')
+            ->where('user_id', $userId)
+            // ->where('session_done', )
+            // ->whereHas('events.event_schedules', function ($query) use ($currentDate) {
+            //     $query->where('date', '<', $currentDate);
+            // })
+        ->get();
+
+        $volunteerEvents = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')
+                                ->where('user_id', $userId)->where('volunteer_events.volunteer_events_schedules.date', '<', $currentDate)->get();
+
                                 
         return view('profil', ['daftarAcaraUser' => $userEvent, 'daftarAcaraRelawanUser' => $userVolunteerEvent, 'loggedInUsers' => $loggedInUsers]);
 

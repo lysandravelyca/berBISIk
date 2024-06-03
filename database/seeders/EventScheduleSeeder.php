@@ -29,7 +29,8 @@ class EventScheduleSeeder extends Seeder
                 for($i=1;$i<=$event->event_details->session;$i++){
                     EventSchedule::factory()->create([
                         'event_id' => $event->id,
-                        'name' => 'Kelas ' . $i
+                        'name' => 'Kelas ' . $i,
+                        'status_id' => 1
                     ]);
                 }
                 
@@ -37,7 +38,8 @@ class EventScheduleSeeder extends Seeder
             else{
                 EventSchedule::factory()->create([
                     'event_id' => $event->id,
-                    'name' => 'Hari-H'
+                    'name' => 'Hari-H',
+                    'status_id' => 1
                 ]);
             }
 

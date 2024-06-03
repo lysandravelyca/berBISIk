@@ -178,6 +178,68 @@
         </div>
     </div>
 
+    {{-- acara yg udh dilewatin --}}
+    <div class="riwayat">
+        <div class="judul2_current">
+            <div class="judul_current">
+                <img src="assets/acara/Group 43.png" alt="">
+                <h2>Riwayat Acara-acara yang sudah dilalui</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            @foreach($daftarAcaraRelawanUser as $acaraRelawanUser)
+                <a href="volunteer/{{ $acaraRelawanUser->volunteer_events->id }}">
+                    <div class="c2_relawan">
+                        <div class="kelas_card">
+                            <div class="img_container">
+                                <div class="img_kelas">
+                                    <img src="{{ asset('assets/fotoVolunteer/'.$acaraRelawanUser->volunteer_events->photo) }}" alt="">
+                                </div>
+                                
+                                @if(Auth::user()->role_id == 2)
+                                    <div class="modify_button_container">
+                                        <div class="modify_button">
+                                            <a href="ubahVolunteer/{{ $acaraRelawanUser->volunteer_events->id }}"><img src="assets/icon/edit.png" alt=""></a>
+                                        </div>
+                        
+                                        <div class="modify_button">
+                                            <a href="hapusVolunteer/{{ $acaraRelawanUser->volunteer_events->id }}"><img src="assets/icon/trash.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                @endif
+                                
+                            </div>
+            
+                            <div class="cardKelas">
+                                <a href="volunteer/{{ $acaraRelawanUser->volunteer_events->id }}">
+                                    <h3>{{ $acaraRelawanUser->volunteer_events->title }}</h3>
+                        
+                                    <div class="icon_relawan">
+                                        <img src="assets/icon/location.png" alt="">
+                                        <h3>{{ $acaraRelawanUser->volunteer_events->location}}</h3>
+                                    </div>
+                        
+                                    <div class="icon_relawan">
+                                        <img src="assets/icon/calendar.png" alt="">
+                                        <h3>{{ $acaraRelawanUser->volunteer_events->volunteer_event_schedules->date->format('j M Y') }}</h3>
+                                    </div>
+                        
+                                    <div class="icon_relawan">
+                                        <img src="assets/icon/clocktime.png" alt="">
+                                        <h3>{{ substr($acaraRelawanUser->volunteer_events->volunteer_event_schedules->time_start, 0, -3) }} - 
+                                            {{ substr($acaraRelawanUser->volunteer_events->volunteer_event_schedules->time_end, 0, -3)}} WIB
+                                        </h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+    </div>
+
     @if(Auth::user()->role_id == 2)
     <div class="loggedin">
         <div>

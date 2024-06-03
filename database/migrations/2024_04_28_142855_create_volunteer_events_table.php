@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('location');
             $table->string('photo');
-            $table->unsignedBigInteger('status_id')->required();
-            $table->foreign('status_id')->references('id')->on('statuses')->onDelete('restrict');
             $table->timestamps();
         });
     }

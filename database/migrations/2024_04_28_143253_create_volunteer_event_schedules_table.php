@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('name')->required();
             $table->time('time_start')->required();
             $table->time('time_end')->required();
+            $table->unsignedBigInteger('status_id')->required();
+            $table->foreign('status_id')->references('id')->on('statuses')->onDelete('restrict');
             $table->timestamps();
         });
     }

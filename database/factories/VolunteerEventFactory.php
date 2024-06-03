@@ -33,10 +33,6 @@ class VolunteerEventFactory extends Factory
             'Sample3.jpg',
             'Sample4.jpg',
             'Sample5.jpg',
-            'Sample6.jpg',
-            'Sample7.jpg',
-            'Sample8.jpg',
-            'Sample9.jpg',
         ];
 
         return [
