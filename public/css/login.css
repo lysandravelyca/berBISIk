@@ -114,3 +114,15 @@ a{
     font-weight: 600;
     text-decoration:none;
 }
+
+@media only screen and (max-width: 767px) {
+    .text {
+        width: 80%;
+    }
+    .kiri, .kanan {
+        width: 90%;
+    }
+    .text-box, .text-box2, button {
+        width: 80%;
+    }
+}
