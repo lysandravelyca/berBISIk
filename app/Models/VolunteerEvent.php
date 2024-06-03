@@ -14,6 +14,6 @@ class VolunteerEvent extends Model
     }
     
     public function volunteer_event_schedules(){
-        return $this->hasOne(VolunteerEventSchedule::class, 'volunteer_event_id', 'id');
+        return $this->hasOne(VolunteerEventSchedule::class);
     }
 }

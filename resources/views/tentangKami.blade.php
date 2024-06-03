@@ -9,68 +9,63 @@
 {{-- insert code here --}}
 
 <div>
-    <div class="tinggi">
-        <!-- biar agak tinggian  -->
-        <img src="{{ asset('assets/logoAja.png') }}" alt="photo logo">
-    </div>
-
     <div class="header">
+        <img src="{{ asset('assets/logoOnly.png') }}" alt="photo logo">
         <span>Ber<span>BISI</span>k</span>
-        <p>BerbahasaIsyaratIndonesiaAsik</p>
+        <p>#BerbahasaIsyaratIndonesiaAsik</p>
     </div>
 
-    <div class="cerita">
+    <section>
+        <div class="cerita">
 
-        <div class="judul">
-        <span>CERITA BER<span>BISI</span>K</span>
+            <div class="judul">
+                <span>CERITA BER<span>BISI</span>K</span>
+            </div>
+    
+            <div class="para">
+            <p>Kami adalah tim yang berkomitmen untuk menyediakan aksesibilitas dan inklusi bagi 
+                semua orang dalam mempelajari bahasa isyarat. Dengan keyakinan bahwa setiap individu 
+                memiliki hak untuk berkomunikasi dengan bebas dan mandiri, kami berupaya untuk memberikan 
+                platform pembelajaran yang mudah diakses dan berorientasi pada pengguna. Dengan 
+                pengalaman yang mendalam dalam pendidikan dan teknologi, kami menggabungkan inovasi 
+                dengan pengetahuan mendalam tentang bahasa isyarat untuk menciptakan pengalaman 
+                pembelajaran yang menarik dan efektif.</p>
+            </div>
         </div>
+    </section>
+    
 
-        <div class="para">
-        <p>Kami adalah tim yang berkomitmen untuk menyediakan aksesibilitas dan inklusi bagi 
-            semua orang dalam mempelajari bahasa isyarat. Dengan keyakinan bahwa setiap individu 
-            memiliki hak untuk berkomunikasi dengan bebas dan mandiri, kami berupaya untuk memberikan 
-            platform pembelajaran yang mudah diakses dan berorientasi pada pengguna. Dengan 
-            pengalaman yang mendalam dalam pendidikan dan teknologi, kami menggabungkan inovasi 
-            dengan pengetahuan mendalam tentang bahasa isyarat untuk menciptakan pengalaman 
-            pembelajaran yang menarik dan efektif.</p>
+    <section class="visi-section">
+        <div class="visi">
+
+            <div class="paragrap">
+    
+                <p>Menciptakan dunia di mana bahasa isyarat diakui, dihargai, dan diintegrasikan dalam masyarakat. Kami percaya bahwa pembelajaran bahasa isyarat adalah hak semua individu. Dengan memperluas pemahaman dan penggunaan bahasa isyarat, kami berharap membangun jembatan komunikasi antara komunitas tunarungu dan pendengar, serta meningkatkan inklusi sosial dan kesetaraan peluang.</p>
+            </div>
+    
+            <div class="visiKami">
+                <span>VISI KAMI</span>
+            </div>
         </div>
-    </div>
+    </section>
+    
 
+    <section class="misi-section">
+        <div class="misi">
 
-    <div class="visi">
-
-        <div class="paragrap">
-
-            <p>Menciptakan dunia di mana bahasa isyarat diakui, dihargai, dan 
-                diintegrasikan secara luas dalam masyarakat. Kami percaya bahwa 
-                aksesibilitas terhadap pembelajaran bahasa isyarat adalah hak bagi setiap 
-                individu, tanpa memandang latar belakang atau kondisi. Dengan memperluas 
-                pemahaman dan penggunaan bahasa isyarat, kami berharap dapat membangun 
-                jembatan komunikasi yang kuat antara komunitas tunarungu dan pendengar, 
-                serta meningkatkan inklusi sosial dan kesetaraan peluang bagi semua.</p>
+            <div class="misiKami">
+                <span>MISI KAMI</span>
+            </div>
+    
+            <div class="paragrapMisi">
+    
+                <p>Menyediakan platform pembelajaran inovatif dan terjangkau untuk memudahkan semua individu mempelajari dan menguasai bahasa isyarat. Kami berkomitmen menyediakan konten berkualitas tinggi, interaktif, dan mudah dipahami, serta memfasilitasi pertukaran pengetahuan antar pengguna.</p>
+            </div>
         </div>
+    </section>
+   
 
-        <div class="visiKami">
-            <span>VISI KAMI</span>
-        </div>
-    </div>
-
-    <div class="misi">
-
-        <div class="misiKami">
-            <span>MISI KAMI</span>
-        </div>
-
-        <div class="paragrapMisi">
-
-            <p>Menyediakan platform pembelajaran yang inovatif dan terjangkau untuk 
-                memungkinkan individu dari berbagai latar belakang belajar dan menguasai 
-                bahasa isyarat dengan mudah. Kami berkomitmen untuk menyediakan konten-konten 
-                berkualitas tinggi yang interaktif dan mudah dipahami, serta memfasilitasi pertukaran 
-                pengetahuan dan pengalaman antar pengguna. </p>
-        </div>
-    </div>
-
+<section>
     <div class="case">
 
         <div class="timKami">
@@ -83,64 +78,71 @@
         </div>
     </div>
 
-    <div class="member">
-       
+    <div class="member-container">
+        <div class="member">
             <div class="img1">
                 <div class="bulet-img1"></div>
                 <div class="kotak-img1"></div>
                 <img src="{{ asset('assets/el.png') }}" alt="">
             </div>
-                
-        
-            
-          
+            <div class="nama">
+                <h1>DIREKTUR UTAMA</h1>
+                <P>Anastashia Ellena Widjaja</P>
+            </div>
+    </div>
+
+    <div class="member">
             <div class="img2">
                 <div class="kotak-img2"></div>
                 <img src="{{ asset('assets/jeje.png') }}" alt="">
             </div>
+            <div class="nama">
+                <h1>KEPALA KURIKULUM</h1>
+                <P>Jesselyn Widjaja</P>
+            </div>
+    </div>
+    
+    <div class="member">
             <div class="img3">
                 <div class="bulet-img3"></div>
                 <div class="kotak-img3"></div>
                 <img src="{{ asset('assets/jessy.png') }}" alt="">
             </div>
+            <div class="nama">
+                <h1>KEPALA PEMASARAN</h1>
+                <P>Jessy Clarissa Wijaya</P>
+            </div>
+    </div>
+    <div class="second-row">
+        <div class="member">
             <div class="img4">
                 <div class="bulet-img4"></div>
                 <div class="kotak-img4"></div>
                 <img src="{{ asset('assets/ly.png') }}" alt="">
             </div>
+            <div class="nama">
+                <h1>PENGEMBANG WEB</h1>
+                <P>Lysandra Velyca</P>
+            </div>
+        </div>
+
+        <div class="member">
             <div class="img5">
                 <div class="bulet-img5"></div>
                 <div class="kotak-img5"></div>
                 <img src="{{ asset('assets/val.png') }}" alt="">
             </div>
-    </div>
-
-    <div class="nama">
-        <div class="el">
-            <h1>DIREKTUR UTAMA</h1>
-            <P>Anastashia Ellena Widjaja</P>
-        </div>
-
-        <div class="jeje">
-            <h1>KEPALA KURIKULUM</h1>
-            <P>Jesselyn Widjaja</P>
-        </div>
-
-        <div class="jessy">
-            <h1>KEPALA PEMASARAN</h1>
-            <P>Jessy Clarissa Wijaya</P>
-        </div>
-
-        <div class="ly">
-            <h1>PENGEMBANG WEB</h1>
-            <P>Lysandra Velyca</P>
-        </div>
-
-        <div class="val">
-            <h1>PERANCANG GRAFIS</h1>
-            <p>Vallen Charissa Gunawan</p>
+            <div class="nama">
+                <h1>PERANCANG GRAFIS</h1>
+                <p>Vallen Charissa Gunawan</p>
+            </div>
         </div>
     </div>
+    
+    </div>
+</section>
+    
+    
 
         <div class="semua">
             <div class="peserta">
