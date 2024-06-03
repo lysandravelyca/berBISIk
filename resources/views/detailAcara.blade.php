@@ -102,7 +102,7 @@
                     @foreach($acara->reviews as $review)
                         <div class="reviewbox">
                             <div class="userinfo">
-                                <img src="{{ asset('assets/fotoUsers/'.$review->user->photo) }}" class="fotouser">
+                                <img src="{{ asset('assets/fotoUser/'.$review->user->photo) }}" class="fotouser">
                                 <div class="namauser">
                                     <h3>{{ $review->user->name }}</h3>
                                 </div>
