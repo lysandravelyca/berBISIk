@@ -59,10 +59,11 @@
 
 .res{
     font-size: 16px;
-    margin-left: 5%;
     font-weight: bold;
     margin-top: 3%;
     color: #5F2A5D;
+    position: relative;
+    left: 120px;
 }
 
 .katadsr{
@@ -73,6 +74,12 @@
     margin-bottom: 1%;
 }
 
+.container2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 2%;
+}
 
 .container1{
     display: flex;
