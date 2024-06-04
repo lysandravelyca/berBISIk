@@ -65,11 +65,11 @@
 
                                 {{-- logic kalo misalnya udh rating apa blm :) cemungut jessy --}}
                                 <div class="ratingg">
+                                    <a href="{{ route('showReview', $acaraUser->events->id) }}">Beri Penilaian</a>
                                     @if (!$acaraUser->events->reviews->where('user_id', Auth::user()->id)->first())
                                         <a href="{{ route('showReview', $acaraUser->events->id) }}">Beri Penilaian</a>
-                                    @else
-                                        <p>Sudah dinilai</p>
                                     @endif
+                                    <p>Sudah dinilai</p>
                                 </div>                                                              
                             </a>
                         </div>
