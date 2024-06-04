@@ -103,3 +103,59 @@ textarea {
 .comment{
     padding-top: 2%;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 5%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin:15%;
+    }
+    form{
+        width: 300px;
+    }
+    label {
+        font-size: 0.8rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+
+    .back{
+        margin-top: 10%;
+        margin-left: 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 10px;
+        margin-top: 10%;
+    }
+
+    h1 {
+        margin-top:30%
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    .rating label i {
+        font-size: 1.5rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+
+    .back{
+        margin-top: 13%;
+        margin-left: 6%;
+    }
+}
