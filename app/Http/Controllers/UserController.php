@@ -92,4 +92,19 @@ class UserController extends Controller
 
         return redirect()->route('profile.show')->with('success', 'Profil berhasil diubah');
     }
+
+    public function history(Request $request, $id){
+        $daftarRiwayatAcara = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules', 'events.reviews')
+        ->where('user_id', $id)
+        ->whereHas('events.event_details', function ($query){
+            $query->whereColumn('users_events.session_done', 'event_details.session');
+        })->get();
+
+        $daftarRiwayatAcaraRelawan = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')->where('user_id', $id)
+        ->whereHas('volunteer_events.volunteer_event_schedules', function ($query){
+            $query->where('status_id', 2);
+        })->get();
+
+        return view('riwayat', ['daftarRiwayatAcara' => $daftarRiwayatAcara, 'daftarRiwayatAcaraRelawan' => $daftarRiwayatAcaraRelawan]);
+    }
 }

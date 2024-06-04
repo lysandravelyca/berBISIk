@@ -95,3 +95,5 @@ Route::get('/profil', [UserController::class, 'show'])->name('profile.show');
 Route::get('/editProfile', [UserController::class, 'edit'])->name('profile.edit');
 Route::put('/updateProfile', [UserController::class, 'update'])->name('profile.update');
 
+Route::get('/riwayat/{id}', [UserController::class, 'history']);
+

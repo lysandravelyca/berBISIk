@@ -211,9 +211,13 @@
 
     {{-- acara yg udh dilewatin --}}
     <div class="riwayat">
-        <div class="judul_history">
-            <img src="assets/acara/Group 43.png" alt="">
-            <h2>Riwayat scara-acara yang sudah dilalui</h2>
+        <div class="judul">
+            <div class="judul_history">
+                <img src="assets/acara/Group 43.png" alt="">
+                <h2>Riwayat scara-acara yang sudah dilalui</h2>
+            </div>
+
+            <a href="riwayat/ {{ Auth::user()->id }}">Lihat semua riwayat</a>
         </div>
 
         <div class="container">
@@ -313,25 +317,24 @@
                                         </div>
                                     </div>
 
-                                    {{-- masih rusak ratingnya --}}
                                     <div class="rating">
-                                        {{-- @php
+                                        @php
                                             $total = 0;
-                                            $jumlahuser = count($acaraUser->reviews);
-                                            foreach ($acaraUser->reviews as $review) {
+                                            $jumlahuser = count($acaraUser->events->reviews);
+                                            foreach ($acaraUser->events->reviews as $review) {
                                                 $total += $review->rating;
                                             }
                                             $avgrating = $jumlahuser > 0 ? $total / $jumlahuser : 0;
-                                        @endphp --}}
+                                        @endphp
                                     
                                         @for ($i = 0; $i < 5; $i++)
-                                            @if ($i < 3)
+                                            @if ($i < $avgrating)
                                                 <i class="fa-solid fa-star"></i>
                                             @else
                                                 <i class="fa-regular fa-star"></i>
                                             @endif
                                         @endfor
-                                        <span>{{ number_format(3, 1) }}</span>
+                                        <span>{{ number_format($avgrating, 1) }}</span>
                                     </div>
 
                                     <div class="icon_link">

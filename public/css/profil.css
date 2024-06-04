@@ -220,6 +220,21 @@
     padding: 1% 3%;
 }
 
+.judul{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+}
+
+.judul a{
+    padding: 0.6rem;
+    border: 2px solid #5F2A5D;
+    border-radius: 25px;
+}
+
 /* Acara yang dimiliki user */
 .tipe_kelas{
     font-size: 14px;
