@@ -25,13 +25,16 @@ class UserController extends Controller
 
         $userEvent = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules', 'events.event_details')
             ->where('user_id', $userId)
-            // ->whereHas('events.event_schedules', function ($query) use ($currentDate) {
-            //     $query->where('date', '>', $currentDate);
-            // })
+            ->whereHas('events.event_details', function ($query){
+                $query->whereColumn('users_events.session_done', '!=','event_details.session');
+            })
         ->get();
 
         $userVolunteerEvent = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')
-                                ->where('user_id', $userId)->get();
+        ->where('user_id', $userId)
+        ->whereHas('volunteer_events.volunteer_event_schedules', function ($query){
+            $query->where('status_id', 1);
+        })->get();
         
         $loggedInUsers = null;
         if ($userRoleId == 2) {
