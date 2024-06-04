@@ -40,7 +40,7 @@ class UpdateSessionDone extends Command
 
         $eventSchedules = EventSchedule::where('date', '<', $currentDate)
                                         ->where('status_id', 1)
-                                        ->where('time_end', '<', $currentDate)
+                                        // ->where('time_end', '<', $currentDate)
                                         ->get();
         
         foreach ($eventSchedules as $schedule) {
@@ -51,7 +51,7 @@ class UpdateSessionDone extends Command
 
         // volunteer event 
         $volunteerEventSchedule = VolunteerEventSchedule::where('date', '<', $currentDate)
-                                                        ->where('time_end', '<', $currentDate)
+                                                        // ->where('time_end', '<', $currentDate)
                                                         ->where('status_id', 1)
                                                         ->get();
         

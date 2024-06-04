@@ -11,6 +11,7 @@ use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -95,3 +96,6 @@ Route::get('/profil', [UserController::class, 'show'])->name('profile.show');
 Route::get('/editProfile', [UserController::class, 'edit'])->name('profile.edit');
 Route::put('/updateProfile', [UserController::class, 'update'])->name('profile.update');
 
+Route::get('/riwayat/{id}', [UserController::class, 'history'])->name('riwayat');;
+Route::get('/penilaian/{eventId}', [ReviewController::class, 'showReviewForm'])->name('showReview');
+Route::post('/penilaian', [ReviewController::class, 'submitReview'])->name('submitReview');

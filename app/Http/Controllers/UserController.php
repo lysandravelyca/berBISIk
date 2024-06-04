@@ -25,13 +25,16 @@ class UserController extends Controller
 
         $userEvent = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules', 'events.event_details')
             ->where('user_id', $userId)
-            // ->whereHas('events.event_schedules', function ($query) use ($currentDate) {
-            //     $query->where('date', '>', $currentDate);
-            // })
+            ->whereHas('events.event_details', function ($query){
+                $query->whereColumn('users_events.session_done', '!=','event_details.session');
+            })
         ->get();
 
         $userVolunteerEvent = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')
-                                ->where('user_id', $userId)->get();
+        ->where('user_id', $userId)
+        ->whereHas('volunteer_events.volunteer_event_schedules', function ($query){
+            $query->where('status_id', 1);
+        })->get();
         
         $loggedInUsers = null;
         if ($userRoleId == 2) {
@@ -41,7 +44,7 @@ class UserController extends Controller
             });
         }
 
-        $events = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules')
+        $events = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules', 'events.reviews')
         ->where('user_id', $userId)
         ->whereHas('events.event_details', function ($query){
             $query->whereColumn('users_events.session_done', 'event_details.session');
@@ -91,5 +94,20 @@ class UserController extends Controller
         $user->save();
 
         return redirect()->route('profile.show')->with('success', 'Profil berhasil diubah');
+    }
+
+    public function history(Request $request, $id){
+        $daftarRiwayatAcara = UsersEvent::with('events', 'events.event_types', 'events.instructors', 'events.event_schedules', 'events.reviews')
+        ->where('user_id', $id)
+        ->whereHas('events.event_details', function ($query){
+            $query->whereColumn('users_events.session_done', 'event_details.session');
+        })->get();
+
+        $daftarRiwayatAcaraRelawan = UsersVolunteerEvent::with('volunteer_events', 'volunteer_events.volunteer_event_schedules')->where('user_id', $id)
+        ->whereHas('volunteer_events.volunteer_event_schedules', function ($query){
+            $query->where('status_id', 2);
+        })->get();
+
+        return view('riwayat', ['daftarRiwayatAcara' => $daftarRiwayatAcara, 'daftarRiwayatAcaraRelawan' => $daftarRiwayatAcaraRelawan]);
     }
 }
