@@ -397,6 +397,14 @@
     /* align-items: center; */
 }
 
+.progress_container{
+    width: 70%;
+    background-color: #B4B4B4;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
 .progress{
     margin-top: 4%;
     display: flex;
@@ -414,23 +422,18 @@
 .progress_bar{
     position: relative;
     border-radius: 10px;
-    display: grid;
-    place-items: center;
-    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0%;
     background-color: #FF885E;
-}
-
-.progress_bar::before{
-    content: "";
-    position: absolute;
-    background-color: #B4B4B4;
-    border-radius: 10px;
-    width: 40%;
+    /* transition: width 0.2s ease; */
 }
 
 .value-percentage{
     position: relative;
     color: white;
+    margin: auto;
 }
 
 .acara_icon {

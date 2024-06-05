@@ -4,6 +4,8 @@
 
 <link rel="stylesheet" href="{{ asset('css/profil.css') }}">
 <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+{{-- js --}}
+<script src="{{asset('js/profil.js') }}" defer></script>
 
 @section('content')
 
@@ -104,11 +106,13 @@
                                             </div>
                                         </div>
     
-                                        <div class="progress">
+                                        <div class="progress" data-session-done="{{$acaraUser->session_done}}" data-session="{{$acaraUser->events->event_details->session}}">
                                             <p>sesi {{ $acaraUser->session_done }}/ {{ $acaraUser->events->event_details->session }}</p>
     
-                                            <div class="progress_bar">
-                                                <span class="value-percentage">0%</span>
+                                            <div class="progress_container">
+                                                <div class="progress_bar">
+                                                    <span class="value-percentage">0%</span>
+                                                </div>
                                             </div>
                                         </div>
     

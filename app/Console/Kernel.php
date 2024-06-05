@@ -20,7 +20,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         
-        $schedule->command('update:session_done')->hourly();
+        $schedule->command('update:session_done')->daily();
         
         // $schedule->call(function(){
         //     UsersEvent::UpdateSessionDone();

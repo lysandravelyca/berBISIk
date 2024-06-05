@@ -39,9 +39,12 @@ class UpdateSessionDone extends Command
         // $currentTime = $currentDate->format('H:i:s');
 
         $eventSchedules = EventSchedule::where('date', '<', $currentDate)
-                                        ->where('status_id', 1)
-                                        // ->where('time_end', '<', $currentDate)
-                                        ->get();
+        // ->orWhere(function($query) use ($currentDate){
+        //     $query->where('date', '=', $currentDate)->where('time_end', '<', $currentDate->toTimeString());
+        // })
+        ->where('status_id', 1)
+        // ->where('time_end', '<', $currentDate)
+        ->get();
         
         foreach ($eventSchedules as $schedule) {
             UsersEvent::where('event_id', $schedule->event_id)->increment('session_done');

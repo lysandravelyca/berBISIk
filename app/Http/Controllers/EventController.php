@@ -23,7 +23,11 @@ class EventController extends Controller
         $event = Event::with('instructors', 'event_types', 'event_schedules')->get();
         $VolunteerEvent = VolunteerEvent::with('volunteer_event_schedules')->get();
         // $VolunteerEvent = VolunteerEventController::getVolunteerEvents();
-        return view('acara', ['daftarAcara' => $event], ['daftarVolunteer' => $VolunteerEvent]);
+
+        $progressBar = UsersEvent::with('events', 'events.event_types', 'events.event_details')
+        ->where('user_id', Auth::user()->id)->get();
+
+        return view('acara', ['daftarAcara' => $event, 'daftarVolunteer' => $VolunteerEvent, 'daftarProgress' => $progressBar]);
     }
     
     public function show($id)
