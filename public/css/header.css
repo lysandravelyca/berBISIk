@@ -109,6 +109,7 @@ a{
 
     .nav-menu{
         position: fixed;
+        z-index: 999;
         left: -100%;
         top: 70px;
         gap: 0;
