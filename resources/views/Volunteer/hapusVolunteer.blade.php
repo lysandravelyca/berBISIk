@@ -4,18 +4,24 @@
 
 <body>
     <!-- css -->
-    {{-- <link rel="stylesheet" href="{{ asset('css/kamusPage.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/hapusAcara.css') }}">
 </body>
 
 @section('content')
-
-    <h3>Apakah Anda yakin ingin menghapus acara relawan {{ $volunteer->title }}?</h3>
-    <form style="display: inline-block"action="/hapusVolunteer/{{ $volunteer->id }}" method="post">
-        @csrf
-        @method('delete')
-            <button type="submit">Hapus</button>
-        </form>
+    <div class="case">
+        <h3>Apakah Anda yakin ingin menghapus acara relawan {{ $volunteer->title }}?</h3>
+        <div class="case2">
+            <form style="display: inline-block"action="/hapusVolunteer/{{ $volunteer->id }}" method="post">
+                @csrf
+                @method('delete')
+                <div class="submit">
+                    <button type="submit">Hapus</button>
+            </form>
+    
+                <a href="/acara" class="button">Batal</a>
+            </div>
+        </div>
         
-        <a href="/acara" class="button" >Batal</a>
+    </div>
 
 @endsection

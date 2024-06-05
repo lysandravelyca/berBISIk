@@ -14,10 +14,14 @@
 
 <div class="container">
     <div class="info">
-        <div class="img_kelas">
-            <div class="kotak"></div>
-            <img src="{{ asset('assets/fotoVolunteer/'.$volunteer->photo)  }}" alt="" class="foto_acara">
+        <div class="img_title">
+            <div class="img_kelas">
+                <div class="kotak"></div>
+                <img src="{{ asset('assets/fotoVolunteer/'.$volunteer->photo)  }}" alt="" class="foto_acara">
+            </div>
+            <h1>{{ $volunteer->title }}</h1>
         </div>
+        
 
         <div class="detail"> 
             <div class="desc_acara">

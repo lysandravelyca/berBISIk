@@ -1,15 +1,22 @@
+section {
+    padding: 2rem 6%;
+}
+
 h1{
     color: #5F2A5D;
-    margin: 50px;
+    /* margin: 2rem; */
+    margin-bottom: 1rem;
 }
 
 .card{
-    margin: 50px;
+    /* margin: 50px; */
+    /* margin-top: 0; */
     background-color: #F9EEE1;
     padding: 40px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
 }
 
 .input{
@@ -21,6 +28,7 @@ h1{
 .card label{
     /* display: flex; */
     width: 200px;
+    font-weight: 600;
 }
 
 select, input{
@@ -44,15 +52,23 @@ select, input{
     margin-bottom: 10px;
 }
 
+.input_pengajar:nth-of-type(2) {
+    gap: 0.5rem;
+}
+
 .input_pengajar p{
     width: 330px;
+}
+
+.input_pengajar p, .input_pengajar a {
+    font-size: 14px;
 }
 
 button{
     border: 1px solid #5F2A5D;
     padding: 10px 15px;
-    margin: 50px;
-    margin-top: 0;
+    /* margin: 50px;
+    margin-top: 0; */
     border-radius: 20px;
     background-color: #5F2A5D;
     color: #F9EEE1;
@@ -61,8 +77,8 @@ button{
 button:hover{
     border: 1px solid #5F2A5D;
     padding: 10px 15px;
-    margin: 50px;
-    margin-top: 0;
+    /* margin: 50px;
+    margin-top: 0; */
     border-radius: 20px;
     background-color: transparent;
     color: #5F2A5D;
@@ -97,4 +113,15 @@ input #file-upload-button{
     font-weight: bold;
     font-size: 14px;
     color: red;
+}
+
+
+@media(max-width: 768px) {
+    .input {
+        flex-direction: column;
+    }
+
+    .input_pengajar p, .input_pengajar a {
+        font-size: 12px;
+    }
 }
