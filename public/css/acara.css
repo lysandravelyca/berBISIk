@@ -74,7 +74,7 @@ section {
 
 .progress{
     background: linear-gradient(to bottom, #F5DDC3, #FBF3EA);
-    padding: 2% 5% 20%;
+    padding: 4% 5% 20%;
     border-radius: 0 0 300px 300px;
 }
 
@@ -84,14 +84,49 @@ section {
 
 .progres_kelas{
     background-color: white;
-    width: 40vw;
-    /* height: 112px; */
+    /* width: 35vw; */
+    height: 112px;
     padding: 1%;
     border-radius: 30px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    margin-top: 30px;
+    margin: 1%;
+    align-items: center;
+    flex: 1;
+}
+
+.img_progress{
+    border-radius: 100%;
+    width: 80px; /* Set your desired width */
+    height: 80px; /* Set your desired height */
+    overflow: hidden; /* This will hide any parts of the image that exceed the container */
+    position: relative;
+}
+
+.img_progress img{
+    object-fit: cover;
+    position: absolute;
+    width: auto; /* This will allow the image to resize proportionally */
+    height: 100%; /* This will ensure the image fills the entire container vertically */
+    left: 50%; /* Center the image horizontally */
+    top: 50%; /* Center the image vertically */
+    transform: translate(-50%, -50%); /* Center the image precisely */
+}
+
+.desc_kelas{
+    margin: 0 auto;
+    margin-left: 3%;
+    width: 55%;
+}
+
+.progress_container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2%;
+    /* flex-direction: column;
+    grid-row: 2; */
 }
 
 .desc_kelas {
@@ -109,8 +144,8 @@ section {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    /* margin-right: 20px;
-    margin-left: 5px; */
+    margin: auto;
+    margin-right: 1%;
 }
 
 .persen:before{

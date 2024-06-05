@@ -34,20 +34,20 @@
 
 <section class="progress-section">
     <div class="progress">
-        <div class="">
-            <h2>Progres Kelas yang Sedang Kamu Ambil</h2>
+        <h2>Progres Kelas yang Sedang Kamu Ambil</h2>
+
+        <div class="progress_container">
     
-            {{-- @foreach($daftarAcara as $acara) --}}
-            <div class="progres_kelas">
+            @foreach($daftarProgress as $acara)
+            <div class="progres_kelas" data-session-done="{{ $acara->session_done }}" data-session="{{ $acara->events->event_details->session }}">
                 <div class="img_progress">
-                    <img src="" alt="">
+                    <img src="{{ asset('assets/fotoAcara/'.$acara->events->photo)  }}" alt="">
                 </div>
-                
                
                 <div class="desc_kelas">
-                    <p class="tipe_kelas">Tipe: {{--{{$acara->event_types->name}} --}}</p>
-                    <p class="judul_kelas">Judul Kelas{{--{{$acara->title}}--}}</p>
-                    <p class="sesi_kelas">7/10 sesi</p>
+                    <p class="tipe_kelas">Tipe: {{ $acara->events->event_types->name }}</p>
+                    <p class="judul_kelas">{{ $acara->events->title }}</p>
+                    <p class="sesi_kelas"> {{ $acara->session_done }}/{{ $acara->events->event_details->session }} sesi</p>
                 </div>
     
                 {{-- progress barnya --}}
@@ -55,7 +55,7 @@
                     <span class="value-percentage">0%</span>
                 </div>
             </div>
-            {{-- @endforeach --}}
+            @endforeach
     
         </div>
     </div>

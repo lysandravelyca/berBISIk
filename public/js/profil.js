@@ -1,22 +1,23 @@
-let progressBar = document.querySelector(".progress_bar");
-let valueContainer = document.querySelector(".value-percentage");
+document.querySelectorAll('.progress').forEach(function(progressContainer) {
+    let progressBar = progressContainer.querySelector(".progress_bar");
+    let valueContainer = progressContainer.querySelector(".value-percentage");
 
-let progressValue = 0;
-//end valuenya berarti berdasarkan tanggal kah?
-let progressEndValue = 60;
-let speed = 20;
+    let sessionDone = parseInt(progressContainer.getAttribute('data-session-done'));
+    let totalSession = parseInt(progressContainer.getAttribute('data-session'));
+    let progressEndValue = (sessionDone / totalSession) * 100;
+    
+    let progressValue = 0;
+    let speed = 20;
 
-let progress = setInterval(() => {
-    progressValue++;
+    let progress = setInterval(() => {
+        progressValue++;
 
-    valueContainer.textContent = `${progressValue}%`
-    progressBar.style.background = `conic-gradient(#FF885E ${progressValue * 3.6}deg, #D9D9D9 0deg)`
-    // progressBar.style.background = '#conic-gradient( #FF885E${progressValue * 3.6}deg, #D9D9D9 $progressValue * 3.6}deg';
+        valueContainer.textContent = `${Math.min(progressValue, Math.round(progressEndValue))}%`;
+        progressBar.style.width = `${Math.min(progressValue, Math.round(progressEndValue))}%`;
 
-    // console.log(progressValue);
+        if (progressValue >= progressEndValue) {
+            clearInterval(progress);
+        }
 
-    if(progressValue == progressEndValue){
-        clearInterval(progress);
-    }
-
-}, speed);
+    }, speed);
+});
