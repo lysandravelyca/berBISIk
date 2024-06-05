@@ -219,3 +219,16 @@ h1{
     justify-content: center;
     width: 100%;
 }
+
+.ratingg p{
+    border-radius: 20px;
+    background-color: gray;
+    margin: 2% auto 4%;
+    padding: 3% 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    font-size: 14px;
+    color: #ffffff;
+}
