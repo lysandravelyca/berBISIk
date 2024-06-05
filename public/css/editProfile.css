@@ -93,3 +93,10 @@
   .rating input[type="radio"]:checked + label i {
     color: #ffd700;
   }
+
+  @media(max-width: 768px) {
+    .input {
+        flex-direction: column;
+    }
+
+}
