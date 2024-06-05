@@ -16,6 +16,10 @@ p{
     position: relative;
 }
 
+.img_title h1 {
+    display: none;
+}
+
 .kotak {
     position: absolute;
     top: -2rem;
@@ -132,4 +136,104 @@ p{
 
 .desc_acara li{
     color: black;
+}
+
+@media(max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    
+
+    .info {
+        flex-direction: column;
+        /* padding-top: 3rem; */
+        padding-right: 3%;
+        /* gap: 1rem; */
+    }
+
+    .desc_acara p {
+        margin-bottom: 0.5rem;
+    }
+
+    .foto_acara, .kotak {
+        width: 80vw;
+    }
+
+    .desc_acara h1 {
+        display: none;
+        text-align: center;
+    }
+
+    .img_title h1 {
+        display: block;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .img_title {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .pekerjaan {
+        padding: 2rem;
+    }
+
+}
+
+@media(max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    li {
+        font-size: 12px;
+    }
+
+    .kotak {
+        top: -1rem;
+        left: -1rem;
+    }
+
+    .detil h1 {
+        font-size: 28px;
+        margin-bottom: 1rem;
+    }
+
+    .jadwal_acara {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .daftar, .infojadwal {
+        margin: 0;
+    }
+
+    .daftar h3 {
+        text-align: left;
+    }
+
+    .daftar a {
+        display: flex;
+        text-align: center;
+        /* align-self: flex-end; */
+        justify-content: center;
+    }
+
+
+
+    
 }

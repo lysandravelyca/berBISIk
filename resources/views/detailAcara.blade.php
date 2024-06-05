@@ -11,10 +11,14 @@
 
 <div class="container">
     <div class="info">
-        <div class="img_kelas">
-            <div class="kotak"></div>
-            <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="foto_acara">
+        <div class="img_title">
+            <div class="img_kelas">
+                <div class="kotak"></div>
+                <img src="{{ asset('assets/fotoAcara/'.$acara->photo)  }}" alt="" class="foto_acara">
+            </div>
+            <h1>{{ $acara->title }}</h1>
         </div>
+       
 
         <div class="detail"> 
             <div class="desc_acara">
@@ -94,7 +98,8 @@
                     </div>
                 </div>
             @endforeach
-
+        
+        @if (count($acara->reviews) > 0)
         <div class="bisik">
             <div class="bisi">
                 <h1><span>BISI</span>Kan Mereka </h1>
@@ -123,6 +128,7 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
 </div>
 

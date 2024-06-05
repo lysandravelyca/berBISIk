@@ -25,16 +25,22 @@ class tambahJadwalAcaraRequest extends FormRequest
     {
         $rules = [];
         $numberOfFields = 12;  
+
+        
     
-        for ($i = 1; $i <= $numberOfFields; $i++) {
+        for ($i = 1; $i <= request()->query('jumlahSesi'); $i++) {
             $rules["name$i"] = 'required';
             $rules["description$i"] = 'required';
             $rules["date$i"] = 'required';
             $rules["time_start$i"] = 'required';
-            $rules["time_end$i"] = 'required|after:time_start';
+            $rules["time_end$i"] = "required|after:time_start$i";
         }
-    
+        
         return $rules;
+        
+        // return [
+        //     'name' => 'required'
+        // ];
     }
 
     public function messages()
@@ -42,7 +48,7 @@ class tambahJadwalAcaraRequest extends FormRequest
         $messages = [];
         $numberOfFields = 12; 
 
-        for ($i = 1; $i <= $numberOfFields; $i++) {
+        for ($i = 1; $i <= request()->query('jumlahSesi'); $i++) {
             $messages["name$i.required"] = "Nama sesi $i wajib diisi.";
             $messages["description$i.required"] = "Deskripsi sesi $i wajib diisi.";
             $messages["date$i.required"] = "Tanggal sesi $i wajib diisi.";
@@ -50,8 +56,12 @@ class tambahJadwalAcaraRequest extends FormRequest
             $messages["time_end$i.required"] = "Waktu selesai sesi $i wajib diisi.";
             $messages["time_end$i.after"] = "Waktu selesai sesi $i harus setelah waktu mulai sesi $i.";
         }
-
+        
         return $messages;
+
+        // return [
+        //     'name.required' => 'wajib diisi'
+        // ];
         
     }
 }

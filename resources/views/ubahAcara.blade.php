@@ -8,7 +8,8 @@
 </body>
 
 @section('content')
-<form method="POST" action="/ubahAcara/{{ $acara->id }}" enctype="multipart/form-data">
+<section>
+    <form method="POST" action="/ubahAcara/{{ $acara->id }}" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
@@ -111,6 +112,6 @@
     
 
 </form>
-
+</section>
 
 @endsection
