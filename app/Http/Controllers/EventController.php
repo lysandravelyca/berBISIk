@@ -25,7 +25,10 @@ class EventController extends Controller
         // $VolunteerEvent = VolunteerEventController::getVolunteerEvents();
 
         $progressBar = UsersEvent::with('events', 'events.event_types', 'events.event_details')
-        ->where('user_id', Auth::user()->id)->get();
+        ->where('user_id', Auth::user()->id)
+        ->whereHas('events.event_details', function ($query){
+            $query->whereColumn('users_events.session_done', '!=','event_details.session');
+        })->get();
 
         return view('acara', ['daftarAcara' => $event, 'daftarVolunteer' => $VolunteerEvent, 'daftarProgress' => $progressBar]);
     }

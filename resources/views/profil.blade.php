@@ -115,12 +115,25 @@
                                                 </div>
                                             </div>
                                         </div>
-    
+                                        
+                                        @php
+                                            $nearestSchedule = null;
+                                            $currentDate = \Carbon\Carbon::now();
+
+
+                                            foreach($acaraUser->events->event_schedules as $schedule){
+                                                if($schedule->status_id == 1){
+                                                    $nearestSchedule = $schedule;
+                                                    break;
+                                                }
+                                            }
+                                        @endphp
+                                        
                                         {{-- bukan jadwal terdekat tapi jadwal paling pertama --}}
                                         <div class="icon_tanggal">
                                             <i class="fa-regular fa-calendar" style="color: white"></i>
                                             <h3>
-                                                {{ $acaraUser->events->event_schedules->first()->date->format('j M Y') }}
+                                                {{ $nearestSchedule->date->format('j M Y') }}
                                                 {{-- @if (count($acaraUser->events->event_schedules) > 1)
                                                     -
                                                     {{ $acaraUser->events->event_schedules->last()->date->format('j M Y') }}
@@ -129,7 +142,7 @@
     
                                             <i class="fa-regular fa-clock" style="color: white"></i>
                                             <h3>
-                                                {{ substr($acaraUser->events->event_schedules->first()->time_start, 0, -3) }}
+                                                {{ substr($nearestSchedule->time_start, 0, -3) }}
                                                 WIB
                                             </h3>
                                         </div>
