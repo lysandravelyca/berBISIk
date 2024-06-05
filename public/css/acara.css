@@ -117,7 +117,7 @@ section {
 .desc_kelas{
     margin: 0 auto;
     margin-left: 3%;
-    width: 70%;
+    width: 55%;
 }
 
 .progress_container{
@@ -144,8 +144,8 @@ section {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    margin-right: 20px;
-    margin-left: 5px;
+    margin: auto;
+    margin-right: 1%;
 }
 
 .persen:before{
