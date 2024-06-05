@@ -148,6 +148,98 @@
     align-items: center;
     position: relative;
 
+}
 
+.result p{
+
+    font-size: 20px;
+}
+
+@media(max-width:768px){
+
+    
+}
+
+@media(max-width:768px){
+
+    .btnfull{
+   
+        padding: 10px 26px;
+        font-size: 10px;
+      
+    }
+    
+    .btnksg{
+       
+        padding: 10px 26px;
+        font-size: 10px;
+
+    }
+    
+    .judul {
+
+        font-size: 25px;
+
+    }
+
+    .search{
+        border: 2px solid  #5F2A5D   ;
+        margin-left: 5%;
+        margin-top: 2%;
+        background-color: #ffffff;
+        padding: 10px 30px;
+        border-radius: 25px;
+        width: 80%;
+        text-align: left;
+    }
+
+    .btnsearch{
+      
+        padding: 10px 26px;
+        font-size: 12px;
+        margin-top: 2%;  
+        margin-left: 5%;
+    }
+    .katadsr{
+
+        font-size: 27px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .container1{
+        margin-bottom: 3%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        
+    }
+     
+    .res{
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 3%;
+        color: #5F2A5D;
+        position: relative;
+        left: 0px;
+        padding-left: 7%;
+      
+    }
+
+}
+
+
+@media(max-width:850px){
+
+    .container1{
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        
+    }
+     
 }
 

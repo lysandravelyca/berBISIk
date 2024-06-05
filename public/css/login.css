@@ -115,14 +115,149 @@ a{
     text-decoration:none;
 }
 
-@media only screen and (max-width: 767px) {
-    .text {
-        width: 80%;
+@media only screen and (max-width: 840px) {
+
+    .case{
+    
+        display: flex;
+        flex-direction: column-reverse;
+    
     }
-    .kiri, .kanan {
-        width: 90%;
+
+    .kanan{
+    
+        display: flex;
+        flex-direction: column;
+        background-color:  #F9EEE1; 
+        color: #FF885E;
+        height: 25vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    
     }
-    .text-box, .text-box2, button {
-        width: 80%;
+
+    .kanan p{
+
+        font-size: 24px;
+    }
+    .kanan img{
+    
+        width: 50%;
+    
+    }
+
+    .kiri{
+    
+        display: flex;  
+        flex-direction: column;
+        width: 100vw;
+        height: 65vh;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .text h1{
+    
+        color: #5F2A5D;
+        text-align: left;
+        font-size: 20x;
+    }
+    
+
+}
+
+@media only screen and (max-width: 835px) {
+
+    .case{
+    
+        display: flex;
+        flex-direction: column-reverse;
+    
+    }
+
+    .kanan{
+    
+        display: flex;
+        flex-direction: column;
+        background-color:  #F9EEE1; 
+        color: #FF885E;
+        height: 30vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .kanan p{
+
+        font-size: 20px;
+    }
+    .kanan img{
+    
+        width: 40%;
+    
+    }
+
+  
+    
+
+}
+
+@media only screen and (max-width: 490px) {
+  
+    .case{
+    
+        display: flex;
+        flex-direction: column-reverse;
+    
+    }
+    
+    .text{
+    
+        width: 65%;
+    
+    }
+    
+    .kiri{
+    
+        display: flex;  
+        flex-direction: column;
+        width: 100vw;
+        height: 70vh;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .text h1{
+    
+        color: #5F2A5D;
+        text-align: left;
+        font-size: 20x;
+    }
+    
+    .kanan{
+    
+        display: flex;
+        flex-direction: column;
+        background-color:  #F9EEE1; 
+        color: #FF885E;
+        height: 20vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .kanan p{
+
+        font-size: 16px;
+    }
+    .kanan img{
+    
+        width: 50%;
+    
     }
 }

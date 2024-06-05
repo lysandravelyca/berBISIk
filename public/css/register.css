@@ -129,3 +129,162 @@ a{
     font-size: 14px;
     color: red;
 }
+
+@media only screen and (max-width: 840px) {
+
+    .case{
+    
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .kanan{
+    
+        display: flex;
+        flex-direction: column;
+        background-color:  #F9EEE1; 
+        color: #FF885E;
+        height: 25vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+   
+    .kanan img{
+    
+        width: 40%;
+    
+    }
+
+    .kiri{
+    
+        display: flex;  
+        flex-direction: column;
+        width: 100vw;
+        height: 65vh;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .text h1{
+    
+        color: #5F2A5D;
+        text-align: left;
+        font-size: 20x;
+    }
+    .kiri p{
+
+        text-align: left;
+        color: #969AB8;
+        font-size: 16px;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 835px) {
+
+    .case{
+    
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .kanan{
+    
+        display: flex;
+        flex-direction: column;
+        background-color:  #F9EEE1; 
+        color: #FF885E;
+        height: 30vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .kanan p{
+
+        font-size: 20px;
+    }
+    .kanan img{
+    
+        width: 40%;
+    
+    }
+
+    .kiri p{
+
+        text-align: left;
+        color: #969AB8;
+        font-size: 16px;
+    }
+  
+  
+}
+
+@media only screen and (max-width: 490px) {
+  
+    .case{
+    
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .text{
+    
+        width: 65%;
+    
+    }
+    
+    .kiri{
+    
+        display: flex;  
+        flex-direction: column;
+        width: 100vw;
+        height: 70vh;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .text h1{
+    
+        color: #5F2A5D;
+        text-align: left;
+        font-size: 20x;
+    }
+    
+    .kanan{
+    
+        display: flex;
+        flex-direction: column;
+        background-color:  #F9EEE1; 
+        color: #FF885E;
+        height: 20vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .kanan p{
+
+        font-size: 16px;
+    }
+    .kanan img{
+    
+        width: 50%;
+    
+    }
+   
+
+}

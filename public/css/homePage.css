@@ -80,15 +80,6 @@
    
 }
 
-/* .hashtag{
-
-    display: flex;
-} */
-
-/* .hashtag button{
-
-    
-} */
 
 .hashtag p{
     font-weight: 600;
@@ -678,7 +669,7 @@
         margin-left: 0;
     }
     .BisiPic img {
-        width: 250px;
+        width: 150px;
     }
     .judulBisi h1 {
         font-size: 48px;
@@ -729,6 +720,7 @@
 @media (max-width: 768px) {
     .mainSlide h1 {
         font-size: 36px;
+		margin-top: 5%;
     }
     .mainSlide div:nth-child(1) {
         font-size: 20px;
@@ -744,6 +736,7 @@
         width: 250px;
     }
     .BisiPic img {
+		margin-top: 10%;
         width: 200px;
     }
     .judulBisi h1 {
@@ -781,7 +774,9 @@
     }
 
     .txtCollab {
-        flex-direction: column; /* Stack items vertically */
+		display: flex;
+		flex-wrap: wrap;
+        flex-direction: row; 
     }
 
     .judulCollab p {
@@ -790,7 +785,7 @@
 
 	.product .boxContainer {
 		display: flex;
-		flex-wrap: wrap; /* Added for responsive wrapping */
+		flex-wrap: wrap; 
 		justify-content: center;
 		gap: 3%;
 	}
@@ -815,6 +810,7 @@
     .product .boxContainer .box {
         max-width: calc(50% - 30px); /* Adjusted for smaller screens */
         /* 50% width minus gap */
+		margin-bottom: 5%;
     }
 }
 
@@ -844,6 +840,10 @@
     .txtBisi p, .txtBisi2 p {
         font-size: 14px;
     }
-}
 
-/* Additional responsive styles for other sections as needed */
+	.product .boxContainer .box {
+        max-width: calc(50% - 30px); /* Adjusted for smaller screens */
+        /* 50% width minus gap */
+		margin-bottom: 5%;
+    }
+}
