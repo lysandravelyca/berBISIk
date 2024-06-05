@@ -19,7 +19,7 @@ class EventScheduleController extends Controller
     }
 
     // ga bisa pake tambahAcaraRequest kalo ga dia bakal null
-    public function store(Request $request)
+    public function store(tambahJadwalAcaraRequest $request)
     {
         // dd($request->input('name' . 1));
 
@@ -27,14 +27,12 @@ class EventScheduleController extends Controller
         $fileName = session()->get('photo_file_name');
 
         $event = new Event;
-        $event->status_id = 1;
         $event->event_type_id = $eventData['event_type_id']; 
         $event->instructor_id = $eventData['instructor_id'];
         $event->title = $eventData['title'];
         $event->price = $eventData['price'];
         $event->location = $eventData['location'];
         $event->photo = $fileName;
-        $event->status_id = 1;
         $event->save(); 
 
         $eventDetail = new EventDetail;
@@ -50,6 +48,7 @@ class EventScheduleController extends Controller
         for ($i = 1; $i <= $eventDetail->session; $i++) {
             $eventSchedule = new EventSchedule;
             $eventSchedule->event_id = $event->id;
+            $eventSchedule->status_id = 1;
             $eventSchedule->name = $request->input('name'.$i);
             $eventSchedule->description = $request->input('description'.$i);
             $eventSchedule->date = $request->input('date'.$i);
@@ -75,7 +74,7 @@ class EventScheduleController extends Controller
         // return view('/ubahJadwalAcara');
     }
 
-    public function update(Request $request, $id)
+    public function update(tambahJadwalAcaraRequest $request, $id)
     {
         // $id = session()->get('event_id');
         
@@ -114,6 +113,7 @@ class EventScheduleController extends Controller
                 $eventSchedule = new EventSchedule();
                 $eventSchedule->event_id = $id;
             }
+            $eventSchedule->status_id = 1;
             $eventSchedule->name = $request->input('name'.$i);
             $eventSchedule->description = $request->input('description'.$i);
             $eventSchedule->date = $request->input('date'.$i);
