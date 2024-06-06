@@ -15,13 +15,21 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\VolunteerEventSchedule;
 use App\Http\Requests\tambahAcaraRequest;
 use App\Http\Controllers\VolunteerEventController;
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
     public function index()
     {
-        $event = Event::with('instructors', 'event_types', 'event_schedules')->get();
-        $VolunteerEvent = VolunteerEvent::with('volunteer_event_schedules')->get();
+        $currentDate = Carbon::now();
+
+        $event = Event::with('instructors', 'event_types', 'event_schedules')->whereHas('event_schedules', function($query) use ($currentDate){
+            $query->where('date', '>', $currentDate);
+        })->get();
+
+        $VolunteerEvent = VolunteerEvent::with('volunteer_event_schedules')->whereHas('volunteer_event_schedules', function($query) use ($currentDate){
+            $query->where('date', '>', $currentDate);
+        })->get();
         // $VolunteerEvent = VolunteerEventController::getVolunteerEvents();
 
         $progressBar = UsersEvent::with('events', 'events.event_types', 'events.event_details')
