@@ -156,10 +156,16 @@
     font-size: 20px;
 }
 
-@media(max-width:768px){
-
-    
+.copyright-illustration {
+    text-align: center;
+    margin-bottom: 2rem;
 }
+
+.copyright-illustration p {
+    color: #5F2A5D;
+    font-weight: 600;
+}
+
 
 @media(max-width:768px){
 
