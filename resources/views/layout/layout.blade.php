@@ -45,7 +45,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="/profil" class="nav-link">Profile</a>
+                    <a href="/profil" class="nav-link">Profil</a>
                 </li>
                 
                 <li class="nav-item">

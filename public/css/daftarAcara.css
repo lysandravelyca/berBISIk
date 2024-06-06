@@ -1,14 +1,18 @@
 
 .body{
 
-    margin-left: 5%;
+    /* margin-left: 5%; */
     display: flex;
+}
+
+section {
+    padding: 2rem 6%;
 }
 
 .back{
 
     margin-top: 1%;
-    margin-left: 2%;   
+    /* margin-left: 2%;    */
     margin-bottom: 2%;
 }
 
@@ -21,8 +25,8 @@
 
     display: flex;
     flex-direction: column;
-    width: 45vw;
-    height: 38vh;
+    /* width: 45vw;
+    height: 38vh; */
 }
 
 .judul h1{
@@ -35,12 +39,14 @@
 
 .case{
 
-    width: 600px;
+    /* width: 600px; */
     background-color: #F9EEE1;
     display: flex;
-    gap:5%;
+    /* gap:5%; */
     padding: 5%;
     border-radius: 20px;
+    gap: 1rem;
+    justify-content: space-between;
 
 }
 
@@ -53,7 +59,7 @@
 
 .ovo , .gopay , .Bank{
 
-    width: 400px;
+    width: 22vw;
     display: flex;
     align-items: center;
 }
@@ -61,10 +67,12 @@
 .lainnya{
 
     display: flex;
+    /* flex-direction: column; */
     align-items: center;
-    gap:7%;
-
+    /* gap:7%; */
+    flex-wrap: wrap;
 }
+
 .lainnya .logo img,
 .Bank .logo img {
     width: 55px;
@@ -101,16 +109,16 @@ h3{
     width: 100%;
     height: 100%;
     border-radius: 20px;
-
+    object-fit: cover;
 }
 
 .desc{
 
-    width: 300px;
+    /* width: 300px; */
 }
 
 .descFoto{
-    width: 200px;
+    width: 25vw;
 }
 
 .harga{
@@ -129,12 +137,13 @@ h3{
 .desc h1{
 
     color: #5F2A5D;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .infoJadwal{
-
+    color: #FF885E;
     margin-top: 3%;
+    font-size: 14px;
 
 }
 
@@ -145,16 +154,21 @@ h3{
 
 }
 
+.fa-regular {
+    margin-right: 2px;
+}
+
 
 input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
     cursor: pointer;
     border-radius: 50%;
-    background-color: #FF885E;
+    border: 1px solid #FF885E;
+    /* background-color: #FF885E; */
     position: relative;
 
 }
@@ -163,12 +177,12 @@ input[type="radio"]::after {
     content: "";
     display: none;
     position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 8px;
-    height: 8px;
+    top: 3px;
+    left: 3.2px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: #FF885E;
 }
 
 input[type="radio"]:checked::after {
@@ -182,13 +196,13 @@ button{
     border: none;
     width: 210px;
     height: 60px;
-    margin-bottom: 5%;
-    margin-left: 5%;
+    /* margin-bottom: 2rem;   */
+    /* margin-left: 5%; */
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 4%;
+    margin-top: 2rem;
 }
 
 button:hover {
@@ -196,4 +210,69 @@ button:hover {
     color: #F9EEE1;
     font-weight: 600;
     transition: background-color 0.3s ease;
+}
+
+#btn-vol {
+    margin-top: 1rem;
+}
+
+#case-vol {
+    margin-bottom: 0;
+}
+
+
+@media(max-width: 768px){
+    .judul h1 {
+        font-size: 32px;
+    }
+
+    .harga h3 {
+        font-size: 24px;
+    }
+
+    .kategori {
+        margin: 0;
+    }
+
+
+    .body {
+        flex-direction: column-reverse;
+    }
+
+    .case {
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+    }
+
+    .descFoto {
+        align-self: center;
+        width: 100%;
+        height: 30vw;
+    }
+
+    .gambar {
+        /* display: flex;
+        align-content: center;
+        align-self: center; */
+        /* justify-self: center; */
+        /* width: 50vw; */
+    }
+
+    .infoJadwal {
+        margin-top: 0.5rem;
+    }
+
+    .ovo, .gopay, .Bank {
+        width: auto;
+    }
+
+    .lainnya {
+        gap: 1rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .judul h1 {
+        font-size: 24px;
+    }
 }

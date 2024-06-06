@@ -127,6 +127,7 @@ class VolunteerEventController extends Controller
         $deleteEvent = VolunteerEvent::findOrFail($id);
         $deleteEvent->volunteer_event_details()->delete();
         $deleteEvent->volunteer_event_schedules()->delete();
+        $deleteEvent->users_volunteer_events()->delete();
         $deleteEvent->delete();
 
         return redirect('/acara');

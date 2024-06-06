@@ -67,4 +67,8 @@
             </div>
         </div>
     </div>
+
+    <div class="copyright-illustration">
+        <p>&copy; Illustration by @ on Instagram</p>
+    </div>
 @endsection

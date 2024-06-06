@@ -14,6 +14,10 @@ document.querySelectorAll('.progress').forEach(function(progressContainer) {
 
         valueContainer.textContent = `${Math.min(progressValue, Math.round(progressEndValue))}%`;
         progressBar.style.width = `${Math.min(progressValue, Math.round(progressEndValue))}%`;
+        
+        if(progressEndValue > 0) {
+            progressBar.style.justifyContent = 'center';
+        }
 
         if (progressValue >= progressEndValue) {
             clearInterval(progress);
