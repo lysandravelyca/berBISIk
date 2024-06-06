@@ -120,6 +120,10 @@ section {
     width: 55%;
 }
 
+.deskripsi_pengajar p{
+    margin-left: 5px;
+}
+
 .progress_container{
     display: flex;
     justify-content: space-between;
@@ -279,7 +283,7 @@ section {
 }
 
 .c2 p{
-    margin-left: 5px;
+    /* margin-left: 5px; */
     font-size: 10px;
 }
 

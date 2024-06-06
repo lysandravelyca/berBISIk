@@ -107,7 +107,7 @@
                                         </div>
     
                                         <div class="progress" data-session-done="{{$acaraUser->session_done}}" data-session="{{$acaraUser->events->event_details->session}}">
-                                            <p>sesi {{ $acaraUser->session_done }}/ {{ $acaraUser->events->event_details->session }}</p>
+                                            <p>Sesi {{ $acaraUser->session_done }}/{{ $acaraUser->events->event_details->session }}</p>
     
                                             <div class="progress_container">
                                                 <div class="progress_bar">
@@ -148,15 +148,20 @@
                                         </div>
     
                                         <div class="icon_link">
-                                            <div class="icon_wa">
-                                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                                <a href="{{ $acaraUser->events->event_details->whatsapp_link }}"><p>Link Grup</p></a>
-                                            </div>
-    
-                                            <div class="icon_zoom">
-                                                <i class="fa fa-video-camera" aria-hidden="true"></i>
-                                                <a href="{{ $acaraUser->events->event_details->zoom_link }}"><p>Link Zoom</p></a>
-                                            </div>
+                                            <a class="icon_wa_container" href="{{ $acaraUser->events->event_details->whatsapp_link }}">
+                                                <div class="icon_wa">
+                                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                                    <p>Link Grup</p>
+                                                </div>
+                                            </a>
+                                            
+                                            <a class="icon_zoom_container" href="{{ $acaraUser->events->event_details->zoom_link }}">
+                                                <div class="icon_zoom">
+                                                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                                    <p>Link Zoom</p>
+                                                </div>
+                                            </a>
+                                            
                                         </div>
     
                                         <h3>Sudah terdaftar</h3>
@@ -205,7 +210,7 @@
                             
                                         <div class="icon_location">
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <h3>{{ $acaraRelawanUser->volunteer_events->location}}</h3>
+                                            <p>{{ $acaraRelawanUser->volunteer_events->location}}</p>
                                         </div>
                             
                                         <div class="icon_tanggal">
@@ -218,15 +223,19 @@
                                         </div>
     
                                         <div class="icon_link">
-                                            <div class="icon_wa">
-                                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                                <a href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->whatsapp_link }}"><p>Link Grup</p></a>
-                                            </div>
-    
-                                            <div class="icon_zoom">
-                                                <i class="fa fa-video-camera" aria-hidden="true"></i>
-                                                <a href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->zoom_link }}"><p>Link Zoom</p></a>
-                                            </div>
+                                            <a class="icon_wa_container" href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->whatsapp_link }}">
+                                                <div class="icon_wa">
+                                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                                    <p>Link Grup</p>
+                                                </div>
+                                            </a>
+                                            
+                                            <a class="icon_zoom_container" href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->zoom_link }}">
+                                                <div class="icon_zoom">
+                                                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                                    <p>Link Zoom</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </a>
                                 </div>
@@ -291,10 +300,12 @@
                                         </div>
     
                                         <div class="icon_link">
-                                            <div class="icon_wa">
-                                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                                <a href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->whatsapp_link }}"><p>Link Grup</p></a>
-                                            </div>
+                                            <a class="icon_wa_container" href="{{ $acaraRelawanUser->volunteer_events->volunteer_event_details->whatsapp_link }}">
+                                                <div class="icon_wa">
+                                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                                    <p>Link Grup</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </a>
                                 </div>
@@ -364,13 +375,15 @@
                                             @endfor
                                             <span>{{ number_format($avgrating, 1) }}</span>
                                         </div>
-    
-                                        <div class="icon_link">
-                                            <div class="icon_wa">
-                                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                                <a href="{{ $acaraUser->events->event_details->whatsapp_link }}"><p>Link Grup</p></a>
+                                        
+                                        <a class="icon_wa_container" href="{{ $acaraUser->events->event_details->whatsapp_link }}">
+                                            <div class="icon_link">
+                                                <div class="icon_wa">
+                                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                                    <p>Link Grup</p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </a>
                                 </div>
                             </div>

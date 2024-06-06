@@ -119,10 +119,15 @@ class EventController extends Controller
     
     public function confirm(Request $request, $id)
     {
-       $usersEvent = new UsersEvent();
-       $usersEvent->user_id = Auth::user()->id;
-       $usersEvent->event_id = $id;
-       $usersEvent->save();
-       return redirect('/profil');
+        $event = Event::find($id);
+        $event->event_details->seat = $event->event_details->seat - 1;
+        $event->event_details->save();
+
+        $usersEvent = new UsersEvent();
+        $usersEvent->user_id = Auth::user()->id;
+        $usersEvent->event_id = $id;
+        $usersEvent->session_done = 0;
+        $usersEvent->save();
+        return redirect('/profil');
     }
 }
