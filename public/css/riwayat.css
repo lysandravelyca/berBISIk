@@ -53,6 +53,7 @@ h1{
     border-radius: 10px;
     position: relative;
     z-index: 10;
+    font-weight: bold;
 }
 
 .img_kelas img{
@@ -134,7 +135,7 @@ h1{
     align-items: center;
 }
 
-.rating{
+.ratingg a{
     border-radius: 20px;
     background-color: #602B5E;
     margin: 2% auto 4%;
@@ -143,9 +144,6 @@ h1{
     justify-content: center;
     align-items: center;
     width: max-content;
-}
-
-.rating a{
     color: white;
 }
 
