@@ -67,7 +67,11 @@
                 </div>
 
                 <div class="daftar">
-                    <a href="daftarVolunteer/{{ $volunteer->id }}">Daftar Sekarang</a>
+                    @if (Auth::user()->users_volunteer_events->contains('volunteer_event_id', $volunteer->id))
+                        <a href="" readonly="true" class="readonly-link">Sudah Terdaftar</a>
+                    @else
+                        <a href="daftarVolunteer/{{ $volunteer->id }}">Daftar Sekarang</a>
+                    @endif
                 </div>
             </div>
         </div>   

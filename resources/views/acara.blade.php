@@ -1,6 +1,6 @@
 @extends('layout/layout')
 
-<link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoAja.png') }}">
+<link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoOnly.png') }}">
 <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
 
 @section('title', 'Acara')
@@ -166,8 +166,13 @@
                                 @endfor
                                 <span>{{ number_format($avgrating, 1) }}</span>
                             </div>
-                
-                            <h3>Rp{{ number_format($acara->price, 0,',', '.')  }}</h3>
+                            
+                            @if (Auth::user()->users_events->contains('event_id', $acara->id))
+                                <h3>Sudah Terdaftar</h3>
+                            @else
+                                <h3>Rp{{ number_format($acara->price, 0,',', '.')  }}</h3>
+                            @endif
+                            
                         </div>
                     </div>
                 </div>

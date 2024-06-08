@@ -1,6 +1,6 @@
 @extends('layout/layout')
 
-<link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoAja.png') }}">
+<link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoOnly.png') }}">
 
 @section('title', 'Kamus')
 

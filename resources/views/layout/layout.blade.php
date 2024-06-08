@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     {{-- buat icon tapi blmbisaaaa --}}
-    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoAja.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/logoOnly.png') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
         <nav class="navbar">
             
             <div class="logo">
-                <img src="{{ asset('assets/logo.png') }}" alt="">
+                <a href="/" class="nav-link"><img src="{{ asset('assets/logo.png') }}" alt=""></a>
             </div>
 
             <ul class="nav-menu">

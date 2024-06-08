@@ -102,6 +102,10 @@ p{
     color: #5F2A5D;
 }
 
+.readonly-link {
+    pointer-events: none;
+}
+
 .back{
     background-color: #F9EEE1;
     padding-top: 1%;
@@ -110,6 +114,9 @@ p{
 
 .pekerjaan{
     background-color: #5F2A5D;
+    background-image: url(../assets/fotoVolunteer/detailBackground.png);
+    background-size: cover;
+    background-position: center;
     padding: 3%; 
     border-radius: 40px; 
     display: flex;

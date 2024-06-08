@@ -32,11 +32,24 @@ class UserFactory extends Factory
             'Sample9.png',
         ];
 
+        $phone_numbers = [
+            '081234567890',
+            '082345678901',
+            '083456789012',
+            '085678901234',
+            '087890123456',
+            '089012345678',
+            '081112223334',
+            '082223334445',
+            '083334445556',
+            '085556667778'
+        ];        
+
         return [
             'role_id' => '1',
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'phone' => '123',
+            'phone' => fake()->randomElement($phone_numbers),
             'photo' => fake()->randomElement($photo),
             'email_verified_at' => now(),
             'password' => Hash::make('abc'), // password

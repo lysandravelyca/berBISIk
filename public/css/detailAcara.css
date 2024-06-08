@@ -109,6 +109,10 @@ p{
     color: #5F2A5D;
 }
 
+.readonly-link {
+    pointer-events: none;
+}
+
 .instructor {
     align-items: center;
     display: flex;

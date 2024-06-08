@@ -67,7 +67,13 @@
                     <div>
                         <h3>{{ 'Rp'.number_format($acara->price, 0, ',', '.') }}</h3>
                     </div>
-                    <a href="daftarAcara/{{ $acara->id }}">Daftar Sekarang</a>
+                    
+                    @if (Auth::user()->users_events->contains('event_id', $acara->id))
+                        <a href="" readonly="true" class="readonly-link">Sudah Terdaftar</a>
+                    @else
+                        <a href="daftarAcara/{{ $acara->id }}">Daftar Sekarang</a>
+                    @endif
+                    
                 </div>
             </div>
         </div>   
