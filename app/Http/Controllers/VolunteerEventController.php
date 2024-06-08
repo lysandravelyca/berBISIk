@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\tambahVolunteerRequest;
 use App\Models\UsersVolunteerEvent;
 use App\Models\VolunteerEvent;
 use App\Models\VolunteerEventDetail;
@@ -22,7 +23,7 @@ class VolunteerEventController extends Controller
         return view('/Volunteer/tambahVolunteer');
     }
 
-    public function store (Request $request)
+    public function store (tambahVolunteerRequest $request)
     {
         $photoFile = time() . '-' . $request->title . '.' . $request->photo->extension();
         $request->photo->move(public_path('assets\fotoVolunteer'), $photoFile);
@@ -55,6 +56,7 @@ class VolunteerEventController extends Controller
         $volunteerSchedule->date = $volunteerData['date'];
         $volunteerSchedule->time_start = $volunteerData['time_start'];
         $volunteerSchedule->time_end = $volunteerData['time_end'];
+        $volunteerSchedule->status_id = 1;
         $volunteerSchedule->save();
 
         return redirect('/acara');
