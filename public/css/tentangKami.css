@@ -803,10 +803,9 @@ section {
     .header-container .bg {
         height: 25vh;
         width: 100%;
-        /* transform: scaleX(-1); */
     }
+    
     .header-bg .bg {
-        /* display: none; */
         transform: scaleY(-1);
     }
 

@@ -271,8 +271,8 @@
             </div>
             <div class="answer">
                 <p>BerBISIk adalah platform yang menjadi wadah pembelajaran bahasa isyarat bagi 
-                    semua orang. Selain belajar, berBISIk juga memiliki banyak kegiatan lain seperti 
-                    seminar dan kegiatan relawan</p>
+                    semua orang. Selain menyediakan kamus gerakan BISINDO, berBISIk juga menyediakan kegiatan pembelajaran lain seperti 
+                    seminar dan kegiatan relawan.</p>
             </div>
         </div>
 
@@ -285,7 +285,7 @@
                 <p>Bahasa isyarat adalah bentuk komunikasi non-verbal menggunakan gerakan tangan, 
                     posisi tubuh, dan ekspresi wajah untuk menyampaikan makna, digunakan oleh orang 
                     dengan gangguan pendengaran atau dalam situasi di mana komunikasi verbal tidak mungkin
-                         atau tidak nyaman.</p>
+                    atau tidak nyaman.</p>
             </div>
         </div>
 
@@ -308,7 +308,7 @@
                 <i class="icon fa-solid fa-caret-down"></i>
             </div>
             <div class="answer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione modi incidunt doloremque eius recusandae quibusdam nihil beatae laudantium nesciunt praesentium?</p>
+                <p>Anda dapat memilih acara relawan yang tersedia pada bagian "Acara Relawan." Kemudian, Anda dapat klik pada kartu tersebut dan muncul detail acara relawan yang Anda pilih. Di sana Anda perlu menekan tombol "Daftar Sekarang." Untuk melihat apakah Anda berhasil mendaftar, daftar Acara Relawan yang Anda pilih dapat terlihat pada profil Anda.</p>
             </div>
         </div>
 

@@ -36,8 +36,8 @@ Route::get('/register', function(){
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'authenticating'])->middleware('guest');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
-Route::get('/register', [RegisterController::class, 'create'])->name('register')->middleware('guest');
-Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
+Route::get('/register', [UserController::class, 'create'])->name('register')->middleware('guest');
+Route::post('/register', [UserController::class, 'store'])->middleware('guest');
 
 Route::get('/kamus', function(){
     return view('kamus');
