@@ -35,7 +35,7 @@
     </div>
 
     <div class="copyright-illustration">
-        <p>&copy; Illustration by @ on Instagram</p>
+        <p>&copy; Illustration by Si Unyu Comic on Facebook</p>
     </div>
 
 @endsection
