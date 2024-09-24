@@ -14,6 +14,9 @@ B. Technologies Used:
 
 With Berbisik, we aim to contribute meaningfully to promoting inclusivity and facilitating better communication with the deaf and mute community in Indonesia.
 
+
+![alt text](public/asset/berbisik.png?raw=true)
+
 # Contributors
 1. Anastashia Ellena Widjaja 
 2. Jesselyn Widjaja 
